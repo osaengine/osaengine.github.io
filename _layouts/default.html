@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="OS Engine Logo">
+            <h1>{{ site.title }}</h1>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>Связь со мной: <a href="https://t.me/osengine_official" target="_blank">в телеграм</a></p>
+    </footer>
+</body>
+</html>

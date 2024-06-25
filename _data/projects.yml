@@ -1,0 +1,53 @@
+- name: LEAN
+  image: /assets/images/lean.png
+  description: Менеджер алгоритмов Lean
+  advantages:
+    - Высокая производительность
+    - Активное сообщество
+  github: https://github.com/QuantConnect/Lean
+  website: https://www.quantconnect.com/lean/
+
+- name: StockSharp
+  image: /assets/images/stocksharp.png
+  description: Торговая платформа для алгоритмической торговли
+  advantages:
+    - Широкий спектр поддерживаемых брокеров
+    - Конструктор стратегий без программирования
+  github: https://github.com/StockSharp/StockSharp
+  website: https://stocksharp.com/
+
+- name: Backtrader
+  image: /assets/images/backtrader.png
+  description: Python-фреймворк для бэктестинга торговых стратегий
+  advantages:
+    - Простота использования
+    - Гибкая архитектура
+  github: https://github.com/mementum/backtrader
+  website: https://www.backtrader.com/
+
+- name: CCXT
+  image: /assets/images/ccxt.png
+  description: Библиотека для торговли криптовалютами
+  advantages:
+    - Поддержка множества бирж
+    - Унифицированный API
+  github: https://github.com/ccxt/ccxt
+  website: https://ccxt.trade/
+
+- name: QuantLib
+  image: /assets/images/quantlib.png
+  description: Библиотека для количественных финансов
+  advantages:
+    - Обширный набор финансовых инструментов
+    - Реализация моделей ценообразования
+  github: https://github.com/lballabio/QuantLib
+  website: https://www.quantlib.org/
+
+- name: Zipline
+  image: /assets/images/zipline.png
+  description: Pythonic библиотека для алгоритмической торговли
+  advantages:
+    - Простота использования
+    - Проект не поддерживается
+  github: https://github.com/quantopian/zipline
+  website: https://www.zipline.io/
