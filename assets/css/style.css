@@ -82,22 +82,35 @@ main {
     display: block;
 }
 
-.github-link {
-    display: inline-block;
+.project-links {
+    display: flex;
+    justify-content: space-between;
     margin-top: 1rem;
+}
+
+.website-link, .github-link {
+    display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #333;
     color: #fff;
     text-decoration: none;
     border-radius: 3px;
+    transition: background-color 0.3s ease;
 }
 
-.project-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.website-link {
+    background-color: #4CAF50;
+}
+
+.github-link {
+    background-color: #333;
+}
+
+.website-link:hover {
+    background-color: #45a049;
+}
+
+.github-link:hover {
+    background-color: #555;
 }
 
 footer {
@@ -128,7 +141,11 @@ footer a {
         display: block;
     }
 
-    .project-link {
-        display: none;
+    .project-links {
+        flex-direction: column;
+    }
+
+    .website-link, .github-link {
+        margin-bottom: 0.5rem;
     }
 }
