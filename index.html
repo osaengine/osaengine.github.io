@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+<div class="intro">
+    <h2>Добро пожаловать на OSA Engine</h2>
+    <p>Этот сайт посвящен открытым (open source) платформам для алгоритмической торговли. Отсюда и наше название - Open Source Algotrading (OSA).</p>
+</div>
+
 <div class="project-grid">
   {% for project in site.data.projects %}
     <div class="project-card">
@@ -18,4 +23,9 @@ layout: default
       <a href="{{ project.website }}" class="project-link" target="_blank"></a>
     </div>
   {% endfor %}
+</div>
+
+<div class="outro">
+    <h3>Как скачать OSA Engine?</h3>
+    <p>Чтобы начать использовать OSA Engine, выберите нужный репозиторий из представленных выше и склонируйте его себе на компьютер. Следуйте инструкциям в README файле каждого проекта для установки и настройки.</p>
 </div>
