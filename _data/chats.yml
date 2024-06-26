@@ -1,0 +1,29 @@
+- name: AlgoPack от МосБиржи
+  image: /assets/images/moex_algopack.png
+  description: Чат по AlgoPack от Московской Биржи
+  link: https://t.me/moex_algopack
+
+- name: Алор Брокер
+  image: /assets/images/alor_chat.png
+  description: Чат по Алор Брокер OpenAPI
+  link: https://t.me/alor_openapi_chat
+
+- name: Тинькофф Инвестиции
+  image: /assets/images/tinkoff_chat.png
+  description: Чат по Тинькофф Инвестиции
+  link: https://t.me/joinchat/VaW05CDzcSdsPULM
+
+- name: TSLab
+  image: /assets/images/tslab_chat.png
+  description: Чат по TSLab
+  link: https://t.me/tslabprorugroup
+
+- name: StockSharp
+  image: /assets/images/stocksharp_chat.png
+  description: Чат по StockSharp
+  link: https://t.me/stocksharpchat
+
+- name: AlgoFox
+  image: /assets/images/algofox_chat.png
+  description: Чат по AlgoFox
+  link: https://t.me/algofoxchat

@@ -88,7 +88,7 @@ main {
     margin-top: 1rem;
 }
 
-.website-link, .github-link {
+.website-link, .github-link, .telegram-link {
     display: inline-block;
     padding: 0.5rem 1rem;
     color: #fff;
@@ -105,12 +105,20 @@ main {
     background-color: #333;
 }
 
+.telegram-link {
+    background-color: #0088cc;
+}
+
 .website-link:hover {
     background-color: #45a049;
 }
 
 .github-link:hover {
     background-color: #555;
+}
+
+.telegram-link:hover {
+    background-color: #0077b5;
 }
 
 footer {
@@ -182,7 +190,21 @@ footer a {
         flex-direction: column;
     }
 
-    .website-link, .github-link {
+    .website-link, .github-link, .telegram-link {
         margin-bottom: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .intro h2, .outro h3, .outro h4 {
+        font-size: 1.5rem;
     }
 }
