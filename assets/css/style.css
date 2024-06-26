@@ -188,12 +188,17 @@ footer a {
 .post-list {
     list-style: none;
     padding: 0;
+    max-width: 800px;
+    margin: 2rem auto 0;
 }
 
 .post-item {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
 }
 
 .post-image {
@@ -201,6 +206,7 @@ footer a {
     height: 150px;
     object-fit: cover;
     margin-right: 20px;
+    border-radius: 5px;
 }
 
 .post-details {
@@ -282,6 +288,7 @@ footer a {
 
     .post-item {
         flex-direction: column;
+        padding: 10px;
     }
 
     .post-image {
