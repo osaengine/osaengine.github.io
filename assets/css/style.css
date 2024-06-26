@@ -125,6 +125,43 @@ footer a {
     color: #fff;
 }
 
+.outro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.outro h3, .outro h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.steps {
+    padding-left: 20px;
+}
+
+.steps li {
+    margin-bottom: 10px;
+}
+
+.resources {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resources li {
+    margin-bottom: 10px;
+}
+
+.resources a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
