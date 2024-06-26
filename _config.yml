@@ -1,4 +1,15 @@
-title: OS Engine
-description: Open Source Algotrading Engine
-baseurl: ""
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+title: OS.Engine
+description: "Открытые платформы для алгоритмической торговли. Узнайте о лучших open source решениях для алготрейдинга."
 url: "https://osaengine.ru"
+author: OS.Engine Team
+logo: /assets/images/logo.png
+social:
+  name: OS.Engine
+  links:
+    - https://t.me/osengine_official
+    - https://github.com/osaengine
+lang: ru_RU
