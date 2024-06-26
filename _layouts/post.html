@@ -8,6 +8,11 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
     </p>
   </header>
+
+  {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image">
+  {% endif %}
+
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
