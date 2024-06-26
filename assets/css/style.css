@@ -29,6 +29,21 @@ header {
     margin-right: 10px;
 }
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
 main {
     flex: 1 0 auto;
     padding: 2rem;
@@ -170,6 +185,28 @@ footer a {
     text-decoration: underline;
 }
 
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin-bottom: 30px;
+}
+
+.post-list img {
+  max-width: 200px;
+}
+
+.post {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post img {
+  max-width: 100%;
+}
+
 @media (max-width: 1024px) {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -206,5 +243,10 @@ footer a {
 
     .intro h2, .outro h3, .outro h4 {
         font-size: 1.5rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
     }
 }

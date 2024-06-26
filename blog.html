@@ -1,0 +1,15 @@
+---
+layout: default
+title: Новости алготрейдинга
+description: Последние новости и обновления об open source алготрейдинг платформах
+---
+<h1>Последние новости</h1>
+<ul class="post-list">
+  {% for post in site.posts limit:10 %}
+    <li>
+      <img src="{{ post.image }}" alt="{{ post.title }}">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
