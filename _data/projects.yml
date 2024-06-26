@@ -61,7 +61,7 @@
   github: https://github.com/finsight/QUIKSharp
   website: https://github.com/finsight/QUIKSharp
 
-- name: QUIKPy
+- name: QuikPy
   image: /assets/images/quikpy_logo.png
   description: Работа с QUIK из Python
   advantages:
