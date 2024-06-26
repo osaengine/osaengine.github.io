@@ -16,4 +16,13 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  {% if page.tags.size > 0 %}
+    <div class="tags">
+      <span>Теги:</span>
+      {% for tag in page.tags %}
+        <a href="/tags#{{ tag | slugify }}">{{ tag }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
 </article>

@@ -2,6 +2,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+paginate: 5
+paginate_path: "/blog/page:num/"
+
 title: OS.Engine
 description: "Открытые платформы для алгоритмической торговли. Узнайте о лучших open source решениях для алготрейдинга."
 url: "https://osaengine.ru"
