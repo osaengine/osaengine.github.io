@@ -51,3 +51,30 @@
     - Проект не поддерживается
   github: https://github.com/quantopian/zipline
   website: https://zipline.ml4trading.io/
+
+- name: QUIKSharp
+  image: /assets/images/quiksharp_logo.png
+  description: "Работа с QUIK из C#"
+  advantages:
+    - Популярный терминал
+    - "Работа с C#"
+  github: https://github.com/finsight/QUIKSharp
+  website: https://github.com/finsight/QUIKSharp
+
+- name: QUIKPy
+  image: /assets/images/quikpy_logo.png
+  description: Работа с QUIK из Python
+  advantages:
+    - Популярный терминал
+    - Работа с Python
+  github: https://github.com/cia76/QuikPy
+  website: https://github.com/cia76/QuikPy
+
+- name: FinamWeb API
+  image: /assets/images/finam_logo.png
+  description: Web-обертка TXmlConnector
+  advantages:
+    - Простота использования
+    - Кросс-платформенно
+  github: https://github.com/FinamWeb/trade-api-docs
+  website: https://finamweb.github.io/trade-api-docs/
