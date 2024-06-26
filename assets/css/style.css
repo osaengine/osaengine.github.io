@@ -203,7 +203,6 @@ footer a {
 
 .post-image {
     width: 200px;
-    height: 150px;
     object-fit: cover;
     margin-right: 20px;
     border-radius: 5px;
@@ -234,13 +233,19 @@ footer a {
 
 .post {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
 }
 
 .post img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    margin: 2rem auto;
+    display: block;
+}
+
+.post-content {
+    margin-top: 2rem;
 }
 
 @media (max-width: 1024px) {
