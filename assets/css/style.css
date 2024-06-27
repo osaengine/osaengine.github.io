@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #f4f4f4;
+    background-color: #3f51b5;
     padding: 1rem;
     text-align: center;
 }
@@ -45,9 +45,14 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: bold;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c5cae9;
 }
 
 main {
@@ -60,6 +65,25 @@ main {
 .intro, .outro {
     margin-bottom: 2rem;
     text-align: center;
+}
+
+.telegram-link-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.telegram-link {
+    display: inline-block;
+    background-color: #0088cc;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.telegram-link:hover {
+    background-color: #0077b5;
 }
 
 .project-grid {
@@ -79,6 +103,7 @@ main {
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img {
@@ -126,10 +151,6 @@ main {
     background-color: #333;
 }
 
-.telegram-link {
-    background-color: #0088cc;
-}
-
 .website-link:hover {
     background-color: #45a049;
 }
@@ -138,13 +159,9 @@ main {
     background-color: #555;
 }
 
-.telegram-link:hover {
-    background-color: #0077b5;
-}
-
 footer {
     flex-shrink: 0;
-    background-color: #333;
+    background-color: #3f51b5;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -152,6 +169,12 @@ footer {
 
 footer a {
     color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #c5cae9;
 }
 
 .outro {
@@ -183,12 +206,13 @@ footer a {
 }
 
 .resources a {
-    color: #0066cc;
+    color: #3f51b5;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .resources a:hover {
-    text-decoration: underline;
+    color: #1a237e;
 }
 
 .post-list {
@@ -205,6 +229,12 @@ footer a {
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .post-image {
@@ -224,12 +254,13 @@ footer a {
 }
 
 .post-details h2 a {
-    color: #1e88e5;
+    color: #3f51b5;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .post-details h2 a:hover {
-    text-decoration: underline;
+    color: #1a237e;
 }
 
 .meta {
@@ -249,6 +280,8 @@ footer a {
     height: auto;
     margin: 2rem auto;
     display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .post-content {
@@ -273,10 +306,12 @@ footer a {
     margin-right: 0.5rem;
     text-decoration: none;
     border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .tags a:hover {
-    background-color: #ddd;
+    background-color: #3f51b5;
+    color: #fff;
 }
 
 .tags-list {
@@ -292,10 +327,12 @@ footer a {
     margin-bottom: 0.5rem;
     text-decoration: none;
     border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .tags-list a:hover {
-    background-color: #ddd;
+    background-color: #3f51b5;
+    color: #fff;
 }
 
 .pagination {
@@ -311,15 +348,17 @@ footer a {
     color: #333;
     background-color: #f4f4f4;
     border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pagination a:hover {
-    background-color: #ddd;
+    background-color: #3f51b5;
+    color: #fff;
 }
 
 .pagination .current-page {
     font-weight: bold;
-    background-color: #333;
+    background-color: #3f51b5;
     color: #fff;
 }
 
