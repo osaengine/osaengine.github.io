@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #3f51b5;
+    background-color: #5f9ea0;
     padding: 1rem;
     text-align: center;
 }
@@ -161,7 +161,7 @@ main {
 
 footer {
     flex-shrink: 0;
-    background-color: #3f51b5;
+    background-color: #5f9ea0;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -169,7 +169,6 @@ footer {
 
 footer a {
     color: #fff;
-    text-decoration: none;
     transition: color 0.3s ease;
 }
 
