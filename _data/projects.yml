@@ -78,3 +78,30 @@
     - Кросс-платформенно
   github: https://github.com/FinamWeb/trade-api-docs
   website: https://finamweb.github.io/trade-api-docs/
+
+- name: Nautilus Trader
+  image: /assets/images/nautilus_trader.png
+  description: Торговая платформа с облаком
+  advantages:
+    - Работа с Python
+    - Облачный сервис
+  github: https://github.com/nautechsystems/nautilus_trader
+  website: https://nautilustrader.io/
+
+- name: ML for Trading
+  image: /assets/images/ml4trading.png
+  description: Книга о машинном обучении
+  advantages:
+    - Машинное обучение
+    - Детальное объяснение
+  github: https://github.com/stefan-jansen/machine-learning-for-trading
+  website: https://ml4trading.io/
+
+- name: Backtesting.py
+  image: /assets/images/backtesting_py.png
+  description: Бэктестер на Python
+  advantages:
+    - Работа с Python
+    - Простой API
+  github: https://github.com/kernc/backtesting.py
+  website: https://kernc.github.io/backtesting.py/
