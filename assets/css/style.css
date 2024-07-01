@@ -287,17 +287,18 @@ footer a:hover {
 }
 
 .post-content pre {
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 .post-content code {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.9em;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .post-content img {
@@ -434,6 +435,15 @@ footer a:hover {
         height: auto;
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    .post-content pre {
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+    
+    .post-content code {
+        word-break: break-word;
     }
 
     .post-content img {
