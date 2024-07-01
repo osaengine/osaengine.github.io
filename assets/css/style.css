@@ -286,6 +286,20 @@ footer a:hover {
     margin-top: 2rem;
 }
 
+.post-content pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.post-content code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+
 .tags {
     margin-top: 1rem;
     font-size: 0.9rem;
