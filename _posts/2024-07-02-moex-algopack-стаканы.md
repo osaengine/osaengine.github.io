@@ -2,7 +2,7 @@
 layout: post
 title: "Продолжение: Улучшение кода после критики в чате АлгоПак"
 description: "После критики качества кода в чате АлгоПак, было решено внести улучшения и доработки."
-date: 2024-07-03
+date: 2024-07-02
 image: /assets/images/moex_algopack.png
 tags: [MOEX, AlgoPack, WebSocket, C#]
 ---
