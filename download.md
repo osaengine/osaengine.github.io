@@ -1,7 +1,7 @@
 ﻿---
 layout: default
 title: Скачать OS Engine
-permalink: /download/
+permalink: /скачать-os-engine/
 ---
 
 # OS Engine: Открытые платформы для трейдинга
