@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Плаза-протокол: что это и зачем он нужен"
+title: "Plaza-протокол и Plaza коннектор: что это и зачем он нужен"
 description: "Детальный анализ работы Плаза-протокола и его компонентов."
 date: 2024-07-16
 image: /assets/images/blog/plaza-protocol-cgate.png
