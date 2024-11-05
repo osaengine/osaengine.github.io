@@ -1,13 +1,10 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    <h1 itemprop="name headline">{{ page.title }}</h1>
-    <p class="meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-    </p>
-  </header>
+
+<div class="post">
+  <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+  <div class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</div>
 
   {% if page.image %}
     <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image">
@@ -25,4 +22,4 @@ layout: default
       {% endfor %}
     </div>
   {% endif %}
-</article>
+</div>
