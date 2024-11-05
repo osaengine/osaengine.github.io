@@ -420,9 +420,37 @@ footer a:hover {
         font-size: 1.5rem;
     }
 
+    nav {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 0;
+        padding: 10px 0;
+    }
+
     nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
         display: block;
-        margin-bottom: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
     }
 
     .post-item {
