@@ -13,10 +13,10 @@
   description: Чат по Тинькофф Инвестиции
   link: https://t.me/+_SJMWZw_9plmNjUy
 
-- name: TSLab
-  image: /assets/images/tslab_chat.png
-  description: Чат по TSLab
-  link: https://t.me/tslabprorugroup
+- name: OS Engine
+  image: /assets/images/logo.png
+  description: Чат по OS Engine
+  link: https://t.me/osengine
 
 - name: StockSharp
   image: /assets/images/stocksharp_chat.png
