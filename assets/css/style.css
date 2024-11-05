@@ -237,8 +237,6 @@ footer a:hover {
 }
 
 .post-image {
-    width: 200px;
-    height: 150px;
     object-fit: cover;
     margin-right: 20px;
     border-radius: 5px;
