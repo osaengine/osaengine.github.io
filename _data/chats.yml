@@ -3,20 +3,20 @@
   description: Чат по AlgoPack от Московской Биржи
   link: https://t.me/moex_algopack
 
-- name: Алор Брокер
-  image: /assets/images/alor_chat.png
-  description: Чат по Алор Брокер OpenAPI
-  link: https://t.me/alor_openapi_chat
+- name: OS Engine
+  image: /assets/images/logo.png
+  description: Чат по OS Engine
+  link: https://t.me/osengine
 
 - name: Тинькофф Инвестиции
   image: /assets/images/tinkoff_chat.png
   description: Чат по Тинькофф Инвестиции
   link: https://t.me/+_SJMWZw_9plmNjUy
 
-- name: OS Engine
-  image: /assets/images/logo.png
-  description: Чат по OS Engine
-  link: https://t.me/osengine
+- name: Алор Брокер
+  image: /assets/images/alor_chat.png
+  description: Чат по Алор Брокер OpenAPI
+  link: https://t.me/alor_openapi_chat
 
 - name: StockSharp
   image: /assets/images/stocksharp_chat.png
