@@ -236,7 +236,15 @@ footer a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.post-image-post {
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
 .post-image {
+    width: 200px;
+    height: 150px;
     object-fit: cover;
     margin-right: 20px;
     border-radius: 5px;
@@ -466,6 +474,13 @@ footer a:hover {
     }
 
     .post-image {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .post-image-post {
         width: 100%;
         height: auto;
         margin-right: 0;
