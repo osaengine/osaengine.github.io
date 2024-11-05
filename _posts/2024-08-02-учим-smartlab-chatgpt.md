@@ -4,7 +4,7 @@ title: "Импорт данных с Московской биржи в Google S
 description: "Как быстро и эффективно импортировать данные о ценах на акции с Московской биржи в Google Sheets с использованием Google Apps Script."
 date: 2024-08-02
 image: /assets/images/blog/google-sheet-moex-stocks.png
-tags: [ChatGPT, MOEX, SmartLab]
+tags: [ChatGPT, MOEX]
 ---
 
 Привет, друзья!
