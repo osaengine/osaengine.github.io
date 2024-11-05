@@ -408,6 +408,14 @@ footer a:hover {
         text-align: center;
     }
 
+    .project-card {
+        order: 2;
+    }
+    
+    .project-card:has(img[src*="stocksharp"]) {
+        order: 1;
+    }
+
     .project-card img {
         height: 200px;
     }

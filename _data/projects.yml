@@ -9,7 +9,7 @@
 
 - name: StockSharp
   image: /assets/images/stocksharp.png
-  description: Платформа для алгоритмической торговли
+  description: Платформа для алготрейдинга
   advantages:
     - Поддержка множества бирж
     - Конструктор стратегий без кода
