@@ -14,7 +14,7 @@
     - Поддержка множества бирж
     - Конструктор стратегий без кода
   github: https://github.com/StockSharp/StockSharp
-  website: https://stocksharp.com/
+  website: https://stocksharp.ru/
 
 - name: Backtrader
   image: /assets/images/backtrader.png
