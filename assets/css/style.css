@@ -406,6 +406,70 @@ footer a:hover {
     color: #fff;
 }
 
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.faq-section {
+    margin-bottom: 1.5rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.faq-section summary {
+    padding: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-section summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-section summary h2 {
+    color: #3f51b5;
+    margin: 0;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.faq-section summary h2::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-section[open] summary h2::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-links {
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.faq-link {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.faq-link:hover {
+    background: #e0e0e0;
+    color: #3f51b5;
+    padding-left: 1rem;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -550,6 +614,10 @@ footer a:hover {
     .post-content img {
         width: 100%;
         object-fit: contain;
+    }
+
+    .faq-container {
+        padding: 1rem;
     }
 
     .video-container {

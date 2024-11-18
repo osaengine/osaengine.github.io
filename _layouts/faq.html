@@ -9,18 +9,15 @@ layout: default
         {% assign section_data = section[1] %}
         {% assign section_questions = site.faq | where: "section", section[0] | sort: "order" %}
         
-        <div class="faq-section">
-            <h2>{{ section_data.name }}</h2>
-            <div class="faq-grid">
+        <details class="faq-section">
+            <summary>
+                <h2>{{ section_data.name }}</h2>
+            </summary>
+            <div class="faq-links">
                 {% for item in section_questions %}
-                    <details class="faq-item">
-                        <summary>{{ item.title }}</summary>
-                        <div class="faq-content">
-                            {{ item.content | markdownify }}
-                        </div>
-                    </details>
+                    <a href="{{ item.url }}" class="faq-link">{{ item.title }}</a>
                 {% endfor %}
             </div>
-        </div>
+        </details>
     {% endfor %}
 </div>
