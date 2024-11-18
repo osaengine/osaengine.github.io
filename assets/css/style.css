@@ -416,12 +416,14 @@ footer a:hover {
     margin-bottom: 1.5rem;
     background: #f5f5f5;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .faq-section summary {
     padding: 1.5rem;
     cursor: pointer;
     list-style: none;
+    box-sizing: border-box;
 }
 
 .faq-section summary::-webkit-details-marker {
@@ -454,6 +456,8 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .faq-link {
