@@ -466,9 +466,7 @@ footer a:hover {
     }
 
     .project-title {
-        position: relative;
-        background: #333;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        display: none; /* Скрываем заголовок на мобильных */
     }
 
     main {
