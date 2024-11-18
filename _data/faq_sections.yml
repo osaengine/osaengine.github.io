@@ -1,0 +1,23 @@
+basics:
+  name: "Основы алготрейдинга"
+  folder: "01_basics"
+
+technical:
+  name: "Техническая подготовка"
+  folder: "02_technical"
+
+practice:
+  name: "Практика и разработка"
+  folder: "03_practice"
+
+financial:
+  name: "Финансовые и биржевые аспекты"
+  folder: "04_financial"
+
+advanced:
+  name: "Продвинутые темы"
+  folder: "05_advanced"
+
+tools:
+  name: "Инструменты и ресурсы"
+  folder: "06_tools"

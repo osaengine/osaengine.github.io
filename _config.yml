@@ -16,3 +16,7 @@ social:
     - https://t.me/osengine_official
     - https://github.com/osaengine
 lang: ru_RU
+
+collections:
+  faq:
+    output: true

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="faq-container">
+    <h1>Часто задаваемые вопросы (FAQ)</h1>
+    
+    {% for section in site.data.faq_sections %}
+        {% assign section_data = section[1] %}
+        {% assign section_questions = site.faq | where: "section", section[0] | sort: "order" %}
+        
+        <div class="faq-section">
+            <h2>{{ section_data.name }}</h2>
+            <div class="faq-grid">
+                {% for item in section_questions %}
+                    <details class="faq-item">
+                        <summary>{{ item.title }}</summary>
+                        <div class="faq-content">
+                            {{ item.content | markdownify }}
+                        </div>
+                    </details>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
