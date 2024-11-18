@@ -1,23 +1,23 @@
-basics:
+основы:
   name: "Основы алготрейдинга"
-  folder: "01_basics"
+  folder: "основы-алготрейдинга"
 
-technical:
+техподготовка:
   name: "Техническая подготовка"
-  folder: "02_technical"
+  folder: "техническая-подготовка"
 
-practice:
+практика:
   name: "Практика и разработка"
-  folder: "03_practice"
+  folder: "практика-и-разработка"
 
-financial:
+финансы:
   name: "Финансовые и биржевые аспекты"
-  folder: "04_financial"
+  folder: "финансы-и-биржи"
 
-advanced:
+продвинутое:
   name: "Продвинутые темы"
-  folder: "05_advanced"
+  folder: "продвинутые-темы"
 
-tools:
+инструменты:
   name: "Инструменты и ресурсы"
-  folder: "06_tools"
+  folder: "инструменты-и-ресурсы"
