@@ -149,18 +149,20 @@ main {
 }
 
 .project-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+    gap: 10px;
+    z-index: 2;
 }
 
 .website-link, .github-link, .telegram-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
+    opacity: 0.8;
+}
+
+.website-link:hover, .github-link:hover, .telegram-link:hover {
+    opacity: 1;
 }
 
 .website-link {
