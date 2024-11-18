@@ -1,7 +1,7 @@
 ---
 layout: faq_article
 title: "Что такое биржевые API и как с ними работать?"
-section: техническая подготовка
+section: техподготовка
 order: 3
 ---
 
