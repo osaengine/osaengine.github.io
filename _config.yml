@@ -20,3 +20,4 @@ lang: ru_RU
 collections:
   faq:
     output: true
+    permalink: /faq/:path/

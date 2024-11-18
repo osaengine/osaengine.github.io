@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="faq-article">
+    <div class="faq-breadcrumbs">
+        <a href="/faq/">FAQ</a> &raquo;
+        <span>{{ page.section_name }}</span>
+    </div>
+
+    <h1>{{ page.title }}</h1>
+
+    <div class="faq-content">
+        {{ content }}
+    </div>
+
+    <div class="faq-navigation">
+        {% if page.prev_url %}
+        <a href="{{ page.prev_url }}" class="prev-faq">&larr; {{ page.prev_title }}</a>
+        {% endif %}
+        
+        {% if page.next_url %}
+        <a href="{{ page.next_url }}" class="next-faq">{{ page.next_title }} &rarr;</a>
+        {% endif %}
+    </div>
+</article>
