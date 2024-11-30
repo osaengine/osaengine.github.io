@@ -1,5 +1,5 @@
 ---
 layout: faq
 title: Гайд по платформам OSEngine
-permalink: /faq/
+permalink: /гайд-osengine/
 ---
