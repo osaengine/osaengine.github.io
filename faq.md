@@ -1,5 +1,5 @@
 ---
 layout: faq
-title: FAQ - Часто задаваемые вопросы
+title: Гайд по платформам OSEngine
 permalink: /faq/
 ---
