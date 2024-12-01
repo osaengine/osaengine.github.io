@@ -588,6 +588,11 @@ footer a:hover {
         margin-top: 5px;
     }
 
+    .burger-btn.active {
+        position: fixed;
+        z-index: 1001;
+    }
+
     .burger-btn.active span:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -659,6 +664,14 @@ footer a:hover {
         z-index: 2;
     }
 
+    nav ul.active li {
+        margin: 15px 0;
+        font-size: 24px;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+        animation-delay: calc(0.1s * var(--item-index, 0));
+    }
+
     nav ul li {
         display: block;
         margin: 0;
@@ -680,13 +693,19 @@ footer a:hover {
     }
 
     .nav-menu.active {
-        display: block;
-        position: absolute;
-        top: 80px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
         left: 0;
         right: 0;
-        background-color: #5f9ea0;
-        z-index: 10;
+        bottom: 0;
+        background-color: rgba(95, 158, 160, 0.95);
+        z-index: 1000;
+        padding: 60px 0 20px;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-menu.active li {
@@ -743,5 +762,16 @@ footer a:hover {
 
     .video-container {
         margin: 1rem 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
