@@ -675,6 +675,31 @@ footer a:hover {
         text-align: center;
     }
 
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #5f9ea0;
+        z-index: 10;
+    }
+
+    .nav-menu.active li {
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-menu.active a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
     .logo {
         margin-left: 50px;
     }
