@@ -19,8 +19,7 @@
             <h1>{{ site.title }} - Open Source AlgoTrading платформы</h1>
         </div>
 
-        <input type="checkbox" id="burger" class="burger-checkbox">
-        <button for="burger" class="burger-btn">
+        <button id="menuButton" class="burger-btn">
             <span></span>
             <span></span>
             <span></span>
@@ -36,6 +35,13 @@
             </ul>
         </nav>
     </header>
+
+    <script>
+        document.getElementById('menuButton').onclick = e => {
+            e.target.classList.toggle('active');
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
 
     <main>
         {{ content }}
