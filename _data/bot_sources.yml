@@ -1,0 +1,19 @@
+- name: "StockSharp Store"
+  image: "/assets/images/stocksharp.png"
+  description: "Большая коллекция бесплатных торговых роботов для StockSharp. Включает роботы для различных рынков: акции, фьючерсы, криптовалюты."
+  url: "https://stocksharp.ru/store/?groups=4"
+
+- name: "QuantConnect Strategy Library"
+  image: "/assets/images/lean.png"
+  description: "Библиотека готовых алгоритмических стратегий от сообщества QuantConnect. Содержит подробное описание и бэктесты каждой стратегии."
+  url: "https://www.quantconnect.com/docs/v2/writing-algorithms/strategy-library"
+
+- name: "MQL5 Кодовая База"
+  image: "/assets/images/mql5.png"
+  description: "Крупнейшая база кода торговых роботов для MetaTrader. Содержит тысячи бесплатных советников, индикаторов и скриптов."
+  url: "https://www.mql5.com/ru/code"
+
+- name: "TradersUnion Free Robots"
+  image: "/assets/images/tradersunion.png"
+  description: "Подборка лучших бесплатных торговых роботов для форекс. Включает описание принципов работы и инструкции по установке."
+  url: "https://tradersunion.com/ru/interesting-articles/luchshie-besplatnye-torgovye-roboty-foreks"

@@ -1,0 +1,23 @@
+---
+layout: default
+title: Каталог бесплатных торговых роботов
+permalink: /бесплатные-торговые-роботы/
+---
+
+<div class="intro">
+  <h1>Где найти бесплатных торговых роботов</h1>
+  <p>Каталог ресурсов с бесплатными торговыми роботами и алгоритмическими стратегиями. На этих площадках вы можете найти готовые решения для алготрейдинга.</p>
+</div>
+
+<div class="sources-grid">
+  {% for source in site.data.bot_sources %}
+  <div class="source-card">
+    <img src="{{ source.image | relative_url }}" alt="{{ source.name }}" class="source-image">
+    <div class="source-info">
+      <h2>{{ source.name }}</h2>
+      <p class="source-description">{{ source.description }}</p>
+      <a href="{{ source.url }}" class="source-link" target="_blank">Перейти на сайт</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
