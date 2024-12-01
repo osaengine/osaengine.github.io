@@ -564,23 +564,27 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .burger-btn {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        cursor: pointer;
-        padding: 10px;
-        z-index: 3;
-    }
+       display: block;
+       position: absolute;
+       left: 20px;
+       top: 20px;
+       cursor: pointer;
+       padding: 10px;
+       z-index: 3;
+   }
 
-    .burger-btn span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        margin: 5px 0;
-        transition: 0.3s;
-    }
+   .burger-btn span {
+       display: block;
+       width: 25px;
+       height: 3px;
+       background-color: #333;
+       margin: 5px 0;
+       transition: 0.3s;
+   }
+
+   .logo {
+       padding-left: 50px;
+   }
 
     .project-grid {
         grid-template-columns: 1fr;
@@ -614,7 +618,7 @@ footer a:hover {
     }
 
     .project-title {
-        display: none; /* Скрываем заголовок на мобильных */
+        display: none;
     }
 
     main {
@@ -630,14 +634,15 @@ footer a:hover {
     }
 
     nav ul {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        right: 0;
-        background-color: #5f9ea0;
-        transition: 0.3s;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+       position: fixed;
+       top: -100vh;
+       left: 0;
+       right: 0;
+       background-color: #5f9ea0;
+       transition: 0.3s;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+       z-index: 2;
+   }
 
     nav ul li {
         display: block;
@@ -656,7 +661,10 @@ footer a:hover {
     } 
 
     .burger-checkbox:checked ~ nav ul {
-        top: 70px;
+       top: 70px;
+       height: auto;
+       max-height: calc(100vh - 70px);
+       overflow-y: auto;
     }
 
     .burger-checkbox:checked ~ .burger-btn span:nth-child(1) {
