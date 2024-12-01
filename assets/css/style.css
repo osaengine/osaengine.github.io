@@ -563,6 +563,27 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-left: 0;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .logo h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
     .burger-btn {
         width: 45px;
         height: 45px;
@@ -573,6 +594,11 @@ footer a:hover {
         background: transparent;
         border: none;
         outline: none;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-left: 10px;
+        margin-top: 5px;
     }
 
     .burger-btn span {
@@ -719,8 +745,11 @@ footer a:hover {
         display: block;
     }
 
-    .logo {
-        margin-left: 50px;
+
+    .header-mobile {
+        display: flex;
+        align-items: center;
+        width: 100%;
     }
 
     .post-item {
