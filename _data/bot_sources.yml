@@ -1,4 +1,4 @@
-- name: "StockSharp Store"
+- name: "StockSharp Стратегии"
   image: "/assets/images/stocksharp.png"
   description: "Большая коллекция бесплатных торговых роботов для StockSharp. Включает роботы для различных рынков: акции, фьючерсы, криптовалюты."
   url: "https://stocksharp.ru/store/?groups=4"

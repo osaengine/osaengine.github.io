@@ -647,9 +647,6 @@ footer a:hover {
         border: none;
         outline: none;
         margin-left: 10px;
-        position: fixed;
-        right: 20px;
-        left: auto;
     }
 
     .burger-btn span {
