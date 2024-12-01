@@ -538,6 +538,14 @@ footer a:hover {
     border: none;
 }
 
+.burger-checkbox {
+    display: none;
+}
+
+.burger-btn {
+    display: none;
+}
+
 @media (min-width: 769px) {
     .project-links {
         position: absolute;
@@ -555,6 +563,25 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .burger-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 3;
+    }
+
+    .burger-btn span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
     .project-grid {
         grid-template-columns: 1fr;
     }
@@ -603,33 +630,45 @@ footer a:hover {
     }
 
     nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin: 0;
-        padding: 15px;
-        width: 100%;
-        box-sizing: border-box;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        background-color: #5f9ea0;
+        transition: 0.3s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     nav ul li {
+        display: block;
         margin: 0;
-        width: 100%;
-        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
     }
 
     nav ul li a {
         display: block;
-        padding: 12px;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
-        width: 100%;
-        box-sizing: border-box;
+        padding: 15px 20px;
+        text-align: center;
+    } 
+
+    .burger-checkbox:checked ~ nav ul {
+        top: 70px;
     }
 
-    nav ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+    .burger-checkbox:checked ~ .burger-btn span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger-checkbox:checked ~ .burger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-checkbox:checked ~ .burger-btn span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .post-item {
