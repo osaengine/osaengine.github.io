@@ -1,6 +1,7 @@
 ﻿---
 layout: default
 title: Скачать OS Engine
+description: "Как скачивать и устанавливать платформы OS Engine"
 permalink: /скачать-os-engine/
 ---
 
