@@ -17,3 +17,8 @@
   image: "/assets/images/tradersunion.png"
   description: "Подборка лучших бесплатных торговых роботов для форекс. Включает описание принципов работы и инструкции по установке."
   url: "https://tradersunion.com/ru/interesting-articles/luchshie-besplatnye-torgovye-roboty-foreks"
+
+- name: "PMN Trade"
+  image: "/assets/images/pmntrade.jpg"
+  description: "Индикаторы и роботы для QUIK. Большой выбор индикаторов. Работа с терминалом QUIK."
+  url: "https://pmntrade.ru"
