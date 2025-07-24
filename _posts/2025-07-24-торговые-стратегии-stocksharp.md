@@ -4,7 +4,7 @@ title: "Коллекция торговых стратегий от StockSharp"
 description: "StockSharp опубликовал новость о доступности сотен торговых стратегий с открытым исходным кодом на GitHub — для использования в Designer, Runner, Shell или через API."
 date: 2025-07-24
 image: /assets/images/blog/github_strategies.png
-tags: [торговые стратегии, алготрейдинг, StockSharp]
+tags: [торговые стратегии, алготрейдинг, GitHub, StockSharp]
 ---
 
 На сайте StockSharp опубликована новость о том, что на GitHub теперь доступна обширная коллекция торговых стратегий на C# и Python, готовых к использованию в Designer, Runner, Shell или через API.
