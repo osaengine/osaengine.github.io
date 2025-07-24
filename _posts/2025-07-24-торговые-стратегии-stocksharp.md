@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Огромная коллекция торговых стратегий теперь на GitHub"
+title: "Коллекция торговых стратегий от StockSharp"
 description: "StockSharp опубликовал новость о доступности сотен торговых стратегий с открытым исходным кодом на GitHub — для использования в Designer, Runner, Shell или через API."
 date: 2025-07-24
 image: /assets/images/blog/github_strategies.png
