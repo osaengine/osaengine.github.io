@@ -14,7 +14,7 @@ tags: [торговые стратегии, алготрейдинг, StockSharp
 В репозиториях приводится документация по каждому решению, описаны параметры и варианты настройки. Пользователи могут свободно модифицировать код под собственные задачи или использовать его для обучения и тестирования.
 
 Подробнее о проекте и ссылки на коллекцию доступны в новости на сайте StockSharp:
-https://stocksharp.ru/topic/28416/ogromnaya-kollektsiya-torgovyh-strategii-uzhe-na-github!-zapuskaite-v-paru-klikov-/
+[https://stocksharp.ru/topic/28416/ogromnaya-kollektsiya-torgovyh-strategii-uzhe-na-github!-zapuskaite-v-paru-klikov-/](https://stocksharp.ru/topic/28416/ogromnaya-kollektsiya-torgovyh-strategii-uzhe-na-github!-zapuskaite-v-paru-klikov-/)
 
 **GitHub-репозиторий:** 
-https://github.com/StockSharp/AlgoTrading
+[https://github.com/StockSharp/AlgoTrading](https://github.com/StockSharp/AlgoTrading)
