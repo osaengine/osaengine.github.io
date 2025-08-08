@@ -120,9 +120,6 @@ permalink: /скачать-os-engine/
         <div class="step-content">
             <h3>Скачивание</h3>
             <p>Перейдите в репозиторий выбранного проекта на GitHub и клонируйте его.</p>
-            <div class="code-example">
-                <code>git clone https://github.com/[username]/[repository].git</code>
-            </div>
         </div>
     </div>
 
