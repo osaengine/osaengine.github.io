@@ -1,10 +1,15 @@
 ---
 layout: default
+title: Гайд по платформам OSEngine
+description: "Подробный гайд по возможностям платформ OS Engine для трейдеров и разработчиков."
 ---
 
+<section class="hero">
+    <h2>Гайд по OSEngine и алготрейдингу</h2>
+    <p>Исчерпывающее руководство по работе с платформами алгоритмической торговли. От основ до продвинутых техник.</p>
+</section>
+
 <div class="faq-container">
-    <h1>Гайд по OSEngine и алготрейдингу</h1>
-    
     {% for section in site.data.faq_sections %}
         {% assign section_data = section[1] %}
         {% assign section_questions = site.faq | where: "section", section[0] | sort: "order" %}
@@ -12,12 +17,30 @@ layout: default
         <details class="faq-section">
             <summary>
                 <h2>{{ section_data.name }}</h2>
+                <div class="faq-section-meta">
+                    <span class="question-count">{{ section_questions.size }} вопросов</span>
+                </div>
             </summary>
             <div class="faq-links">
                 {% for item in section_questions %}
-                    <a href="{{ item.url }}" class="faq-link">{{ item.title }}</a>
+                    <a href="{{ item.url }}" class="faq-link">
+                        <span class="faq-link-title">{{ item.title }}</span>
+                        {% if item.description %}
+                            <span class="faq-link-description">{{ item.description | truncatewords: 15 }}</span>
+                        {% endif %}
+                    </a>
                 {% endfor %}
             </div>
         </details>
     {% endfor %}
+    
+    {% if site.faq.size == 0 %}
+        <div class="empty-state">
+            <h3>📚 Раздел в разработке</h3>
+            <p>Мы работаем над созданием подробного гайда. Скоро здесь появится много полезной информации!</p>
+            <a href="https://t.me/osengine" class="btn btn-primary" target="_blank">
+                💬 Задать вопрос в чате
+            </a>
+        </div>
+    {% endif %}
 </div>

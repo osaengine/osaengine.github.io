@@ -3,47 +3,64 @@ layout: default
 title: Новости алготрейдинга
 description: Последние новости и обновления об open source алготрейдинг платформах
 ---
-<h1>Последние новости</h1>
-<p>Подпишитесь на наш <a href="https://t.me/osengine_news" target="_blank">Telegram-канал</a>, чтобы получать последние новости в Telegram.</p>
-<ul class="post-list">
-  {% for post in paginator.posts %}
-    <li class="post-item">
-      <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
-      <div class="post-details">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p class="meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-        <p>{{ post.excerpt }}</p>
-        {% if post.tags.size > 0 %}
-          <div class="tags">
-            <span>Теги:</span>
-            {% for tag in post.tags %}
-              <a href="/tags#{{ tag | slugify }}">{{ tag }}</a>
-            {% endfor %}
+
+<section class="hero">
+    <h2>Последние новости</h2>
+    <p>Следите за развитием мира алгоритмической торговли. Подпишитесь на наш <a href="https://t.me/osengine_news" target="_blank" style="color: var(--primary-color);">Telegram-канал</a>, чтобы получать последние новости.</p>
+</section>
+
+<div class="blog-container">
+    <ul class="post-list">
+      {% for post in paginator.posts %}
+        <li class="post-item">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+          {% else %}
+            <div class="post-image-placeholder">
+              <span>📰</span>
+            </div>
+          {% endif %}
+          <div class="post-details">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p class="meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
+            </p>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            {% if post.tags.size > 0 %}
+              <div class="tags">
+                <span>Теги:</span>
+                {% for tag in post.tags %}
+                  <a href="/tags#{{ tag | slugify }}">{{ tag }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <a href="{{ post.url }}" class="btn btn-primary read-more-btn">Читать далее</a>
           </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-btn">&laquo; Предыдущая</a>
+        {% endif %}
+
+        <div class="pagination-numbers">
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <span class="current-page">{{ page }}</span>
+            {% elsif page == 1 %}
+              <a href="{{ '/blog/' | prepend: site.baseurl }}">{{ page }}</a>
+            {% else %}
+              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-btn">Следующая &raquo;</a>
         {% endif %}
       </div>
-    </li>
-  {% endfor %}
-</ul>
-
-{% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo; Предыдущая</a>
     {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="current-page">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/blog/' | prepend: site.baseurl }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Следующая &raquo;</a>
-    {% endif %}
-  </div>
-{% endif %}
+</div>
