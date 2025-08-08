@@ -2,15 +2,30 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
+  <header class="post-header">
     <h1 itemprop="name headline">{{ page.title }}</h1>
-    <p class="meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-    </p>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%d %B %Y" }}
+      </time>
+      {% if page.author %}
+        <span class="post-author">
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
+          </span>
+        </span>
+      {% endif %}
+      {% assign words = content | number_of_words %}
+      <span class="reading-time">
+        • {% if words < 360 %}1 мин{% else %}{{ words | divided_by: 180 }} мин{% endif %} чтения
+      </span>
+    </div>
   </header>
 
   {% if page.image %}
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image-post">
+    <div class="post-featured-image">
+      <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image-post" itemprop="image">
+    </div>
   {% endif %}
 
   <div class="post-content" itemprop="articleBody">
@@ -18,11 +33,150 @@ layout: default
   </div>
 
   {% if page.tags.size > 0 %}
-    <div class="tags">
-      <span>Теги:</span>
+    <div class="post-tags">
+      <span class="tags-label">Теги:</span>
       {% for tag in page.tags %}
-        <a href="/tags#{{ tag | slugify }}">{{ tag }}</a>
+        <a href="/tags#{{ tag | slugify }}" class="tag-link" rel="tag">{{ tag }}</a>
       {% endfor %}
     </div>
   {% endif %}
+
+  <div class="post-sharing">
+    <h3>Поделиться статьей:</h3>
+    <div class="sharing-buttons">
+      <a href="https://t.me/share/url?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}" 
+         class="share-btn telegram" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Telegram">
+        <span>📱 Telegram</span>
+      </a>
+      
+      <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}&via=osengine_ru" 
+         class="share-btn twitter" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Twitter">
+        <span>🐦 Twitter</span>
+      </a>
+      
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | uri_escape }}" 
+         class="share-btn facebook" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Facebook">
+        <span>📘 Facebook</span>
+      </a>
+      
+      <a href="https://vk.com/share.php?url={{ site.url }}{{ page.url | uri_escape }}&title={{ page.title | uri_escape }}" 
+         class="share-btn vkontakte" target="_blank" rel="noopener noreferrer" aria-label="Поделиться ВКонтакте">
+         <span>🔵 ВКонтакте</span>
+      </a>
+      
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | uri_escape }}" 
+         class="share-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в LinkedIn">
+        <span>💼 LinkedIn</span>
+      </a>
+      
+      <button class="share-btn copy-link" onclick="copyToClipboard('{{ site.url }}{{ page.url }}')" aria-label="Скопировать ссылку">
+        <span>🔗 Копировать ссылку</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Related Posts -->
+  {% assign related_posts = site.related_posts | limit: 3 %}
+  {% if related_posts.size > 0 %}
+  <div class="related-posts">
+    <h3>Похожие статьи</h3>
+    <div class="related-posts-grid">
+      {% for post in related_posts %}
+      <article class="related-post-card">
+        {% if post.image %}
+          <img src="{{ post.image }}" alt="{{ post.title }}" class="related-post-image">
+        {% else %}
+          <div class="related-post-placeholder">📰</div>
+        {% endif %}
+        <div class="related-post-content">
+          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Navigation to Previous/Next Posts -->
+  <nav class="post-navigation">
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}" class="nav-previous" rel="prev">
+        ← {{ page.previous.title | truncate: 30 }}
+      </a>
+    {% endif %}
+    {% if page.next %}
+      <a href="{{ page.next.url }}" class="nav-next" rel="next">
+        {{ page.next.title | truncate: 30 }} →
+      </a>
+    {% endif %}
+  </nav>
+
+  <!-- Comments Section Placeholder -->
+  <div class="post-comments">
+    <h3>Обсуждение</h3>
+    <p>Присоединяйтесь к обсуждению в нашем <a href="https://t.me/osengine" target="_blank">Telegram-чате</a>!</p>
+    
+    <!-- Здесь можно добавить систему комментариев (Disqus, Gitalk, etc.) -->
+    <div id="comments">
+      <!-- Comments system integration -->
+    </div>
+  </div>
 </article>
+
+<script>
+// Copy to clipboard function
+function copyToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      showCopyMessage('Ссылка скопирована!');
+    });
+  } else {
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      document.execCommand('copy');
+      showCopyMessage('Ссылка скопирована!');
+    } catch (err) {
+      showCopyMessage('Ошибка копирования');
+    }
+    
+    textArea.remove();
+  }
+}
+
+function showCopyMessage(message) {
+  // Create and show a temporary message
+  const msgEl = document.createElement('div');
+  msgEl.textContent = message;
+  msgEl.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    z-index: 10000;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  `;
+  
+  document.body.appendChild(msgEl);
+  
+  setTimeout(() => {
+    msgEl.style.opacity = '0';
+    msgEl.style.transform = 'translateY(-20px)';
+    setTimeout(() => msgEl.remove(), 300);
+  }, 2000);
+}
+</script>
