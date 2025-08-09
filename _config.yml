@@ -17,6 +17,12 @@ social:
     - https://github.com/osaengine
 lang: ru_RU
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/preview.png
+
 collections:
   faq:
     output: true
