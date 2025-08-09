@@ -1472,14 +1472,6 @@ main {
     border-color: var(--primary-color);
 }
 
-.platform-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
 .platform-card h3 {
     color: var(--text-primary);
     margin-bottom: 1rem;
@@ -2603,10 +2595,9 @@ main {
     gap: 1rem;
 }
 
-/* Ограничение размера картинок */
 .platform-logo {
-    width: 60px;
-    height: 60px;
+    width: 260px;
+    height: 260px;
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
