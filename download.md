@@ -23,29 +23,61 @@ OS Engine — это общее название для платформ с от
 ## Популярные платформы OS Engine
 
 {% for project in site.data.projects %}
-### {{ project.name }}
-
-![{{ project.name }}]({{ project.image }})
-
-{{ project.description }}
-
-**Преимущества:**
-{% for advantage in project.advantages %}
-- {{ advantage }}
-{% endfor %}
-
-**Системные требования:** {{ project.system_requirements }}
-
-**Установка:** `{{ project.install_command }}`
-
-**Ссылки:**
-- [⬇️ Скачать]({{ project.download_url }})
-- [📁 GitHub]({{ project.github }})
-- [🌐 Сайт]({{ project.website }})
-{% if project.documentation %}- [📖 Документация]({{ project.documentation }}){% endif %}
-{% if project.telegram_chat %}- [💬 Чат]({{ project.telegram_chat }}){% endif %}
-
----
+<div class="platform-section">
+  <div class="platform-header">
+    <img src="{{ project.image }}" alt="{{ project.name }}" class="platform-logo">
+    <h3>{{ project.name }}</h3>
+  </div>
+  
+  <div class="platform-content">
+    <p>{{ project.description }}</p>
+    
+    <div class="platform-advantages">
+      {% for advantage in project.advantages %}
+      <span class="advantage-tag">{{ advantage }}</span>
+      {% endfor %}
+    </div>
+    
+    <div class="platform-details">
+      <div class="detail-item">
+        <strong>Системные требования:</strong>
+        <span>{{ project.system_requirements }}</span>
+      </div>
+      
+      <div class="detail-item">
+        <strong>Установка:</strong>
+        <code>{{ project.install_command }}</code>
+      </div>
+    </div>
+    
+    <div class="platform-links">
+      <a href="{{ project.download_url }}" class="platform-link download-link" target="_blank">
+        <span class="link-icon">⬇️</span>
+        <span class="link-text">Скачать</span>
+      </a>
+      <a href="{{ project.github }}" class="platform-link github-link" target="_blank">
+        <span class="link-icon">📁</span>
+        <span class="link-text">GitHub</span>
+      </a>
+      <a href="{{ project.website }}" class="platform-link website-link" target="_blank">
+        <span class="link-icon">🌐</span>
+        <span class="link-text">Сайт</span>
+      </a>
+      {% if project.documentation %}
+      <a href="{{ project.documentation }}" class="platform-link docs-link" target="_blank">
+        <span class="link-icon">📖</span>
+        <span class="link-text">Документация</span>
+      </a>
+      {% endif %}
+      {% if project.telegram_chat %}
+      <a href="{{ project.telegram_chat }}" class="platform-link chat-link" target="_blank">
+        <span class="link-icon">💬</span>
+        <span class="link-text">Чат</span>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
 {% endfor %}
 
 ## Как выбрать платформу

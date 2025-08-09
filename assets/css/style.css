@@ -2562,6 +2562,234 @@ main {
     text-decoration: underline;
 }
 
+/* Platform Section Styles for Download Page */
+.platform-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.platform-section:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.platform-header {
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Ограничение размера картинок */
+.platform-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    border: 1px solid var(--border-color);
+}
+
+.platform-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.platform-content {
+    padding: 1.5rem;
+}
+
+.platform-content > p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.platform-advantages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.advantage-tag {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.platform-details {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-item strong {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.detail-item span {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.detail-item code {
+    background: var(--bg-primary);
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
+    font-family: 'Courier New', monospace;
+}
+
+/* Красивые стилизованные ссылки */
+.platform-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+.platform-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.link-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.link-text {
+    white-space: nowrap;
+}
+
+/* Цветовая схема для разных типов ссылок */
+.download-link {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.download-link:hover {
+    background: var(--primary-hover);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.github-link {
+    background: #24292e;
+    color: white;
+    border-color: #24292e;
+}
+
+.github-link:hover {
+    background: #1a1e22;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.website-link {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.website-link:hover {
+    background: #059669;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.docs-link {
+    background: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
+}
+
+.docs-link:hover {
+    background: #d97706;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.chat-link {
+    background: #0088cc;
+    color: white;
+    border-color: #0088cc;
+}
+
+.chat-link:hover {
+    background: #006ba3;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Эффект волны при наведении */
+.platform-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.platform-link:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
 #comments {
     margin-top: 2rem;
     min-height: 100px;
@@ -2628,6 +2856,32 @@ main {
         display: block;
         margin-bottom: 0.5rem;
         margin-right: 0;
+    }
+
+    /* Platform Section Mobile */
+    .platform-header {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .platform-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .platform-content {
+        padding: 1rem;
+    }
+    
+    .platform-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .platform-link {
+        padding: 0.6rem;
+        font-size: 0.85rem;
     }
 }
 
