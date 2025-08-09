@@ -6,6 +6,11 @@
     - Активное сообщество
   github: https://github.com/QuantConnect/Lean
   website: https://www.quantconnect.com/lean/
+  download_url: https://github.com/QuantConnect/Lean/releases/latest
+  install_command: "git clone https://github.com/QuantConnect/Lean.git"
+  system_requirements: "Windows/Linux/macOS, .NET 6+, Python 3.8+"
+  documentation: https://www.quantconnect.com/docs/
+  telegram_chat: ""
 
 - name: StockSharp
   image: /assets/images/stocksharp.png
@@ -15,6 +20,11 @@
     - Конструктор стратегий без кода
   github: https://github.com/StockSharp/StockSharp
   website: https://stocksharp.ru/
+  download_url: https://stocksharp.ru/products/download/
+  install_command: "Скачать .msi установщик с GitHub"
+  system_requirements: "Windows/Linux/macOS, .NET 6+"
+  documentation: https://doc.stocksharp.ru/
+  telegram_chat: https://t.me/stocksharpchat
 
 - name: Backtrader
   image: /assets/images/backtrader.png
@@ -24,6 +34,11 @@
     - Гибкая архитектура
   github: https://github.com/mementum/backtrader
   website: https://www.backtrader.com/
+  download_url: https://pypi.org/project/backtrader/
+  install_command: "pip install backtrader"
+  system_requirements: "Python 3.6+, кроссплатформенно"
+  documentation: https://www.backtrader.com/docu/
+  telegram_chat: ""
 
 - name: CCXT
   image: /assets/images/ccxt.png
@@ -33,6 +48,11 @@
     - Унифицированный API
   github: https://github.com/ccxt/ccxt
   website: https://ccxt.trade/
+  download_url: https://pypi.org/project/ccxt/
+  install_command: "pip install ccxt"
+  system_requirements: "Python 3.7+, Node.js 15.0+, PHP 7.0+"
+  documentation: https://docs.ccxt.com/
+  telegram_chat: ""
 
 - name: QuantLib
   image: /assets/images/quantlib.png
@@ -42,6 +62,11 @@
     - Реализация ценообразования
   github: https://github.com/lballabio/QuantLib
   website: https://www.quantlib.org/
+  download_url: https://github.com/lballabio/QuantLib/releases/latest
+  install_command: "pip install QuantLib-Python"
+  system_requirements: "C++, Python 3.6+, кроссплатформенно"
+  documentation: https://www.quantlib.org/docs.shtml
+  telegram_chat: ""
 
 - name: Zipline
   image: /assets/images/zipline.png
@@ -51,6 +76,11 @@
     - Проект не поддерживается
   github: https://github.com/quantopian/zipline
   website: https://zipline.ml4trading.io/
+  download_url: https://pypi.org/project/zipline-reloaded/
+  install_command: "pip install zipline-reloaded"
+  system_requirements: "Python 3.6+, кроссплатформенно"
+  documentation: https://zipline.ml4trading.io/
+  telegram_chat: ""
 
 - name: QUIKSharp
   image: /assets/images/quiksharp_logo.png
@@ -60,6 +90,11 @@
     - "Работа с C#"
   github: https://github.com/finsight/QUIKSharp
   website: https://github.com/finsight/QUIKSharp
+  download_url: https://github.com/finsight/QUIKSharp/releases/latest
+  install_command: "Install-Package QuikSharp"
+  system_requirements: "Windows, QUIK, .NET Framework 4.5+"
+  documentation: https://github.com/finsight/QUIKSharp/wiki
+  telegram_chat: ""
 
 - name: QuikPy
   image: /assets/images/quikpy_logo.png
@@ -69,6 +104,11 @@
     - Работа с Python
   github: https://github.com/cia76/QuikPy
   website: https://github.com/cia76/QuikPy
+  download_url: https://pypi.org/project/QuikPy/
+  install_command: "pip install QuikPy"
+  system_requirements: "Windows, QUIK, Python 3.6+"
+  documentation: https://github.com/cia76/QuikPy/blob/master/README.md
+  telegram_chat: ""
 
 - name: FinamWeb API
   image: /assets/images/finam_logo.png
@@ -78,6 +118,11 @@
     - Кросс-платформенно
   github: https://github.com/FinamWeb/trade-api-docs
   website: https://finamweb.github.io/trade-api-docs/
+  download_url: https://finamweb.github.io/trade-api-docs/
+  install_command: "REST API - без установки"
+  system_requirements: "Любая ОС с HTTP клиентом"
+  documentation: https://finamweb.github.io/trade-api-docs/
+  telegram_chat: ""
 
 - name: Nautilus Trader
   image: /assets/images/nautilus_trader.png
@@ -87,6 +132,11 @@
     - Облачный сервис
   github: https://github.com/nautechsystems/nautilus_trader
   website: https://nautilustrader.io/
+  download_url: https://pypi.org/project/nautilus-trader/
+  install_command: "pip install nautilus-trader"
+  system_requirements: "Python 3.10+, кроссплатформенно"
+  documentation: https://docs.nautilustrader.io/
+  telegram_chat: ""
 
 - name: ML for Trading
   image: /assets/images/ml4trading.png
@@ -96,6 +146,11 @@
     - Детальное объяснение
   github: https://github.com/stefan-jansen/machine-learning-for-trading
   website: https://ml4trading.io/
+  download_url: https://github.com/stefan-jansen/machine-learning-for-trading/archive/refs/heads/main.zip
+  install_command: "git clone репозитория"
+  system_requirements: "Python 3.8+, кроссплатформенно"
+  documentation: https://ml4trading.io/
+  telegram_chat: ""
 
 - name: Backtesting.py
   image: /assets/images/backtesting_py.png
@@ -105,3 +160,8 @@
     - Простой API
   github: https://github.com/kernc/backtesting.py
   website: https://kernc.github.io/backtesting.py/
+  download_url: https://pypi.org/project/Backtesting/
+  install_command: "pip install Backtesting"
+  system_requirements: "Python 3.6+, кроссплатформенно"
+  documentation: https://kernc.github.io/backtesting.py/doc/backtesting/
+  telegram_chat: ""
