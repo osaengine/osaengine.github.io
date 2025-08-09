@@ -21,7 +21,7 @@
 }
 
 [data-theme="dark"] {
-    --text-primary: #f9fafb;
+    --text-primary: #ffffff;
     --text-secondary: #d1d5db;
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
@@ -2179,7 +2179,7 @@ main {
 /* Dark Mode Preference */
 @media (prefers-color-scheme: dark) {
     body:not([data-theme]) {
-        --text-primary: #f9fafb;
+        --text-primary: #ffffff;
         --text-secondary: #d1d5db;
         --bg-primary: #0f172a;
         --bg-secondary: #1e293b;
