@@ -879,14 +879,14 @@ main {
 
 .post-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 30px;
-    padding: 20px;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     transition: var(--transition);
     box-shadow: var(--shadow-sm);
+    overflow: hidden;
 }
 
 .post-item:hover {
@@ -895,62 +895,116 @@ main {
     border-color: var(--primary-color);
 }
 
-.post-image-post, .post-image {
-    object-fit: cover;
-    margin-right: 20px;
-    border-radius: 8px;
+.post-image-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
 }
 
 .post-image {
-    width: 200px;
-    height: 150px;
-}
-
-.post-image-placeholder {
-    width: 200px;
-    height: 150px;
-    background: var(--bg-secondary);
-    border: 2px dashed var(--border-color);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    margin-right: 20px;
-}
-
-.post-details {
-    flex: 1;
-}
-
-.post-details h2 {
-    margin-top: 0;
-}
-
-.post-details h2 a {
-    color: var(--text-primary);
-    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: var(--transition);
 }
 
-.post-details h2 a:hover {
-    color: var(--primary-color);
+.post-item:hover .post-image {
+    transform: scale(1.05);
 }
 
-.meta {
-    font-size: 0.9rem;
+.post-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    z-index: 2;
+}
+
+.post-title-preview {
+    font-size: 1.25rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    line-height: 1.3;
+    color: white;
+    margin: 0;
+}
+
+.post-meta-overlay {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.post-image-placeholder {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--border-color));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.placeholder-content {
+    text-align: center;
+    color: var(--text-primary);
+    padding: 2rem;
+    max-width: 100%;
+}
+
+.placeholder-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.placeholder-content .post-title-preview {
+    color: var(--text-primary);
+    text-shadow: none;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.placeholder-content .post-meta-overlay {
     color: var(--text-secondary);
+    text-shadow: none;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.post-details {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .post-excerpt {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 1rem;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.reading-time {
+    font-style: italic;
+    opacity: 0.8;
 }
 
 .read-more-btn {
-    margin-top: 0.5rem;
+    align-self: flex-start;
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
 }
@@ -1747,24 +1801,68 @@ main {
         padding: 0 1rem;
     }
 
-    .post-item {
-        flex-direction: column;
-        padding: 1rem;
-    }
+.post-item {
+    margin-bottom: 20px;
+}
 
-    .post-image, .post-image-post {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
+.post-image-container {
+    height: 200px;
+}
 
-    .post-image-placeholder {
-        width: 100%;
-        height: 120px;
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
+.post-image-overlay {
+    padding: 1.5rem 1rem 1rem;
+}
+
+.post-title-preview {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta-overlay {
+    font-size: 0.8rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.post-image-placeholder {
+    height: 200px;
+}
+
+.placeholder-content {
+    padding: 1rem;
+}
+
+.placeholder-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-content .post-title-preview {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.placeholder-content .post-meta-overlay {
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.post-details {
+    padding: 1rem;
+}
+
+.post-excerpt {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.read-more-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
 
     .post-content pre {
         font-size: 12px;
