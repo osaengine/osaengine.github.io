@@ -2595,15 +2595,6 @@ main {
     gap: 1rem;
 }
 
-.platform-logo {
-    width: 260px;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
-    border: 1px solid var(--border-color);
-}
-
 .platform-header h3 {
     margin: 0;
     color: var(--text-primary);
@@ -2785,8 +2776,8 @@ main {
 }
 
 .platform-logo {
-   width: 80px;
-   height: 80px;
+   width: 280px;
+   height: 280px;
    object-fit: cover;
    border-radius: 8px;
    flex-shrink: 0;
