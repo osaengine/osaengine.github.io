@@ -102,17 +102,6 @@ OS Engine — это общее название для платформ с от
 - QUIKSharp / QuikPy: Работа с QUIK
 - FinamWeb API: Современный веб-API
 
-## Системные требования
-
-| Платформа | Операционная система | Минимальные требования |
-|-----------|---------------------|------------------------|
-| StockSharp | Windows 10+ | .NET Framework 4.8+, 4GB RAM |
-| LEAN | Windows/Linux/macOS | .NET 6+, Python 3.8+, 8GB RAM |
-| Backtrader | Кроссплатформенно | Python 3.6+, 2GB RAM |
-| CCXT | Кроссплатформенно | Python 3.7+, 1GB RAM |
-| QUIKSharp | Windows | QUIK + .NET Framework 4.5+ |
-| QuikPy | Windows | QUIK + Python 3.6+ |
-
 ## Пошаговое руководство по установке
 
 ### Шаг 1: Выберите платформу
