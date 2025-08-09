@@ -1658,6 +1658,15 @@ main {
     text-decoration: underline;
 }
 
+
+.platforms-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+   gap: 2rem;
+   max-width: 1200px;
+   margin: 2rem auto;
+}
+
 /* Mobile Responsive Styles */
 
 /* Tablet Breakpoint */
@@ -2017,6 +2026,12 @@ main {
     .outro ol {
         padding-left: 1rem;
     }
+
+   .platforms-grid {
+       grid-template-columns: 1fr;
+       gap: 1.5rem;
+       margin: 1.5rem auto;
+   }
 }
 
 /* Small Mobile Breakpoint */
@@ -2568,7 +2583,6 @@ main {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 0;
-    margin-bottom: 2rem;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     overflow: hidden;
@@ -2769,23 +2783,6 @@ main {
     color: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
-}
-
-.platform-section {
-   background: var(--bg-card);
-   border: 1px solid var(--border-color);
-   border-radius: 8px;
-   padding: 0;
-   margin-bottom: 1.5rem;
-   box-shadow: var(--shadow-sm);
-   transition: var(--transition);
-   overflow: hidden;
-}
-
-.platform-section:hover {
-   transform: translateY(-2px);
-   box-shadow: var(--shadow-md);
-   border-color: var(--primary-color);
 }
 
 .platform-header {

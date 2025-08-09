@@ -22,6 +22,7 @@ OS Engine — это общее название для платформ с от
 
 ## Популярные платформы OS Engine
 
+<div class="platforms-grid">
 {% for project in site.data.projects %}
 <div class="platform-section">
   <div class="platform-header">
@@ -79,6 +80,7 @@ OS Engine — это общее название для платформ с от
   </div>
 </div>
 {% endfor %}
+</div>
 
 ## Как выбрать платформу
 
