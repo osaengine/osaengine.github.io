@@ -2771,23 +2771,205 @@ main {
     box-shadow: var(--shadow-md);
 }
 
-/* Эффект волны при наведении */
-.platform-link::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
+.platform-section {
+   background: var(--bg-card);
+   border: 1px solid var(--border-color);
+   border-radius: 8px;
+   padding: 0;
+   margin-bottom: 1.5rem;
+   box-shadow: var(--shadow-sm);
+   transition: var(--transition);
+   overflow: hidden;
 }
 
-.platform-link:hover::before {
-    width: 300px;
-    height: 300px;
+.platform-section:hover {
+   transform: translateY(-2px);
+   box-shadow: var(--shadow-md);
+   border-color: var(--primary-color);
+}
+
+.platform-header {
+   padding: 1rem 1.5rem;
+   background: var(--bg-secondary);
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.platform-logo {
+   width: 80px;
+   height: 80px;
+   object-fit: cover;
+   border-radius: 8px;
+   flex-shrink: 0;
+   border: 1px solid var(--border-color);
+}
+
+.platform-header h3 {
+   margin: 0;
+   color: var(--text-primary);
+   font-size: 1.5rem;
+   font-weight: 600;
+}
+
+.platform-content {
+   padding: 1.5rem;
+}
+
+.platform-content > p {
+   color: var(--text-secondary);
+   margin-bottom: 1rem;
+   line-height: 1.6;
+}
+
+.platform-advantages {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+   margin-bottom: 1rem;
+}
+
+.advantage-tag {
+   background: var(--bg-secondary);
+   color: var(--text-secondary);
+   padding: 0.2rem 0.6rem;
+   border-radius: 20px;
+   font-size: 0.75rem;
+   border: 1px solid var(--border-color);
+   white-space: nowrap;
+}
+
+.platform-details {
+   background: var(--bg-secondary);
+   border-radius: 6px;
+   padding: 0.75rem;
+   margin-bottom: 1rem;
+}
+
+.detail-item {
+   margin-bottom: 0.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.25rem;
+}
+
+.detail-item:last-child {
+   margin-bottom: 0;
+}
+
+.detail-item strong {
+   color: var(--text-primary);
+   font-size: 0.85rem;
+   font-weight: 600;
+}
+
+.detail-item span {
+   color: var(--text-secondary);
+   font-size: 0.8rem;
+   line-height: 1.4;
+}
+
+.detail-item code {
+   background: var(--bg-primary);
+   color: var(--primary-color);
+   padding: 0.2rem 0.4rem;
+   border-radius: 4px;
+   font-size: 0.75rem;
+   border: 1px solid var(--border-color);
+   font-family: 'Courier New', monospace;
+}
+
+.platform-links {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+}
+
+.platform-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.4rem;
+   padding: 0.5rem 0.8rem;
+   border-radius: 6px;
+   text-decoration: none;
+   font-weight: 500;
+   font-size: 0.8rem;
+   transition: var(--transition);
+   border: none;
+   position: relative;
+   overflow: hidden;
+   flex: 1;
+   min-width: 100px;
+}
+
+.link-icon {
+   font-size: 1rem;
+   flex-shrink: 0;
+}
+
+.link-text {
+   white-space: nowrap;
+}
+
+.download-link {
+   background: var(--primary-color);
+   color: white;
+}
+
+.download-link:hover {
+   background: var(--primary-hover);
+   color: white;
+   transform: translateY(-1px);
+   box-shadow: var(--shadow-sm);
+}
+
+.github-link {
+   background: #24292e;
+   color: white;
+}
+
+.github-link:hover {
+   background: #1a1e22;
+   color: white;
+   transform: translateY(-1px);
+   box-shadow: var(--shadow-sm);
+}
+
+.website-link {
+   background: var(--secondary-color);
+   color: white;
+}
+
+.website-link:hover {
+   background: #059669;
+   color: white;
+   transform: translateY(-1px);
+   box-shadow: var(--shadow-sm);
+}
+
+.docs-link {
+   background: #f59e0b;
+   color: white;
+}
+
+.docs-link:hover {
+   background: #d97706;
+   color: white;
+   transform: translateY(-1px);
+   box-shadow: var(--shadow-sm);
+}
+
+.chat-link {
+   background: #0088cc;
+   color: white;
+}
+
+.chat-link:hover {
+   background: #006ba3;
+   color: white;
+   transform: translateY(-1px);
+   box-shadow: var(--shadow-sm);
 }
 
 #comments {
@@ -2858,31 +3040,32 @@ main {
         margin-right: 0;
     }
 
-    /* Platform Section Mobile */
-    .platform-header {
-        padding: 1rem;
-        flex-direction: column;
-        text-align: center;
-        gap: 0.75rem;
-    }
-    
-    .platform-logo {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .platform-content {
-        padding: 1rem;
-    }
-    
-    .platform-links {
-        grid-template-columns: 1fr;
-    }
-    
-    .platform-link {
-        padding: 0.6rem;
-        font-size: 0.85rem;
-    }
+   .platform-header {
+       padding: 0.75rem;
+       flex-direction: column;
+       text-align: center;
+       gap: 0.5rem;
+   }
+   
+   .platform-logo {
+       width: 60px;
+       height: 60px;
+   }
+   
+   .platform-content {
+       padding: 1rem;
+   }
+   
+   .platform-links {
+       flex-direction: column;
+       gap: 0.4rem;
+   }
+   
+   .platform-link {
+       padding: 0.5rem;
+       font-size: 0.8rem;
+       flex: none;
+   }
 }
 
 @media (max-width: 480px) {
@@ -2911,4 +3094,31 @@ main {
         padding: 0.75rem;
         font-size: 0.875rem;
     }
+
+   .platform-header {
+       padding: 0.5rem;
+   }
+   
+   .platform-logo {
+       width: 50px;
+       height: 50px;
+   }
+   
+   .platform-content {
+       padding: 0.75rem;
+   }
+   
+   .platform-details {
+       padding: 0.5rem;
+   }
+   
+   .platform-link {
+       padding: 0.4rem;
+       font-size: 0.75rem;
+   }
+   
+   .advantage-tag {
+       font-size: 0.7rem;
+       padding: 0.15rem 0.4rem;
+   }
 }
