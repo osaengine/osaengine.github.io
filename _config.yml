@@ -27,3 +27,6 @@ collections:
   faq:
     output: true
     permalink: /faq/:path/
+
+include:
+  - "robots.txt"
