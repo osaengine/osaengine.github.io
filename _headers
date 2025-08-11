@@ -1,0 +1,23 @@
+/assets/images/*
+  Cache-Control: max-age=31536000, immutable
+
+/assets/css/*
+  Cache-Control: max-age=2592000, public
+
+/assets/js/*
+  Cache-Control: max-age=2592000, public
+
+/assets/fonts/*
+  Cache-Control: max-age=31536000, immutable
+
+/*.html
+  Cache-Control: max-age=3600, public
+
+/
+  Cache-Control: max-age=3600, public
+
+/sitemap.xml
+  Cache-Control: max-age=86400, public
+
+/robots.txt
+  Cache-Control: max-age=86400, public
