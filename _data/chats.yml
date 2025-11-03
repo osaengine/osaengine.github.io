@@ -8,20 +8,20 @@
   description: Чат по OS Engine
   link: https://t.me/osengine
 
-- name: Тинькофф Инвестиции
+- name: StockSharp
+  image: /assets/images/stocksharp_chat.png
+  description: Чат по StockSharp
+  link: https://t.me/stocksharpchat
+
+- name: Backtrader
   image: /assets/images/tinkoff_chat.png
-  description: Чат по Тинькофф Инвестиции
-  link: https://t.me/+_SJMWZw_9plmNjUy
+  description: Чат по Backtrader
+  link: https://t.me/backtrader_chat
 
 - name: Алор Брокер
   image: /assets/images/alor_chat.png
   description: Чат по Алор Брокер OpenAPI
   link: https://t.me/alor_openapi_chat
-
-- name: StockSharp
-  image: /assets/images/stocksharp_chat.png
-  description: Чат по StockSharp
-  link: https://t.me/stocksharpchat
 
 - name: AlgoFox
   image: /assets/images/algofox_chat.png
