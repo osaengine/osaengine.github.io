@@ -10,7 +10,7 @@
   install_command: "git clone https://github.com/QuantConnect/Lean.git"
   system_requirements: "Windows/Linux/macOS, .NET 6+, Python 3.8+"
   documentation: https://www.quantconnect.com/docs/
-  telegram_chat: ""
+  telegram_chat: https://discord.gg/quantconnect
 
 - name: StockSharp
   image: /assets/images/stocksharp.png
@@ -38,7 +38,7 @@
   install_command: "pip install backtrader"
   system_requirements: "Python 3.6+, кроссплатформенно"
   documentation: https://www.backtrader.com/docu/
-  telegram_chat: ""
+  telegram_chat: https://t.me/backtrader_chat
 
 - name: CCXT
   image: /assets/images/ccxt.png
@@ -52,7 +52,7 @@
   install_command: "pip install ccxt"
   system_requirements: "Python 3.7+, Node.js 15.0+, PHP 7.0+"
   documentation: https://docs.ccxt.com/
-  telegram_chat: ""
+  telegram_chat: https://discord.com/invite/ccxt
 
 - name: QuantLib
   image: /assets/images/quantlib.png
@@ -80,7 +80,7 @@
   install_command: "pip install zipline-reloaded"
   system_requirements: "Python 3.6+, кроссплатформенно"
   documentation: https://zipline.ml4trading.io/
-  telegram_chat: ""
+  telegram_chat: https://discord.gg/qfCqS6Vtnj
 
 - name: QUIKSharp
   image: /assets/images/quiksharp_logo.png
@@ -108,7 +108,7 @@
   install_command: "pip install QuikPy"
   system_requirements: "Windows, QUIK, Python 3.6+"
   documentation: https://github.com/cia76/QuikPy/blob/master/README.md
-  telegram_chat: ""
+  telegram_chat: https://t.me/finlabvip
 
 - name: FinamWeb API
   image: /assets/images/finam_logo.png
@@ -136,7 +136,7 @@
   install_command: "pip install nautilus-trader"
   system_requirements: "Python 3.10+, кроссплатформенно"
   documentation: https://docs.nautilustrader.io/
-  telegram_chat: ""
+  telegram_chat: https://discord.gg/NautilusTrader
 
 - name: ML for Trading
   image: /assets/images/ml4trading.png
@@ -150,7 +150,7 @@
   install_command: "git clone репозитория"
   system_requirements: "Python 3.8+, кроссплатформенно"
   documentation: https://ml4trading.io/
-  telegram_chat: ""
+  telegram_chat: https://exchange.ml4trading.io
 
 - name: Backtesting.py
   image: /assets/images/backtesting_py.png
@@ -164,4 +164,4 @@
   install_command: "pip install Backtesting"
   system_requirements: "Python 3.6+, кроссплатформенно"
   documentation: https://kernc.github.io/backtesting.py/doc/backtesting/
-  telegram_chat: ""
+  telegram_chat: https://github.com/kernc/backtesting.py/discussions
