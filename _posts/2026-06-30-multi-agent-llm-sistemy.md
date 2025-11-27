@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Multi-Agent LLM системы для трейдинга: когда один мозг недостаточно"
+description: "Глубокое погружение в мультиагентные системы на базе LLM для торговли: TradingAgents, ATLAS, архитектура дебатов и результаты на реальных рынках. Sharpe Ratio 5.60+ против традиционных стратегий."
 date: 2026-06-30
-categories: ai llm multi-agent trading
-excerpt: "Глубокое погружение в мультиагентные системы на базе LLM для торговли: TradingAgents, ATLAS, архитектура дебатов и результаты на реальных рынках. Sharpe Ratio 5.60+ против традиционных стратегий."
+image: /assets/images/blog/multi-agent-llm-sistemy.png
+tags: ["ai", "llm", "multi-agent", "trading"]
 ---
 
 # Multi-Agent LLM системы для трейдинга: когда один мозг недостаточно

@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Как мы собираем каталог open-source решений для алготрейдинга"
+description: "История создания OSA Engine — каталога open-source платформ для алготрейдинга. Критерии отбора, методология оценки, структура данных и планы развития проекта."
 date: 2026-04-28
-categories: [алготрейдинг, open-source]
-tags: [OSA-Engine, каталог, open-source, Freqtrade, LEAN, StockSharp, Backtrader]
-author: OSA Engine Team
-excerpt: "История создания OSA Engine — каталога open-source платформ для алготрейдинга. Критерии отбора, методология оценки, структура данных и планы развития проекта."
 image: /assets/images/blog/osa_engine_catalog.png
+tags: [OSA-Engine, каталог, open-source, Freqtrade, LEAN, StockSharp, Backtrader]
 ---
 
 В предыдущих статьях мы разобрали технические аспекты алготрейдинга: от [архитектуры роботов]({{ site.baseurl }}/2026/03/03/kak-ustroen-opensource-robot-vnutri.html) до [типичных ошибок начинающих]({{ site.baseurl }}/2026/04/21/tipichnye-oshibki-nachinayushchih.html). Теперь расскажем, **как и зачем** мы создали OSA Engine — каталог open-source решений для алготрейдинга.

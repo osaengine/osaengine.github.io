@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Автоматизация документации и ченджлогов торговых роботов с помощью ИИ"
+description: "Практическое руководство по автоматизации документации торговых систем с помощью LLM: генерация README, API docs, changelogs, release notes. Реальные промпты, скрипты и GitHub Actions workflows."
 date: 2026-05-26
-categories: [AI, алготрейдинг, документация]
-tags: [LLM, ChatGPT, Claude, documentation, changelog, automation]
-author: OSA Engine Team
-excerpt: "Практическое руководство по автоматизации документации торговых систем с помощью LLM: генерация README, API docs, changelogs, release notes. Реальные промпты, скрипты и GitHub Actions workflows."
 image: /assets/images/blog/ai_documentation.png
+tags: [LLM, ChatGPT, Claude, documentation, changelog, automation]
 ---
 
 В [предыдущей статье]({{ site.baseurl }}/2026/05/19/generaciya-strategiy-s-llm.html) мы обсудили генерацию стратегий с LLM. Теперь перейдём к менее glamorous, но критически важной задаче: **документации**.

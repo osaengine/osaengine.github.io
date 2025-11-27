@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Как я использую LLM как тимлида-кванта: постановка задач, ревью кода, разбор багов"
+description: "Практический опыт использования LLM (ChatGPT, Claude) как помощника в разработке торговых стратегий: генерация кода, ревью, дебаг, документация. Реальные примеры и промпты."
 date: 2026-05-12
-categories: [AI, алготрейдинг]
-tags: [LLM, ChatGPT, Claude, разработка, code-review, debugging]
-author: OSA Engine Team
-excerpt: "Практический опыт использования LLM (ChatGPT, Claude) как помощника в разработке торговых стратегий: генерация кода, ревью, дебаг, документация. Реальные примеры и промпты."
 image: /assets/images/blog/llm_quant_lead.png
+tags: [LLM, ChatGPT, Claude, разработка, code-review, debugging]
 ---
 
 В предыдущих статьях мы обсуждали, [может ли LLM заменить квант-аналитика]({{ site.baseurl }}/2026/03/17/mozhet-li-llm-zamenit-kvant-analitika.html) (спойлер: нет, но помочь может) и [где заканчивается помощь ИИ]({{ site.baseurl }}/2026/03/24/gde-zakanchivaetsya-pomoshch-ii.html). Теперь — **практический гайд**: как я использую LLM ежедневно в разработке торговых стратегий.

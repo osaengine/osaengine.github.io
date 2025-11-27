@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Multimodal AI: когда алгоритм видит графики лучше трейдера"
+description: "Как GPT-5 Vision, Claude Sonnet, YOLO и CNN распознают паттерны на графиках с точностью 99.3%. От анализа свечей до спутниковых снимков парковок. Реальные результаты и провалы."
 date: 2026-07-07
-categories: ai multimodal vision trading
-excerpt: "Как GPT-5 Vision, Claude Sonnet, YOLO и CNN распознают паттерны на графиках с точностью 99.3%. От анализа свечей до спутниковых снимков парковок. Реальные результаты и провалы."
+image: /assets/images/blog/multimodal-ai-grafiki.png
+tags: ["ai", "multimodal", "vision", "trading"]
 ---
 
 # Multimodal AI: когда алгоритм видит графики лучше трейдера

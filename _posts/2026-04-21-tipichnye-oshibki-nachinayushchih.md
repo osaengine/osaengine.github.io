@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Типичные ошибки начинающих в алготрейдинге: разбор на реальных примерах"
+description: "Разбираем 12 классических ошибок начинающих алготрейдеров с реальными примерами кода, цифрами убытков и решениями. От look-ahead bias до эмоциональных вмешательств в работу робота."
 date: 2026-04-21
-categories: [алготрейдинг, обучение]
-tags: [ошибки, backtesting, overfitting, risk-management, position-sizing, emotions]
-author: OSA Engine Team
-excerpt: "Разбираем 12 классических ошибок начинающих алготрейдеров с реальными примерами кода, цифрами убытков и решениями. От look-ahead bias до эмоциональных вмешательств в работу робота."
 image: /assets/images/blog/beginner_mistakes.png
+tags: [ошибки, backtesting, overfitting, risk-management, position-sizing, emotions]
 ---
 
 В предыдущих статьях мы обсудили [10 реальных проблем при разработке роботов]({{ site.baseurl }}/2026/04/07/10-realnyh-problem-torgovogo-robota.html) и [проектирование отказоустойчивой инфраструктуры]({{ site.baseurl }}/2026/04/14/infrastruktura-kotoraya-perezhivet-krizis.html). Теперь разберём **типичные ошибки начинающих** — те самые грабли, на которые наступает каждый второй новичок в алготрейдинге.

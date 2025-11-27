@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "LLM как \"анализатор логов\" алгосистемы: поиск аномалий и повторяющихся ошибок"
+description: "Практическое применение LLM для анализа логов торговых систем: автоматическое выявление аномалий, паттернов ошибок, корреляций между событиями. Реальные кейсы и промпты для ChatGPT/Claude."
 date: 2026-06-02
-categories: [AI, алготрейдинг, мониторинг]
-tags: [LLM, ChatGPT, Claude, logs, debugging, anomaly-detection]
-author: OSA Engine Team
-excerpt: "Практическое применение LLM для анализа логов торговых систем: автоматическое выявление аномалий, паттернов ошибок, корреляций между событиями. Реальные кейсы и промпты для ChatGPT/Claude."
 image: /assets/images/blog/llm_log_analyzer.png
+tags: [LLM, ChatGPT, Claude, logs, debugging, anomaly-detection]
 ---
 
 В [предыдущей статье]({{ site.baseurl }}/2026/05/26/avtomatizaciya-dokumentacii-s-ai.html) мы автоматизировали документацию с помощью LLM. Теперь применим LLM для решения ещё более практической задачи: **анализа логов торговой системы**.

@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Как проектировать алготрейдинг-инфраструктуру так, чтобы она пережила хотя бы один кризис"
+description: "Проектируем отказоустойчивую торговую инфраструктуру с High Availability, Disaster Recovery, Kubernetes, circuit breakers и мониторингом. Реальные примеры архитектур с 99.99% uptime и Recovery Time Objective < 1 минуты."
 date: 2026-04-14
-categories: [алготрейдинг, инфраструктура]
-tags: [infrastructure, high-availability, disaster-recovery, kubernetes, monitoring, circuit-breakers]
-author: OSA Engine Team
-excerpt: "Проектируем отказоустойчивую торговую инфраструктуру с High Availability, Disaster Recovery, Kubernetes, circuit breakers и мониторингом. Реальные примеры архитектур с 99.99% uptime и Recovery Time Objective < 1 минуты."
 image: /assets/images/blog/trading_infrastructure.png
+tags: [infrastructure, high-availability, disaster-recovery, kubernetes, monitoring, circuit-breakers]
 ---
 
 В [предыдущей статье]({{ site.baseurl }}/2026/04/07/10-realnyh-problem-torgovogo-robota.html) мы разобрали 10 критических проблем разработки торговых роботов. Теперь поговорим о том, как спроектировать **инфраструктуру**, которая переживёт не только технические сбои, но и **рыночные кризисы**.

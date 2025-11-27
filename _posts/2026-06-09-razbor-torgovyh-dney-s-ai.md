@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Автоматический разбор торговых дней с помощью ИИ: где мы нарушаем риск-менеджмент"
+description: "Используем LLM для автоматического анализа каждого торгового дня: выявление нарушений риск-менеджмента, эмоциональных решений, отклонений от стратегии. Генерация ежедневного отчёта с actionable insights."
 date: 2026-06-09
-categories: [AI, алготрейдинг, риск-менеджмент]
-tags: [LLM, ChatGPT, Claude, risk-management, post-trade-analysis, trading-journal]
-author: OSA Engine Team
-excerpt: "Используем LLM для автоматического анализа каждого торгового дня: выявление нарушений риск-менеджмента, эмоциональных решений, отклонений от стратегии. Генерация ежедневного отчёта с actionable insights."
 image: /assets/images/blog/ai_daily_analysis.png
+tags: [LLM, ChatGPT, Claude, risk-management, post-trade-analysis, trading-journal]
 ---
 
 В [предыдущей статье]({{ site.baseurl }}/2026/06/02/llm-kak-analizator-logov.html) мы использовали LLM для анализа логов и поиска технических ошибок. Теперь применим LLM для более high-level задачи: **анализа качества торговых решений**.
