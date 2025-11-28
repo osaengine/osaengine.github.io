@@ -1152,11 +1152,11 @@ strategy = Strategy(stop_loss_pct=0.03)
 
 Update your config files before upgrading. The old parameter will be removed in v2.0 (6 months from now).
 
-### Python 3.9+ Required
+### Обновление Python Required
 
-If you're still on Python 3.7 or 3.8, you'll need to upgrade.
+Если вы используете старую версию Python, вам нужно обновиться.
 
-**Why?** Python 3.9+ gives us better type hints, which means fewer bugs and clearer code.
+**Почему?** Новые версии Python дают лучшие type hints, что означает меньше багов и более понятный код.
 
 **How to upgrade:**
 ```bash

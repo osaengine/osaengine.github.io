@@ -107,7 +107,7 @@ tags: [LLM, ChatGPT, Claude, квант-аналитик, разработка �
 
 - ChatGPT (OpenAI)
 - Claude (Anthropic)
-- Python 3.11
+- Python (последняя версия)
 - Данные: Yahoo Finance (бесплатные)
 
 Начнём.

@@ -598,7 +598,7 @@ class StrategyActor:
 
 **Технологический стек (пример):**
 
-- **Language:** Python 3.11+ (стратегии), Rust (исполнение)
+- **Language:** Python (стратегии), Rust (исполнение)
 - **Data:** TimescaleDB (история), Redis (кэш), PostgreSQL (события)
 - **Messaging:** Kafka или RabbitMQ
 - **Monitoring:** Prometheus + Grafana
@@ -770,7 +770,7 @@ CREATE TABLE positions (
 **Архитектура:** Модульный монолит
 
 **Стек:**
-- Python 3.11+
+- Python
 - SQLite/PostgreSQL (персистентность)
 - Pandas (обработка данных)
 - ccxt (подключение к биржам)
