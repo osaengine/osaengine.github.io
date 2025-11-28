@@ -27,7 +27,7 @@ Generate a Python trading strategy for Backtrader that uses:
 Include proper comments and risk management.
 ```
 
-### Сгенерированный код (Claude Sonnet 4)
+### Сгенерированный код (Claude)
 
 ```python
 import backtrader as bt
@@ -186,7 +186,7 @@ Exit conditions:
 Use Freqtrade framework, Python.
 ```
 
-### Сгенерированный код (GPT-5)
+### Сгенерированный код (ChatGPT)
 
 ```python
 from freqtrade.strategy import IStrategy, DecimalParameter
@@ -338,7 +338,7 @@ Create a machine learning trading strategy using:
 Use scikit-learn and Backtrader.
 ```
 
-### Сгенерированный код (Claude Opus 4)
+### Сгенерированный код (Claude)
 
 ```python
 import backtrader as bt
@@ -548,7 +548,7 @@ Create a triangular arbitrage strategy for crypto:
 Include error handling and logging.
 ```
 
-### Сгенерированный код (ChatGPT-4)
+### Сгенерированный код (ChatGPT)
 
 ```python
 import ccxt

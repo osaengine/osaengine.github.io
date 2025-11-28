@@ -13,7 +13,7 @@ tags: [LLM, ChatGPT, Claude, квант-аналитик, разработка �
 
 Не торговать самому. А помогать человеку пройти путь: идея → исследование → код → бэктест → оптимизация.
 
-Я провёл эксперимент. Взял ChatGPT-5 и Claude Opus 4, дал задачу: **"Разработай торговую стратегию для BTC/USDT с нуля"**. Без моего кода. Без готовых библиотек. Только промпты и LLM.
+Я провёл эксперимент. Взял ChatGPT и Claude, дал задачу: **"Разработай торговую стратегию для BTC/USDT с нуля"**. Без моего кода. Без готовых библиотек. Только промпты и LLM.
 
 Результат удивил. LLM справился с 70% задач квант-аналитика. Но оставшиеся 30% показали, **где человек пока незаменим**.
 
@@ -94,7 +94,7 @@ tags: [LLM, ChatGPT, Claude, квант-аналитик, разработка �
 Разработать полноценную торговую стратегию для BTC/USDT:
 - С нуля (без готового кода)
 - От идеи до бэктеста
-- Только используя ChatGPT-5 и Claude Opus 4
+- Только используя ChatGPT и Claude
 
 ### **Правила:**
 
@@ -105,8 +105,8 @@ tags: [LLM, ChatGPT, Claude, квант-аналитик, разработка �
 
 ### **Инструменты:**
 
-- ChatGPT-5 (OpenAI)
-- Claude Opus 4 (Anthropic)
+- ChatGPT (OpenAI)
+- Claude (Anthropic)
 - Python 3.11
 - Данные: Yahoo Finance (бесплатные)
 
@@ -1121,7 +1121,7 @@ LLM в квант-финансе:
 
 Практические гайды:
 - [Prompt Engineering for Traders](https://roguequant.substack.com/p/prompt-engineering-for-traders-how)
-- [Claude Opus 4 Trading Strategy](https://medium.com/@austin-starks/i-let-claude-opus-4-create-a-trading-strategy-it-destroyed-the-market-c200bf1a19a4)
+- [Claude Trading Strategy](https://medium.com/@austin-starks/i-let-claude-opus-4-create-a-trading-strategy-it-destroyed-the-market-c200bf1a19a4)
 - [ChatGPT and Claude: Data to Backtesting](https://medium.com/@algorithmictrading/develop-a-trading-idea-using-chatgpt-and-claude-from-data-to-backtesting-40a5beb3f370)
 - [LLM Agent Trader in Python](https://medium.com/coding-nexus/llm-agent-trader-a-free-ai-powered-stock-backtesting-system-built-in-python-ad574fd07628)
 

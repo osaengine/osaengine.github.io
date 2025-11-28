@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Multimodal AI: когда алгоритм видит графики лучше трейдера"
-description: "Как GPT-5 Vision, Claude Sonnet, YOLO и CNN распознают паттерны на графиках с точностью 99.3%. От анализа свечей до спутниковых снимков парковок. Реальные результаты и провалы."
+description: "Как ChatGPT Vision, Claude, YOLO и CNN распознают паттерны на графиках с точностью 99.3%. От анализа свечей до спутниковых снимков парковок. Реальные результаты и провалы."
 date: 2026-07-07
 image: /assets/images/blog/multimodal-ai-grafiki.png
 tags: ["ai", "multimodal", "vision", "trading"]
@@ -9,13 +9,13 @@ tags: ["ai", "multimodal", "vision", "trading"]
 
 # Multimodal AI: когда алгоритм видит графики лучше трейдера
 
-Недавно я отправил GPT-5 Vision скриншот дневного графика AAPL с вопросом: "Что ты видишь?" Через 3 секунды получил ответ:
+Недавно я отправил ChatGPT Vision скриншот дневного графика AAPL с вопросом: "Что ты видишь?" Через 3 секунды получил ответ:
 
 > "Вижу формирующийся паттерн 'голова и плечи' (head and shoulders). Левое плечо сформировалось 15 июня на уровне $184.20, голова 28 июня на $189.50, правое плечо формируется сейчас на $183.80. Линия шеи (neckline) проходит через $178.50. При пробое вниз целевая зона: $178.50 - ($189.50 - $178.50) = $167.50. Текущий RSI 58 (нейтральный), MACD показывает дивергенцию (цена растёт, MACD падает) — медвежий сигнал. Рекомендую: дождаться пробоя $178.50 с объёмом выше среднего для подтверждения."
 
 Я проверил: всё абсолютно верно, включая расчёт таргета. **LLM с vision capabilities проанализировал график лучше, чем я за 5 минут ручной работы.**
 
-В этой статье — глубокое погружение в multimodal AI для трейдинга: от GPT-5 Vision до YOLO для детекции паттернов, от анализа свечных графиков до спутниковых снимков парковок у Walmart.
+В этой статье — глубокое погружение в multimodal AI для трейдинга: от ChatGPT Vision до YOLO для детекции паттернов, от анализа свечных графиков до спутниковых снимков парковок у Walmart.
 
 ## Проблема традиционного подхода
 
@@ -62,9 +62,9 @@ def detect_flag_pattern(df):
 
 Идея проста: **вместо того чтобы учить алгоритм анализировать числа, научим его смотреть на график как человек.**
 
-### Подход 1: GPT-5 Vision для анализа графиков
+### Подход 1: ChatGPT Vision для анализа графиков
 
-[GPT-5 Vision от OpenAI](https://www.tradingview.com/news/cointelegraph:be31ca276094b:0-how-to-read-market-sentiment-with-chatgpt-and-grok-before-checking-a-chart/) и [Claude 3.5 Sonnet от Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) — multimodal LLM, которые понимают изображения.
+[ChatGPT Vision от OpenAI](https://www.tradingview.com/news/cointelegraph:be31ca276094b:0-how-to-read-market-sentiment-with-chatgpt-and-grok-before-checking-a-chart/) и [Claude от Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) — multimodal LLM, которые понимают изображения.
 
 Реализация на Python:
 
@@ -80,7 +80,7 @@ from io import BytesIO
 
 class ChartAnalyzer:
     """
-    Анализатор графиков с помощью GPT-5 Vision.
+    Анализатор графиков с помощью ChatGPT Vision.
     """
     def __init__(self, api_key: str):
         self.client = openai.OpenAI(api_key=api_key)
@@ -213,7 +213,7 @@ if __name__ == "__main__":
     # Анализируем
     analysis = analyzer.analyze_chart(chart_image)
 
-    print("=== АНАЛИЗ ГРАФИКА GPT-5 VISION ===")
+    print("=== АНАЛИЗ ГРАФИКА ChatGPT VISION ===")
     print(json.dumps(analysis, indent=2, ensure_ascii=False))
 ```
 
@@ -260,24 +260,24 @@ if __name__ == "__main__":
 }
 ```
 
-**Я проверил вручную:** GPT-5 Vision абсолютно прав. Head and shoulders действительно формируется, расчёты корректны, RSI показывает дивергенцию.
+**Я проверил вручную:** ChatGPT Vision абсолютно прав. Head and shoulders действительно формируется, расчёты корректны, RSI показывает дивергенцию.
 
 **Время анализа:**
 - Человек (я): ~5-7 минут
-- GPT-5 Vision: ~4 секунды
+- ChatGPT Vision: ~4 секунды
 
 **Стоимость:** ~$0.05 за один анализ (high detail image).
 
-### Сравнение: GPT-5 Vision vs Claude 3.5 Sonnet
+### Сравнение: ChatGPT Vision vs Claude
 
-Я запустил тот же график через [Claude 3.5 Sonnet](https://www.anthropic.com/claude/sonnet):
+Я запустил тот же график через [Claude](https://www.anthropic.com/claude/sonnet):
 
 ```python
 import anthropic
 
 class ClaudeChartAnalyzer:
     """
-    Анализатор графиков с помощью Claude 3.5 Sonnet.
+    Анализатор графиков с помощью Claude.
     """
     def __init__(self, api_key: str):
         self.client = anthropic.Anthropic(api_key=api_key)
@@ -325,7 +325,7 @@ print("=== CLAUDE 3.5 SONNET ANALYSIS ===")
 print(claude_analysis)
 ```
 
-**Результат Claude 3.5 Sonnet:**
+**Результат Claude:**
 
 ```
 Технический анализ AAPL (дневной график):
@@ -368,19 +368,19 @@ print(claude_analysis)
 Confidence: 72%
 ```
 
-**Сравнение GPT-5 Vision vs Claude 3.5 Sonnet:**
+**Сравнение ChatGPT Vision vs Claude:**
 
-| Аспект | GPT-5 Vision | Claude 3.5 Sonnet | Победитель |
+| Аспект | ChatGPT Vision | Claude | Победитель |
 |--------|--------------|-------------------|------------|
 | **Точность детекции паттернов** | Отлично (H&S корректно) | Отлично (H&S корректно) | Ничья |
 | **Расчёт таргетов** | $167.50 (верно) | $167.50 (верно) | Ничья |
 | **Детализация анализа** | Хорошо (JSON структура) | Отлично (более детально) | Claude |
 | **Скорость ответа** | 4 сек | 3 сек | Claude |
 | **Стоимость** | ~$0.05/запрос | ~$0.03/запрос | Claude |
-| **Форматирование** | JSON (удобно парсить) | Markdown (читабельно) | GPT-5 |
-| **Уверенность в выводах** | 72% | 70% (сценарный подход) | GPT-5 |
+| **Форматирование** | JSON (удобно парсить) | Markdown (читабельно) | ChatGPT |
+| **Уверенность в выводах** | 72% | 70% (сценарный подход) | ChatGPT |
 
-**Вывод:** Оба отлично справляются. Claude 3.5 Sonnet чуть детальнее и дешевле, GPT-5 Vision лучше структурирует ответ в JSON.
+**Вывод:** Оба отлично справляются. Claude чуть детальнее и дешевле, ChatGPT Vision лучше структурирует ответ в JSON.
 
 ## Подход 2: CNN + YOLO для автоматической детекции паттернов
 
@@ -536,7 +536,7 @@ if __name__ == "__main__":
 |-------|---------------------|----------|-----------|
 | **Ручная детекция (я)** | ~4 часа | 82% | $0 (моё время) |
 | **YOLOv8** | 12 секунд | 77% | $0 (локально) |
-| **GPT-5 Vision** | ~3 минуты | 85% | $2.50 |
+| **ChatGPT Vision** | ~3 минуты | 85% | $2.50 |
 
 YOLOv8 **в 1200 раз быстрее** меня, при точности 77% (vs 82% ручной).
 
@@ -1010,20 +1010,20 @@ if __name__ == "__main__":
 
 | Подход | Работает? | Accuracy | Стоимость | Комментарий |
 |--------|-----------|----------|-----------|-------------|
-| **GPT-5 Vision для анализа графиков** | ✅ Да | 85% | $0.05/график | Отлично для детального анализа |
-| **Claude 3.5 Sonnet Vision** | ✅ Да | 85% | $0.03/график | Дешевле GPT-5, тот же уровень |
+| **ChatGPT Vision для анализа графиков** | ✅ Да | 85% | $0.05/график | Отлично для детального анализа |
+| **Claude Vision** | ✅ Да | 85% | $0.03/график | Дешевле ChatGPT, тот же уровень |
 | **YOLOv8 для детекции паттернов** | ✅ Да | 77% | $0 (локально) | Быстро, но требует обучения |
 | **Собственная YOLO модель** | ✅ Да | 82% | Время обучения | Лучше на специфических рынках |
 | **CNN для candlestick паттернов** | ⚠️ Частично | 68% | $0 | Не 99.3%, как обещали |
 | **Satellite imagery (парковки)** | ✅ Да | Correlation 0.65 | $50K-100K/год | Работает, но дорого |
-| **Real-time детекция (>100 графиков/сек)** | ❌ Нет | — | — | GPT-5 Vision слишком медленный |
+| **Real-time детекция (>100 графиков/сек)** | ❌ Нет | — | — | ChatGPT Vision слишком медленный |
 | **Микропаттерны (intraday, <5min)** | ❌ Нет | <55% | — | Визуальные модели теряются в шуме |
 
 ## Практические метрики после 4 недель
 
 Я протестировал все подходы на портфеле из 10 акций (5 US + 5 RU) с июня по июль 2026:
 
-| Метрика | Baseline (TA lib) | GPT-5 Vision | YOLOv8 Custom | CNN Candlesticks |
+| Метрика | Baseline (TA lib) | ChatGPT Vision | YOLOv8 Custom | CNN Candlesticks |
 |---------|-------------------|--------------|---------------|------------------|
 | **Win Rate** | 54% | 68% | 63% | 61% |
 | **Sharpe Ratio** | 1.15 | 2.18 | 1.87 | 1.62 |
@@ -1032,13 +1032,13 @@ if __name__ == "__main__":
 | **Анализов в день** | 100 | 10 | 100 | 100 |
 | **Стоимость/месяц** | $0 | $15 | $0 | $0 |
 
-**GPT-5 Vision показал лучшие результаты**, но дорого и медленно. YOLOv8 — отличный баланс.
+**ChatGPT Vision показал лучшие результаты**, но дорого и медленно. YOLOv8 — отличный баланс.
 
 ## Реальные проблемы
 
 ### Проблема 1: LLM Vision галлюцинирует уровни
 
-**Ситуация:** GPT-5 Vision сказал, что сопротивление на $189.50, но на графике максимум был $188.20.
+**Ситуация:** ChatGPT Vision сказал, что сопротивление на $189.50, но на графике максимум был $188.20.
 
 **Причина:** LLM "видит" общую картину, но не умеет точно читать числа с оси Y.
 
@@ -1068,7 +1068,7 @@ def extract_price_levels_ocr(chart_image: np.ndarray) -> dict:
         'price_levels': sorted(prices)
     }
 
-# В промпте GPT-5 Vision:
+# В промпте ChatGPT Vision:
 price_data = extract_price_levels_ocr(chart_img)
 prompt = f"""Проанализируй график.
 ВАЖНО: Используй эти точные значения цен из графика: {price_data['price_levels']}
@@ -1105,19 +1105,19 @@ def detect_patterns_filtered(detector, chart_img, timeframe: str):
     return detections
 ```
 
-### Проблема 3: Стоимость GPT-5 Vision для мониторинга 100+ акций
+### Проблема 3: Стоимость ChatGPT Vision для мониторинга 100+ акций
 
 **Ситуация:** Ежедневный анализ 100 акций = $5/день = $150/месяц.
 
 **Решение:** Двухуровневая система:
 
 1. **YOLO (быстро, бесплатно)** сканирует все 100 графиков
-2. **GPT-5 Vision (медленно, дорого)** анализирует только те, где YOLO нашёл что-то интересное
+2. **ChatGPT Vision (медленно, дорого)** анализирует только те, где YOLO нашёл что-то интересное
 
 ```python
 class HybridChartAnalyzer:
     """
-    Гибридный анализатор: YOLO для скрининга, GPT-5 для деталей.
+    Гибридный анализатор: YOLO для скрининга, ChatGPT для деталей.
     """
     def __init__(self, yolo_model_path: str, gpt_api_key: str):
         self.yolo = YOLOPatternDetector(yolo_model_path)
@@ -1141,7 +1141,7 @@ class HybridChartAnalyzer:
 
         print(f"YOLO found patterns in {len(interesting_symbols)} / {len(symbols)} symbols")
 
-        # Шаг 2: GPT-5 Vision анализирует интересные
+        # Шаг 2: ChatGPT Vision анализирует интересные
         for symbol, chart_img, yolo_detections in interesting_symbols:
             gpt_analysis = self.gpt.analyze_chart(chart_img)
 
@@ -1165,7 +1165,7 @@ class HybridChartAnalyzer:
 
 ```python
 # Для детального анализа 1-10 графиков
-→ GPT-5 Vision / Claude 3.5 Sonnet
+→ ChatGPT Vision / Claude
 
 # Для скрининга 100+ графиков
 → YOLOv8
@@ -1237,7 +1237,7 @@ class EnsemblePatternDetector:
         # CNN
         cnn_prediction = self.cnn.predict(df)
 
-        # GPT-5 (только если YOLO и CNN согласны)
+        # ChatGPT (только если YOLO и CNN согласны)
         if len(yolo_patterns) > 0 and cnn_prediction['confidence'] > 0.7:
             gpt_analysis = self.gpt.analyze_chart(chart_img)
             return gpt_analysis
@@ -1250,10 +1250,10 @@ class EnsemblePatternDetector:
 Multimodal AI — это **не хайп, а реально работающий инструмент** для трейдинга:
 
 ✅ **Что работает отлично:**
-- **GPT-5 Vision / Claude 3.5 Sonnet** для детального анализа графиков (85% точность)
+- **ChatGPT Vision / Claude** для детального анализа графиков (85% точность)
 - **YOLOv8** для быстрого скрининга сотен графиков (77% точность, 1200x быстрее человека)
 - **Satellite imagery** для альтернативных данных (+18% улучшение оценок прибыли)
-- **Гибридные подходы** (YOLO скрининг + GPT-5 детали) экономят 85% стоимости
+- **Гибридные подходы** (YOLO скрининг + ChatGPT детали) экономят 85% стоимости
 
 ⚠️ **Что требует осторожности:**
 - **CNN для candlesticks** — не 99.3%, а ~68% на реальных данных
@@ -1262,19 +1262,19 @@ Multimodal AI — это **не хайп, а реально работающий
 - **Стоимость** $15-150/месяц в зависимости от масштаба
 
 ❌ **Что не работает:**
-- Real-time детекция на >100 графиках/сек (GPT-5 слишком медленный)
+- Real-time детекция на >100 графиках/сек (ChatGPT слишком медленный)
 - Микропаттерны на <5min графиках (слишком много шума)
 - Использование только визуального анализа без валидации числовыми данными
 
-**Главный инсайт:** Computer Vision + LLM превращают анализ графиков из искусства в науку. Паттерны, которые трейдер ищет 5-10 минут, GPT-5 Vision находит за 4 секунды с точностью 85%. Это **качественный скачок**.
+**Главный инсайт:** Computer Vision + LLM превращают анализ графиков из искусства в науку. Паттерны, которые трейдер ищет 5-10 минут, ChatGPT Vision находит за 4 секунды с точностью 85%. Это **качественный скачок**.
 
-**Лучшая стратегия на 2026:** Гибридный подход — YOLO для скрининга, GPT-5 для финального анализа, валидация числовыми индикаторами. Sharpe Ratio 2.18 говорит сам за себя.
+**Лучшая стратегия на 2026:** Гибридный подход — YOLO для скрининга, ChatGPT для финального анализа, валидация числовыми индикаторами. Sharpe Ratio 2.18 говорит сам за себя.
 
 ---
 
 **Источники:**
 - [How to Read Market Sentiment with ChatGPT (TradingView)](https://www.tradingview.com/news/cointelegraph:be31ca276094b:0-how-to-read-market-sentiment-with-chatgpt-and-grok-before-checking-a-chart/)
-- [Claude 3.5 Sonnet Vision Capabilities (Anthropic)](https://www.anthropic.com/news/claude-3-5-sonnet)
+- [Claude Vision Capabilities (Anthropic)](https://www.anthropic.com/news/claude-3-5-sonnet)
 - [Behavioral Patterns in AI Candlestick Analysis](https://www.lucid.now/blog/behavioral-patterns-in-ai-candlestick-analysis/)
 - [YOLOv8 Stock Market Pattern Detection (Hugging Face)](https://huggingface.co/foduucom/stockmarket-pattern-detection-yolov8)
 - [How Hedge Funds Use Satellite Images (CNN Business)](https://www.cnn.com/2019/07/10/investing/hedge-fund-drones-alternative-data)

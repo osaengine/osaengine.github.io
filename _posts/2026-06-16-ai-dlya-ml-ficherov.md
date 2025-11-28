@@ -1086,8 +1086,8 @@ def generate_features_with_market_context(market_type: str, asset: str,
 ### Проблема 4: Вычислительная стоимость
 
 **Ситуация:** Генерация 200+ фичей через LLM обходится дорого:
-- GPT-5: ~$0.15 за запрос (200 фичей = $30)
-- Claude Opus: ~$0.25 за запрос (200 фичей = $50)
+- ChatGPT: ~$0.15 за запрос (200 фичей = $30)
+- Claude: ~$0.25 за запрос (200 фичей = $50)
 
 **Решение:** Кэширование и использование более дешёвых моделей для простых задач:
 
@@ -1126,7 +1126,7 @@ class CachedFeatureGenerator:
             return cache_file.read_text()
 
         # Генерируем код
-        # Для простых шаблонов используем GPT-3.5 (дешевле в 10 раз)
+        # Для простых шаблонов используем ChatGPT (дешевле в 10 раз)
         simple_templates = ['technical_indicators', 'price_patterns']
         model = "gpt-3.5-turbo" if template_name in simple_templates else "gpt-4"
 

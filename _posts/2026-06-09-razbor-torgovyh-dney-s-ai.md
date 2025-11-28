@@ -51,7 +51,7 @@ Max Drawdown: -$98.40 (occurred at 14:32)
 
 ```
 Trading Bot → Trade Log → LLM Analyzer → Daily Report
-              (JSON/CSV)   (GPT-5/Claude)  (Markdown + Actions)
+              (JSON/CSV)   (ChatGPT/Claude)  (Markdown + Actions)
 ```
 
 ### Шаг 1: Сбор данных о сделках

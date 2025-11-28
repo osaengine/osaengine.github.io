@@ -90,7 +90,7 @@ ChatGPT предложил стратегию с стоп-лоссом 2%.
 
 ## Проблема #2: Конструкторы ограничивают сложность
 
-[Claude Opus 4 может генерировать сложные стратегии](https://medium.com/@austin-starks/i-let-claude-opus-4-create-a-trading-strategy-it-destroyed-the-market-c200bf1a19a4) с адаптивными параметрами, ML-фильтрами.
+[Claude может генерировать сложные стратегии](https://medium.com/@austin-starks/i-let-claude-opus-4-create-a-trading-strategy-it-destroyed-the-market-c200bf1a19a4) с адаптивными параметрами, ML-фильтрами.
 
 Но визуальный конструктор этого не поддерживает.
 
@@ -302,6 +302,6 @@ Excel + макросы не заменили программистов. Но д
 
 ИИ для алготрейдинга:
 - [Rogue Quant: Prompt Engineering for Traders](https://roguequant.substack.com/p/prompt-engineering-for-traders-how)
-- [Medium: Claude Opus 4 Trading Strategy](https://medium.com/@austin-starks/i-let-claude-opus-4-create-a-trading-strategy-it-destroyed-the-market-c200bf1a19a4)
-- [PickMyTrade: Claude 4.1 for Trading Guide](https://blog.pickmytrade.trade/claude-4-1-for-trading-guide/)
+- [Medium: Claude Trading Strategy](https://medium.com/@austin-starks/i-let-claude-opus-4-create-a-trading-strategy-it-destroyed-the-market-c200bf1a19a4)
+- [PickMyTrade: Claude for Trading Guide](https://blog.pickmytrade.trade/claude-4-1-for-trading-guide/)
 - [Medium: Using Claude for Crypto Trading Strategy](https://medium.com/@lowranceps580/using-claude-for-crypto-swing-trading-strategy-ai-prompt-guide-ab704bc15cb1)

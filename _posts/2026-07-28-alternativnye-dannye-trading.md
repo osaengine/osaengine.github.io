@@ -341,9 +341,9 @@ Social media sentiment analysis — мощнейший инструмент дл
 
 **Альтернативы:**
 
-- **GPT-4.5 Turbo** с prompt engineering для сентимента
-- **Claude Sonnet 4.5** для контекстного анализа новостей
-- **Llama 3.3 70B** с fine-tuning на финансовых данных
+- **ChatGPT** с prompt engineering для сентимента
+- **Claude** для контекстного анализа новостей
+- **Llama** с fine-tuning на финансовых данных
 
 ### Практика: Sentiment Analysis с FinBERT
 
@@ -1285,7 +1285,7 @@ results = system.execute_strategy()
 
 ### 1. AI-генерация инсайтов
 
-**GPT-4.5, Claude Opus 4, Gemini 2.0** будут автоматически анализировать петабайты альтернативных данных, генерируя торговые идеи.
+**ChatGPT, Claude, Gemini** будут автоматически анализировать петабайты альтернативных данных, генерируя торговые идеи.
 
 ```python
 # Будущее: AI-агент анализирует все источники
@@ -1376,7 +1376,7 @@ print(response.choices[0].message.content)
 ```python
 # Sentiment Analysis
 from transformers import BertTokenizer, BertForSequenceClassification  # FinBERT
-import openai  # GPT-4.5 для анализа
+import openai  # ChatGPT для анализа
 
 # Web Scraping
 import scrapy  # Мощный фреймворк для больших проектов

@@ -1363,7 +1363,7 @@ for i, ticker in enumerate(tickers):
 
 ## 5. Foundation Models: LLM Embeddings для трейдинга
 
-**Large Language Models** как GPT-4.5, Claude Sonnet 4.5 генерируют embeddings из финансовых текстов (earnings calls, news, SEC filings), которые выявляют semantic relationships и предсказывают returns.
+**Large Language Models** как ChatGPT, Claude генерируют embeddings из финансовых текстов (earnings calls, news, SEC filings), которые выявляют semantic relationships и предсказывают returns.
 
 ### StockTime: Multimodal LLM для финансов
 

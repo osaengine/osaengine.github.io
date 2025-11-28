@@ -412,7 +412,7 @@ Hybrid skipped it: 0% loss
 **LLM API вызовы:**
 
 - Каждый сигнал → 1 API call
-- GPT-4o: ~$0.01 per call
+- ChatGPT: ~$0.01 per call
 - 23 сигнала за 2 года → $0.23 (дёшево)
 
 **Но:**
