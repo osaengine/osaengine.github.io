@@ -23,7 +23,7 @@
   description: Чат по Алор Брокер OpenAPI
   link: https://t.me/alor_openapi_chat
 
-- name: AlgoFox
-  image: /assets/images/mfd_chat.gif
+- name: MFD
+  image: /assets/images/algofox_chat.png
   description: Алготрейдинг от MFD
   link: https://mfd.ru/blogs/view/?id=50
