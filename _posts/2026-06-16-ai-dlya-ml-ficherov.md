@@ -47,8 +47,10 @@ tags: ["ai", "ml", "feature-engineering"]
 Первый промпт был максимально простым:
 
 ```python
-import openai
+from openai import OpenAI
 import pandas as pd
+
+client = OpenAI()
 
 def generate_features_with_llm(prompt_idea: str, df: pd.DataFrame) -> str:
     """
@@ -92,8 +94,8 @@ df.fillna(method='ffill', inplace=True)
 
 Сгенерируй Python-код для создания признаков на основе этой идеи."""
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}

@@ -200,7 +200,9 @@ class MeanReversionStrategy:
 import ast
 import inspect
 from pathlib import Path
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 
 def extract_docstrings(file_path):
     """Extract all docstrings from Python file"""
@@ -253,8 +255,8 @@ Format in Markdown. Make it professional and comprehensive.
 """
 
     # Call LLM
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": "You are a technical documentation expert."},
             {"role": "user", "content": prompt}
@@ -523,7 +525,8 @@ jobs:
 import os
 import subprocess
 from datetime import datetime
-import openai
+from openai import OpenAI
+client = OpenAI()
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
@@ -614,8 +617,8 @@ Example format:
 Generate the changelog now:
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": "You are a technical writer."},
             {"role": "user", "content": prompt}
@@ -979,7 +982,8 @@ make html
 
 ```python
 # scripts/generate_user_guide.py
-import openai
+from openai import OpenAI
+client = OpenAI()
 
 def generate_user_guide_with_llm(api_docs):
     """Generate user-friendly guide from API documentation"""
@@ -1008,8 +1012,8 @@ Make it beginner-friendly but technically accurate.
 Use real code examples that actually work.
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.4
     )
@@ -1031,7 +1035,8 @@ CHANGELOG технический. Нужны **Release Notes** для трейд
 
 ```python
 # scripts/generate_release_notes.py
-import openai
+from openai import OpenAI
+client = OpenAI()
 
 def generate_release_notes(changelog_entry, version):
     """Convert technical changelog to user-friendly release notes"""
@@ -1060,8 +1065,8 @@ Version: {version}
 Release Date: {datetime.now().strftime('%B %d, %Y')}
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.5  # Slightly higher for more engaging writing
     )
@@ -1220,7 +1225,8 @@ Happy trading! 📈
 # scripts/add_docstrings.py
 import ast
 import astor
-import openai
+from openai import OpenAI
+client = OpenAI()
 
 def generate_docstring_for_function(func_code, func_name):
     """Generate NumPy-style docstring for function"""
@@ -1244,8 +1250,8 @@ The docstring should include:
 Follow NumPy docstring convention strictly.
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.2
     )

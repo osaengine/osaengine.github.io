@@ -436,7 +436,7 @@ XAI помогает, но **не решает проблему полность
 
 ### **EU AI Act (2025)**
 
-[Вступил в силу 31 марта 2025](https://www.finance-watch.org/wp-content/uploads/2025/03/Artificial_intelligence_in_finance_report_final.pdf):
+[Вступил в силу 1 августа 2024 года, с поэтапным введением требований](https://www.finance-watch.org/wp-content/uploads/2025/03/Artificial_intelligence_in_finance_report_final.pdf):
 
 **Требования для "high-risk AI" (включая trading):**
 

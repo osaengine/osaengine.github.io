@@ -66,9 +66,11 @@ tags: [LLM, ChatGPT, Claude, logs, debugging, anomaly-detection]
 ### Промпт для LLM
 
 ```python
-import openai
+from openai import OpenAI
 import re
 from collections import defaultdict
+
+client = OpenAI()
 
 def extract_errors_from_log(log_file_path):
     """Extract all ERROR and WARNING lines"""
@@ -117,8 +119,8 @@ Analyze these errors and provide:
 Format as Markdown report.
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": "You are a trading system reliability engineer."},
             {"role": "user", "content": prompt}
@@ -454,8 +456,8 @@ Identify:
 Be specific with numbers and timestamps.
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3
     )
@@ -756,7 +758,9 @@ Trading Bot → Logs → Log Stream → LLM Analyzer → Alerts (Telegram/Email)
 import time
 import subprocess
 from collections import deque
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 
 class RealtimeLogMonitor:
     def __init__(self, log_file, check_interval=300):  # 5 minutes
@@ -806,8 +810,8 @@ Impact: [potential impact]
 Action: [what to do]
 """
 
-        response = openai.ChatCompletion.create(
-            model="gpt-4",
+        response = client.chat.completions.create(
+            model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.2,
             max_tokens=300  # Quick response
@@ -930,8 +934,8 @@ Provide:
 Focus on causality, not just listing lines.
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3
     )

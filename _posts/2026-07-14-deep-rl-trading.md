@@ -118,7 +118,7 @@ Random Forest **хуже простого Buy & Hold**, несмотря на 58
 - Хорошо работает с continuous action spaces (размер позиции 0-100%)
 - Простая имплементация
 
-[Исследование 2024](https://www.mdpi.com/2076-3417/13/1/633) показало, что PPO достигает **cumulative return 14.20%** и **Sharpe Ratio 0.220** на портфеле SET50.
+[Исследование 2023](https://www.mdpi.com/2076-3417/13/1/633) показало, что PPO достигает **cumulative return 14.20%** и **Sharpe Ratio 0.220** на портфеле SET50.
 
 ### 2. SAC (Soft Actor-Critic)
 
@@ -217,7 +217,7 @@ class TradingEnv(gym.Env):
         rsi_norm = row['rsi'] / 100.0
         macd_norm = row['macd'] / 10.0
         atr_norm = row['atr'] / 100.0
-        volume_norm = row['volume'] / row['volume'].rolling(20).mean()
+        volume_norm = row['volume'] / self.df['volume'].rolling(20).mean().iloc[self.current_step]
 
         # Состояние портфеля
         portfolio_value = self.balance + self.shares * row['close']
@@ -611,7 +611,7 @@ class MultiAssetTradingEnv(gym.Env):
             rsi_norm = row['rsi'] / 100.0
             macd_norm = row['macd'] / 10.0
             atr_norm = row['atr'] / 100.0
-            volume_norm = row['volume'] / row['volume'].rolling(20).mean()
+            volume_norm = row['volume'] / self.dfs[symbol]['volume'].rolling(20).mean().iloc[self.current_step]
 
             position_value = self.shares[symbol] * row['close']
             position_ratio = position_value / portfolio_value if portfolio_value > 0 else 0
@@ -934,7 +934,7 @@ Deep Reinforcement Learning — это **не хайп, а мощный инст
 - [Deep RL Strategies in Finance (2024)](https://arxiv.org/html/2407.09557v1)
 - [Soft Actor-Critic (OpenAI Spinning Up)](https://spinningup.openai.com/en/latest/algorithms/sac.html)
 - [Deep RL with Stock Trading GitHub](https://github.com/theanh97/Deep-Reinforcement-Learning-with-Stock-Trading)
-- [Empirical Analysis of Automated Stock Trading (2024)](https://www.mdpi.com/2076-3417/13/1/633)
+- [Empirical Analysis of Automated Stock Trading (2023)](https://www.mdpi.com/2076-3417/13/1/633)
 
 **Полезные ссылки:**
 - [OSA Engine на GitHub](https://github.com/[ваш-репо]/osa-engine)

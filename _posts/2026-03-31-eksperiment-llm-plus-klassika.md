@@ -491,9 +491,7 @@ if regime not in valid_regimes:
         regime = 'WEAK_TREND'
 ```
 
-### **Проблема 5: Explain
-
-ability**
+### **Проблема 5: Explainability**
 
 Почему LLM классифицировал 2024-06-12 как RANGING?
 
@@ -706,7 +704,10 @@ log_llm_decision({
 
 ```python
 # temperature=0 for reproducibility
-response = openai.ChatCompletion.create(
+from openai import OpenAI
+client = OpenAI()
+
+response = client.chat.completions.create(
     model="gpt-4o",
     temperature=0,  # Deterministic
     messages=[...]

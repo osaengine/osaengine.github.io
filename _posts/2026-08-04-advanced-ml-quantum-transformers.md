@@ -7,7 +7,7 @@ image: /assets/images/blog/advanced_ml.png
 tags: [quantum-ml, transformers, neural-architecture-search, foundation-models, graph-neural-networks]
 ---
 
-В сентябре 2024 года HSBC объявил, что квантовый компьютер IBM Heron улучшил предсказания по торговле облигациями на **34% по сравнению с классическим computing**. McKinsey оценивает потенциальную экономическую ценность от квантовых вычислений в финансовой индустрии в **$400-600 млрд к 2035 году**. Между тем, hybrid QLSTM-QA3C агент показал **11.87% доходность с просадкой всего 0.92%** на валютном рынке, а Transformer-архитектуры с dual attention достигли консистентной производительности на данных **от января 2011 до марта 2025**.
+В 2024 году HSBC сообщил о значительном улучшении предсказаний по торговле облигациями при использовании квантового компьютера IBM Heron — **по предварительным данным, улучшение на десятки процентов по сравнению с классическим computing**. McKinsey оценивает потенциал квантовых вычислений во всех отраслях в триллионы долларов, и **значительная доля приходится на финансовую индустрию**. Между тем, hybrid QLSTM-QA3C агент показал **11.87% доходность с просадкой всего 0.92%** на валютном рынке, а Transformer-архитектуры с dual attention достигли консистентной производительности на данных **от января 2011 до марта 2025**.
 
 Мы на пороге новой эры алготрейдинга, где квантовые схемы заменяют классические нейросети, Transformers вытесняют LSTM, Graph Neural Networks моделируют зависимости между активами, а Neural Architecture Search автоматически эволюционирует торговые стратегии. В этой финальной статье цикла разберём cutting-edge ML техники, которые уже работают прямо сейчас в 2025-2026, и покажу, как применять их на практике.
 
@@ -1446,7 +1446,7 @@ print(f"Embedding norm: {np.linalg.norm(news_embedding):.4f}")
 
 **Ключевые выводы:**
 
-1. **Quantum ML**: QLSTM показывает 11.87% return с 0.92% drawdown, IBM Heron +34% на облигациях, parameter efficiency 13.6x
+1. **Quantum ML**: QLSTM показывает 11.87% return с 0.92% drawdown, IBM Heron демонстрирует значительное улучшение на облигациях, parameter efficiency 13.6x
 2. **Transformers**: Dual attention превосходит LSTM/GRU на 14-летних данных, multi-head attention захватывает long-range dependencies
 3. **NAS**: Neuroevolution RNNs побеждают DJI/S&P500 в bull и bear markets, meta-RL framework достигает Sharpe 2.45
 4. **GNN**: GAT Portfolio Optimizer с 20.3% annual return, Sharpe 0.28, hybrid HRP+GNN+RL 34-71% returns
@@ -1460,7 +1460,7 @@ print(f"Embedding norm: {np.linalg.norm(news_embedding):.4f}")
 - **Для альфа-генерации:** NAS (автоматическая эволюция стратегий)
 - **Для фундаментального анализа:** LLM embeddings (earnings calls, SEC filings)
 
-McKinsey прогнозирует **$400-600 млрд** от quantum computing в финансах к 2035. HSBC уже использует IBM Heron с +34% improvement. Hybrid quantum-classical модели на классическом hardware работают **прямо сейчас**. Transformers вытесняют LSTM. GNN моделируют market structure. NAS эволюционирует стратегии автоматически.
+McKinsey прогнозирует **значительный экономический эффект** от quantum computing в финансах. HSBC уже использует IBM Heron с заметным улучшением результатов. Hybrid quantum-classical модели на классическом hardware работают **прямо сейчас**. Transformers вытесняют LSTM. GNN моделируют market structure. NAS эволюционирует стратегии автоматически.
 
 Будущее алготрейдинга — это не одна технология. Это **комбинация** quantum circuits, attention mechanisms, graph structures, evolved architectures и language embeddings. Те, кто освоит этот арсенал, получат insurmountable advantage.
 

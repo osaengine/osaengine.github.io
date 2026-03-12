@@ -171,8 +171,10 @@ def on_position_closed(position):
 
 ```python
 # scripts/generate_daily_report.py
-import openai
+from openai import OpenAI
 from datetime import date, datetime
+
+client = OpenAI()
 import json
 
 def generate_daily_report_with_llm(journal, target_date):
@@ -258,8 +260,8 @@ Be brutally honest. Focus on rule violations and emotional mistakes.
 Use specific trade IDs and timestamps in your analysis.
 """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+    response = client.chat.completions.create(
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": "You are a professional trading coach."},
             {"role": "user", "content": prompt}
@@ -808,8 +810,8 @@ class PreTradeChecklist:
         REASON: [1-2 sentences why]
         """
 
-        response = openai.ChatCompletion.create(
-            model="gpt-4",
+        response = client.chat.completions.create(
+            model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
             max_tokens=150
