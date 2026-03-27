@@ -1,0 +1,125 @@
+# Chinese UI strings
+lang_name: "中文"
+lang_flag: "🇨🇳"
+
+# Navigation
+nav_home: "首页"
+nav_chat: "聊天"
+nav_blog: "博客"
+nav_guide: "指南"
+nav_trading_robots: "交易机器人"
+nav_download: "下载"
+nav_language: "语言"
+
+# Theme toggle
+theme_toggle: "切换主题"
+menu_label: "菜单"
+
+# Homepage
+hero_title: "算法交易开源平台"
+hero_description: "探索算法交易的世界，使用最佳开源解决方案。创建、测试和运行交易机器人。"
+section_chats: "算法交易聊天群"
+section_resources: "有用的算法交易资源"
+section_getting_started: "如何开始使用 OS Engine"
+getting_started_subtitle: "分步指南："
+getting_started_steps:
+  - "从上面的项目中选择合适的平台"
+  - "前往项目的 GitHub 仓库"
+  - "使用 Git 将仓库克隆到本地"
+  - "按照 README 中的说明进行安装和配置"
+  - "阅读项目文档了解基础知识"
+  - "开始开发您自己的交易算法和策略"
+getting_started_description: "OS Engine 提供强大的算法交易工具，帮助您创建高效的交易机器人并自动化交易策略。"
+getting_started_download_text: "有关下载和安装 OSEngine 的更多信息，请访问我们的"
+getting_started_download_link: "下载页面"
+btn_website: "网站"
+btn_github: "GitHub"
+btn_join_chat: "加入聊天"
+
+# Resources
+resource_algopedia: "算法百科"
+resource_habr: "Habr：算法交易"
+resource_mql5: "MQL5：交易者社区"
+resource_quik_forum: "QUIK：LUA 论坛"
+resource_tradingview: "TradingView：交易脚本"
+resource_pmntrade: "PMN Trade：QUIK 机器人"
+
+# Blog
+blog_title: "最新消息"
+blog_description: "关注算法交易世界的发展。订阅我们的"
+blog_telegram_link: "Telegram 频道"
+blog_read_more: "阅读更多"
+blog_tags: "标签："
+blog_previous: "上一页"
+blog_next: "下一页"
+blog_no_posts: "暂无文章"
+
+# Post
+reading_time_one: "分钟阅读"
+reading_time_other: "分钟阅读"
+post_tags: "标签："
+share_article: "分享文章："
+share_telegram: "Telegram"
+share_twitter: "Twitter"
+share_facebook: "Facebook"
+share_vkontakte: "VKontakte"
+share_linkedin: "LinkedIn"
+share_copy_link: "复制链接"
+link_copied: "链接已复制！"
+copy_error: "复制出错"
+related_posts: "相关文章"
+post_discussion: "讨论"
+post_discussion_text: "加入我们的讨论"
+post_discussion_link: "Telegram 群组"
+nav_previous_post: "上一篇"
+nav_next_post: "下一篇"
+
+# Tags page
+tags_title: "标签"
+tags_description: "标签和相关文章列表"
+
+# Download page
+download_title: "下载 OS Engine"
+download_description: "如何下载和安装 OS Engine 平台"
+
+# Trading robots / Bot sources
+trading_robots_title: "免费交易机器人"
+trading_robots_description: "免费交易机器人和算法策略资源目录。"
+trading_robots_hero: "在哪里找到免费交易机器人"
+trading_robots_hero_desc: "最佳免费交易机器人和算法策略资源目录。找到现成的解决方案开始算法交易。"
+trading_robots_verified: "已验证资源"
+trading_robots_free_bots: "免费机器人"
+trading_robots_platforms: "平台"
+trading_robots_free_badge: "免费"
+trading_robots_visit: "访问网站"
+tips_title: "实用建议"
+tips:
+  - "在实盘交易前务必在模拟账户上测试机器人"
+  - "研究机器人代码以了解其逻辑"
+  - "注意最后更新日期"
+  - "阅读其他用户的评论和反馈"
+warnings_title: "重要警告"
+warnings:
+  - "交易机器人不保证盈利"
+  - "过去的表现不保证未来收益"
+  - "始终使用风险管理"
+  - "定期监控机器人运行状况"
+
+# Guide / FAQ
+guide_title: "OSEngine 和算法交易指南"
+guide_description: "算法交易平台使用综合指南。从基础到高级技术。"
+guide_hero: "OSEngine 和算法交易指南"
+guide_hero_desc: "算法交易平台使用综合指南。从基础到高级技术。"
+guide_questions_count: "个问题"
+guide_in_development: "栏目建设中"
+guide_in_development_text: "我们正在创建详细的指南。有用的信息即将出现！"
+guide_ask_question: "在聊天中提问"
+faq_breadcrumb: "常见问题"
+
+# Footer
+footer_news: "发送您的项目新闻给我们"
+footer_telegram: "在 Telegram 上"
+footer_copyright: "OS Engine。开源算法交易平台。"
+
+# Language switcher
+switch_language: "语言"

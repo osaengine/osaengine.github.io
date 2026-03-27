@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign lang = page.lang | default: site.default_lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <h1 itemprop="name headline">{{ page.title }}</h1>
@@ -17,7 +19,7 @@ layout: default
       {% endif %}
       {% assign words = content | number_of_words %}
       <span class="reading-time">
-        • {% if words < 360 %}1 мин{% else %}{{ words | divided_by: 180 }} мин{% endif %} чтения
+        • {% if words < 360 %}1{% else %}{{ words | divided_by: 180 }}{% endif %} {{ t.reading_time_one }}
       </span>
     </div>
   </header>
@@ -34,54 +36,58 @@ layout: default
 
   {% if page.tags.size > 0 %}
     <div class="post-tags">
-      <span class="tags-label">Теги:</span>
+      <span class="tags-label">{{ t.post_tags }}</span>
       {% for tag in page.tags %}
-        <a href="/tags#{{ tag | slugify }}" class="tag-link" rel="tag">{{ tag }}</a>
+        <a href="/{{ lang }}/tags#{{ tag | slugify }}" class="tag-link" rel="tag">{{ tag }}</a>
       {% endfor %}
     </div>
   {% endif %}
 
   <div class="post-sharing">
-    <h3>Поделиться статьей:</h3>
+    <h3>{{ t.share_article }}</h3>
     <div class="sharing-buttons">
-      <a href="https://t.me/share/url?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}" 
-         class="share-btn telegram" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Telegram">
-        <span>📱 Telegram</span>
+      <a href="https://t.me/share/url?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}"
+         class="share-btn telegram" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_telegram }}">
+        <span>📱 {{ t.share_telegram }}</span>
       </a>
-      
-      <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}&via=osengine_ru" 
-         class="share-btn twitter" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Twitter">
-        <span>🐦 Twitter</span>
+
+      <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}"
+         class="share-btn twitter" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_twitter }}">
+        <span>🐦 {{ t.share_twitter }}</span>
       </a>
-      
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | uri_escape }}" 
-         class="share-btn facebook" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Facebook">
-        <span>📘 Facebook</span>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | uri_escape }}"
+         class="share-btn facebook" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_facebook }}">
+        <span>📘 {{ t.share_facebook }}</span>
       </a>
-      
-      <a href="https://vk.com/share.php?url={{ site.url }}{{ page.url | uri_escape }}&title={{ page.title | uri_escape }}" 
-         class="share-btn vkontakte" target="_blank" rel="noopener noreferrer" aria-label="Поделиться ВКонтакте">
-         <span>🔵 ВКонтакте</span>
+
+      {% if lang == "ru" %}
+      <a href="https://vk.com/share.php?url={{ site.url }}{{ page.url | uri_escape }}&title={{ page.title | uri_escape }}"
+         class="share-btn vkontakte" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_vkontakte }}">
+         <span>🔵 {{ t.share_vkontakte }}</span>
       </a>
-      
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | uri_escape }}" 
-         class="share-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в LinkedIn">
-        <span>💼 LinkedIn</span>
+      {% endif %}
+
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | uri_escape }}"
+         class="share-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_linkedin }}">
+        <span>💼 {{ t.share_linkedin }}</span>
       </a>
-      
-      <button class="share-btn copy-link" onclick="copyToClipboard('{{ site.url }}{{ page.url }}')" aria-label="Скопировать ссылку">
-        <span>🔗 Копировать ссылку</span>
+
+      <button class="share-btn copy-link" onclick="copyToClipboard('{{ site.url }}{{ page.url }}')" aria-label="{{ t.share_copy_link }}">
+        <span>🔗 {{ t.share_copy_link }}</span>
       </button>
     </div>
   </div>
 
-  <!-- Related Posts -->
-  {% assign related_posts = site.related_posts | limit: 3 %}
+  <!-- Related Posts (filtered by language) -->
+  {% assign lang_posts = site.posts | where: "lang", lang %}
+  {% assign related_posts = lang_posts | limit: 3 %}
   {% if related_posts.size > 0 %}
   <div class="related-posts">
-    <h3>Похожие статьи</h3>
+    <h3>{{ t.related_posts }}</h3>
     <div class="related-posts-grid">
       {% for post in related_posts %}
+        {% if post.url != page.url %}
       <article class="related-post-card">
         {% if post.image %}
           <img src="{{ post.image }}" alt="{{ post.title }}" class="related-post-image">
@@ -93,6 +99,7 @@ layout: default
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
         </div>
       </article>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
@@ -112,14 +119,11 @@ layout: default
     {% endif %}
   </nav>
 
-  <!-- Comments Section Placeholder -->
+  <!-- Comments Section -->
   <div class="post-comments">
-    <h3>Обсуждение</h3>
-    <p>Присоединяйтесь к обсуждению в нашем <a href="https://t.me/osengine" target="_blank">Telegram-чате</a>!</p>
-    
-    <!-- Здесь можно добавить систему комментариев (Disqus, Gitalk, etc.) -->
+    <h3>{{ t.post_discussion }}</h3>
+    <p>{{ t.post_discussion_text }} <a href="https://t.me/osengine" target="_blank">{{ t.post_discussion_link }}</a>!</p>
     <div id="comments">
-      <!-- Comments system integration -->
     </div>
   </div>
 </article>
@@ -129,7 +133,7 @@ layout: default
 function copyToClipboard(text) {
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(text).then(() => {
-      showCopyMessage('Ссылка скопирована!');
+      showCopyMessage('{{ t.link_copied }}');
     });
   } else {
     // Fallback for older browsers
@@ -141,14 +145,14 @@ function copyToClipboard(text) {
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
-    
+
     try {
       document.execCommand('copy');
-      showCopyMessage('Ссылка скопирована!');
+      showCopyMessage('{{ t.link_copied }}');
     } catch (err) {
-      showCopyMessage('Ошибка копирования');
+      showCopyMessage('{{ t.copy_error }}');
     }
-    
+
     textArea.remove();
   }
 }
@@ -170,9 +174,9 @@ function showCopyMessage(message) {
     font-weight: 500;
     transition: all 0.3s ease;
   `;
-  
+
   document.body.appendChild(msgEl);
-  
+
   setTimeout(() => {
     msgEl.style.opacity = '0';
     msgEl.style.transform = 'translateY(-20px)';

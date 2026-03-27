@@ -1,0 +1,19 @@
+- name: "StockSharp 策略"
+  image: "/assets/images/stocksharp.png"
+  description: "大量免费的 StockSharp 交易机器人。包括股票、期货、加密货币等各种市场的机器人。"
+  url: "https://stocksharp.com/store/?groups=4"
+
+- name: "QuantConnect 策略库"
+  image: "/assets/images/lean.png"
+  description: "QuantConnect 社区的现成算法策略库。包含每个策略的详细描述和回测结果。"
+  url: "https://www.quantconnect.com/docs/v2/writing-algorithms/strategy-library"
+
+- name: "MQL5 代码库"
+  image: "/assets/images/mql5.png"
+  description: "MetaTrader 最大的交易机器人代码库。包含数千个免费的专家顾问、指标和脚本。"
+  url: "https://www.mql5.com/en/code"
+
+- name: "TradersUnion 免费机器人"
+  image: "/assets/images/tradersunion.png"
+  description: "精选最佳免费外汇交易机器人。包含工作原理说明和安装指南。"
+  url: "https://tradersunion.com/interesting-articles/best-free-forex-trading-robots"

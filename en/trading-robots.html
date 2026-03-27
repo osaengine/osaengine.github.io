@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Free Trading Robots"
+description: "Catalog of resources with free trading robots and algorithmic strategies."
+lang: "en"
+permalink: /en/trading-robots/
+---
+
+{% assign lang = "en" %}
+{% assign t = site.data.i18n[lang] %}
+
+<section class="hero">
+  <h2>{{ t.trading_robots_hero }}</h2>
+  <p>{{ t.trading_robots_hero_desc }}</p>
+</section>
+
+<div class="sources-container">
+  <div class="sources-stats">
+    <div class="stat-card">
+      <h3>{{ site.data.en.bot_sources | size }}</h3>
+      <p>{{ t.trading_robots_verified }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>1000+</h3>
+      <p>{{ t.trading_robots_free_bots }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>5+</h3>
+      <p>{{ t.trading_robots_platforms }}</p>
+    </div>
+  </div>
+
+  <div class="sources-grid">
+    {% for source in site.data.en.bot_sources %}
+    <div class="source-card">
+      <div class="source-card-header">
+        <img src="{{ source.image | relative_url }}" alt="{{ source.name }}" class="source-image">
+        <div class="source-badge">{{ t.trading_robots_free_badge }}</div>
+      </div>
+      <div class="source-info">
+        <h2>{{ source.name }}</h2>
+        <p class="source-description">{{ source.description }}</p>
+        <a href="{{ source.url }}" class="source-link" target="_blank">
+          🚀 {{ t.trading_robots_visit }}
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="additional-info">
+    <div class="info-card">
+      <h3>💡 {{ t.tips_title }}</h3>
+      <ul>
+        {% for tip in t.tips %}
+        <li>{{ tip }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>⚠️ {{ t.warnings_title }}</h3>
+      <ul>
+        {% for warning in t.warnings %}
+        <li>{{ warning }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+---
+layout: default
+title: "Главная"
+description: "Открытые платформы для алгоритмической торговли. Узнайте о лучших open source решениях для алготрейдинга."
+lang: "ru"
+permalink: /ru/
+---
+
+{% assign lang = "ru" %}
+{% assign t = site.data.i18n[lang] %}
+
+<section class="hero">
+    <h2>{{ t.hero_title }}</h2>
+    <p>{{ t.hero_description }}</p>
+</section>
+
+<section class="project-grid">
+  {% for project in site.data.ru.projects %}
+    <div class="project-card">
+      <div class="project-image-container">
+        <img src="{{ project.image }}" alt="{{ project.name }}">
+        <div class="project-title-overlay">{{ project.name }}</div>
+      </div>
+
+      <div class="project-info">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <ul>
+          {% for advantage in project.advantages %}
+            <li>{{ advantage }}</li>
+          {% endfor %}
+        </ul>
+        <div class="project-links">
+          <a href="{{ project.website }}" class="btn btn-primary" target="_blank">
+            🌐 {{ t.btn_website }}
+          </a>
+          <a href="{{ project.github }}" class="btn btn-secondary" target="_blank">
+            📁 {{ t.btn_github }}
+          </a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="chat-section">
+    <h2 class="section-title">{{ t.section_chats }}</h2>
+    <div class="chat-grid">
+      {% for chat in site.data.ru.chats %}
+        <div class="chat-card">
+          <img src="{{ chat.image }}" alt="{{ chat.name }}">
+          <h3>{{ chat.name }}</h3>
+          <p>{{ chat.description }}</p>
+          <a href="{{ chat.link }}" class="btn btn-telegram" target="_blank">
+            💬 {{ t.btn_join_chat }}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+</section>
+
+<section class="resources-section">
+    <h2 class="section-title">{{ t.section_resources }}</h2>
+    <div class="resources-grid">
+        <a href="https://algotradinglib.com/en/" class="resource-link" target="_blank">
+            📚 {{ t.resource_algopedia }}
+        </a>
+        <a href="https://habr.com/ru/search/?target_type=posts&order=relevance&q=[алгоритмическая+торговля]" class="resource-link" target="_blank">
+            📖 {{ t.resource_habr }}
+        </a>
+        <a href="https://www.mql5.com/ru" class="resource-link" target="_blank">
+            🤝 {{ t.resource_mql5 }}
+        </a>
+        <a href="https://forum.quik.ru/forum10/" class="resource-link" target="_blank">
+            💻 {{ t.resource_quik_forum }}
+        </a>
+        <a href="https://ru.tradingview.com/scripts/" class="resource-link" target="_blank">
+            📊 {{ t.resource_tradingview }}
+        </a>
+        <a href="https://pmntrade.ru" class="resource-link" target="_blank">
+            🤖 {{ t.resource_pmntrade }}
+        </a>
+    </div>
+</section>
+
+<section class="resources-section">
+    <h2 class="section-title">{{ t.section_getting_started }}</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+        <h3 style="margin-bottom: 1rem; color: var(--text-primary);">{{ t.getting_started_subtitle }}</h3>
+        <ol style="color: var(--text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+            {% for step in t.getting_started_steps %}
+            <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+        <p style="margin-top: 1.5rem; color: var(--text-secondary);">
+            {{ t.getting_started_description }}
+        </p>
+        <p style="margin-top: 1rem; color: var(--text-secondary);">
+            {{ t.getting_started_download_text }} <a href="/{{ lang }}/download/" style="color: var(--primary-color);">{{ t.getting_started_download_link }}</a>.
+        </p>
+    </div>
+</section>

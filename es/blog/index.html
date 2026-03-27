@@ -1,0 +1,52 @@
+---
+layout: default
+title: "Ultimas Noticias"
+description: "Ultimas noticias y actualizaciones sobre plataformas open source de algo trading"
+lang: "es"
+permalink: /es/blog/
+---
+
+{% assign lang = "es" %}
+{% assign t = site.data.i18n[lang] %}
+
+<section class="hero">
+    <h2>{{ t.blog_title }}</h2>
+    <p>{{ t.blog_description }} <a href="https://t.me/osengine_news" target="_blank" style="color: var(--primary-color);">{{ t.blog_telegram_link }}</a>.</p>
+</section>
+
+<div class="blog-container">
+    {% assign posts = site.categories[lang] %}
+    <ul class="post-list">
+      {% for post in posts %}
+        <li class="post-item">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+          {% else %}
+            <div class="post-image-placeholder">
+              <span>📰</span>
+            </div>
+          {% endif %}
+          <div class="post-details">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p class="meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
+            </p>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            {% if post.tags.size > 0 %}
+              <div class="tags">
+                <span>{{ t.blog_tags }}</span>
+                {% for tag in post.tags %}
+                  <a href="/{{ lang }}/tags#{{ tag | slugify }}">{{ tag }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <a href="{{ post.url }}" class="btn btn-primary read-more-btn">{{ t.blog_read_more }}</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if posts.size == 0 %}
+    <p style="text-align: center; color: var(--text-secondary); padding: 2rem;">{{ t.blog_no_posts }}</p>
+    {% endif %}
+</div>

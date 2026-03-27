@@ -1,0 +1,14 @@
+- name: OS Engine
+  image: /assets/images/logo.png
+  description: OS Engine community chat
+  link: https://t.me/+aF2ZvtMrwFo2Nzli
+
+- name: StockSharp
+  image: /assets/images/stocksharp_chat.png
+  description: StockSharp community chat
+  link: https://t.me/stocksharpchat
+
+- name: Backtrader
+  image: /assets/images/tinkoff_chat.png
+  description: Backtrader community chat
+  link: https://t.me/backtrader_chat

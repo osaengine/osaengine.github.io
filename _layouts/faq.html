@@ -3,22 +3,26 @@ layout: default
 title: Гайд по платформам OSEngine
 description: "Подробный гайд по возможностям платформ OS Engine для трейдеров и разработчиков."
 ---
+{% assign lang = page.lang | default: site.default_lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
 
 <section class="hero">
-    <h2>Гайд по OSEngine и алготрейдингу</h2>
-    <p>Исчерпывающее руководство по работе с платформами алгоритмической торговли. От основ до продвинутых техник.</p>
+    <h2>{{ t.guide_hero }}</h2>
+    <p>{{ t.guide_hero_desc }}</p>
 </section>
 
 <div class="faq-container">
-    {% for section in site.data.faq_sections %}
+    {% if lang == "ru" %}
+    {% assign faq_data = site.data.ru.faq_sections %}
+    {% for section in faq_data %}
         {% assign section_data = section[1] %}
         {% assign section_questions = site.faq | where: "section", section[0] | sort: "order" %}
-        
+
         <details class="faq-section">
             <summary>
                 <h2>{{ section_data.name }}</h2>
                 <div class="faq-section-meta">
-                    <span class="question-count">{{ section_questions.size }} вопросов</span>
+                    <span class="question-count">{{ section_questions.size }} {{ t.guide_questions_count }}</span>
                 </div>
             </summary>
             <div class="faq-links">
@@ -33,13 +37,14 @@ description: "Подробный гайд по возможностям плат
             </div>
         </details>
     {% endfor %}
-    
-    {% if site.faq.size == 0 %}
+    {% endif %}
+
+    {% if lang != "ru" or site.faq.size == 0 %}
         <div class="empty-state">
-            <h3>📚 Раздел в разработке</h3>
-            <p>Мы работаем над созданием подробного гайда. Скоро здесь появится много полезной информации!</p>
+            <h3>📚 {{ t.guide_in_development }}</h3>
+            <p>{{ t.guide_in_development_text }}</p>
             <a href="https://t.me/osengine" class="btn btn-primary" target="_blank">
-                💬 Задать вопрос в чате
+                💬 {{ t.guide_ask_question }}
             </a>
         </div>
     {% endif %}

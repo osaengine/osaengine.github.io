@@ -1,10 +1,12 @@
+{% assign lang = page.lang | default: site.default_lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="yandex-verification" content="3225d9f55371d234" />
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }} - open source алготрейдинг платформы</title>
+    {% if lang == "ru" %}<meta name="yandex-verification" content="3225d9f55371d234" />{% endif %}
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }} - {% if lang == "ru" %}open source алготрейдинг платформы{% else %}open source algo trading platforms{% endif %}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
@@ -19,24 +21,39 @@
                 <div class="logo-icon">OS</div>
                 <h1>{{ site.title }}</h1>
             </div>
-            
+
             <div class="nav-container">
                 <nav>
                     <ul class="nav-menu" id="navMenu">
-                        <li><a href="/">Главная</a></li>
-                        <li><a href="https://t.me/+aF2ZvtMrwFo2Nzli" target="_blank">Чат</a></li>
-                        <li><a href="/blog/">Блог</a></li>
-                        <li><a href="/faq/">Гайд</a></li>
-                        <li><a href="/бесплатные-торговые-роботы/">Торговые роботы</a></li>
-                        <li><a href="/скачать-os-engine/">Скачать</a></li>
+                        <li><a href="/{{ lang }}/">{{ t.nav_home }}</a></li>
+                        <li><a href="https://t.me/+aF2ZvtMrwFo2Nzli" target="_blank">{{ t.nav_chat }}</a></li>
+                        <li><a href="/{{ lang }}/blog/">{{ t.nav_blog }}</a></li>
+                        <li><a href="/{{ lang }}/guide/">{{ t.nav_guide }}</a></li>
+                        <li><a href="/{{ lang }}/trading-robots/">{{ t.nav_trading_robots }}</a></li>
+                        <li><a href="/{{ lang }}/download/">{{ t.nav_download }}</a></li>
                     </ul>
                 </nav>
-                
-                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-toggle" id="langToggle" aria-label="{{ t.switch_language }}">
+                        <span>{{ t.lang_flag }} {{ lang | upcase }}</span>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        {% for l in site.languages %}
+                            {% assign lt = site.data.i18n[l] %}
+                            <a href="/{{ l }}/" class="lang-option{% if l == lang %} active{% endif %}">
+                                {{ lt.lang_flag }} {{ lt.lang_name }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="{{ t.theme_toggle }}">
                     <span id="themeIcon">🌙</span>
                 </button>
-                
-                <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+
+                <button class="burger-btn" id="burgerBtn" aria-label="{{ t.menu_label }}">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -50,8 +67,8 @@
     </main>
 
     <footer>
-        <p>Присылайте новости ваших проектов нам <a href="https://t.me/osengine_official" target="_blank">в телеграм</a></p>
-        <p style="margin-top: 0.5rem; font-size: 0.875rem;">© {{ site.time | date: "%Y" }} OS Engine. Open Source алготрейдинг платформы.</p>
+        <p>{{ t.footer_news }} <a href="https://t.me/osengine_official" target="_blank">{{ t.footer_telegram }}</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">&copy; {{ site.time | date: "%Y" }} {{ t.footer_copyright }}</p>
     </footer>
 
     <script>
@@ -68,7 +85,7 @@
         themeToggle.addEventListener('click', () => {
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
@@ -76,6 +93,21 @@
 
         function updateThemeIcon(theme) {
             themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Language Switcher
+        const langToggle = document.getElementById('langToggle');
+        const langDropdown = document.getElementById('langDropdown');
+
+        if (langToggle && langDropdown) {
+            langToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langDropdown.classList.toggle('active');
+            });
+
+            document.addEventListener('click', () => {
+                langDropdown.classList.remove('active');
+            });
         }
 
         // Mobile Menu Toggle
@@ -117,7 +149,7 @@
 
         window.addEventListener('scroll', () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
+
             if (scrollTop > lastScrollTop && scrollTop > 100) {
                 // Scrolling down
                 header.style.transform = 'translateY(-100%)';
@@ -125,7 +157,7 @@
                 // Scrolling up
                 header.style.transform = 'translateY(0)';
             }
-            
+
             lastScrollTop = scrollTop;
         });
 
@@ -170,6 +202,7 @@
         });
     </script>
 
+    {% if lang == "ru" %}
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -187,5 +220,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/98830374" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    {% endif %}
 </body>
 </html>

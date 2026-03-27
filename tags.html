@@ -1,24 +1,14 @@
 ---
-layout: default
-title: Теги
-description: Список тегов и связанных с ними новостей
+layout: null
+permalink: /tags/
 ---
-<h1>Теги</h1>
-
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tag_words = site_tags | split:',' | sort %}
-
-<div class="tags-list">
-  {% for tag in tag_words %}
-    <a href="#{{ tag | slugify }}">{{ tag }}</a>
-  {% endfor %}
-</div>
-
-{% for tag in tag_words %}
-  <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
-  <ul>
-    {% for post in site.tags[tag] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0;url=/en/tags/">
+<link rel="canonical" href="/en/tags/">
+</head>
+<body>
+<p>Redirecting to <a href="/en/tags/">/en/tags/</a>...</p>
+</body>
+</html>

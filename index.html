@@ -1,100 +1,62 @@
 ---
 layout: default
-title: "Главная"
-description: "Открытые платформы для алгоритмической торговли. Узнайте о лучших open source решениях для алготрейдинга."
+title: "OS Engine"
+description: "Open source platforms for algorithmic trading. Discover the best solutions for algo trading."
+lang: "en"
 ---
 
 <section class="hero">
-    <h2>Открытые платформы для алготрейдинга</h2>
-    <p>Откройте для себя мир алгоритмической торговли с лучшими open source решениями. Создавайте, тестируйте и запускайте торговых роботов с помощью современных инструментов.</p>
+    <h2>Choose Your Language / Выберите язык</h2>
+    <p>Select your preferred language to continue</p>
 </section>
 
-<section class="project-grid">
-  {% for project in site.data.projects %}
-    <div class="project-card">
-      <div class="project-image-container">
-        <img src="{{ project.image }}" alt="{{ project.name }}">
-        <div class="project-title-overlay">{{ project.name }}</div>
-      </div>
-
-      <div class="project-info">
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
-        <ul>
-          {% for advantage in project.advantages %}
-            <li>{{ advantage }}</li>
-          {% endfor %}
-        </ul>
-        <div class="project-links">
-          <a href="{{ project.website }}" class="btn btn-primary" target="_blank">
-            🌐 Сайт
-          </a>
-          <a href="{{ project.github }}" class="btn btn-secondary" target="_blank">
-            📁 GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-</section>
-
-<section class="chat-section">
-    <h2 class="section-title">Чаты по алготрейдингу</h2>
-    <div class="chat-grid">
-      {% for chat in site.data.chats %}
-        <div class="chat-card">
-          <img src="{{ chat.image }}" alt="{{ chat.name }}">
-          <h3>{{ chat.name }}</h3>
-          <p>{{ chat.description }}</p>
-          <a href="{{ chat.link }}" class="btn btn-telegram" target="_blank">
-            💬 Перейти в чат
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-</section>
-
-<section class="resources-section">
-    <h2 class="section-title">Полезные ресурсы по алготрейдингу</h2>
-    <div class="resources-grid">
-        <a href="https://algotradinglib.com/en/" class="resource-link" target="_blank">
-            📚 Алгопедия
+<div class="lang-picker">
+    <div class="lang-picker-grid">
+        <a href="/en/" class="lang-picker-card">
+            <span class="lang-picker-flag">🇬🇧</span>
+            <span class="lang-picker-name">English</span>
         </a>
-        <a href="https://habr.com/ru/search/?target_type=posts&order=relevance&q=[алгоритмическая+торговля]" class="resource-link" target="_blank">
-            📖 Хабр: Алгоритмическая торговля
+        <a href="/ru/" class="lang-picker-card">
+            <span class="lang-picker-flag">🇷🇺</span>
+            <span class="lang-picker-name">Русский</span>
         </a>
-        <a href="https://www.mql5.com/ru" class="resource-link" target="_blank">
-            🤝 MQL5: Сообщество трейдеров
+        <a href="/zh/" class="lang-picker-card">
+            <span class="lang-picker-flag">🇨🇳</span>
+            <span class="lang-picker-name">中文</span>
         </a>
-        <a href="https://forum.quik.ru/forum10/" class="resource-link" target="_blank">
-            💻 QUIK: Форум по LUA
+        <a href="/es/" class="lang-picker-card">
+            <span class="lang-picker-flag">🇪🇸</span>
+            <span class="lang-picker-name">Español</span>
         </a>
-        <a href="https://ru.tradingview.com/scripts/" class="resource-link" target="_blank">
-            📊 TradingView: Торговые скрипты
-        </a>
-        <a href="https://pmntrade.ru" class="resource-link" target="_blank">
-            🤖 PMN Trade: Роботы для QUIK
+        <a href="/de/" class="lang-picker-card">
+            <span class="lang-picker-flag">🇩🇪</span>
+            <span class="lang-picker-name">Deutsch</span>
         </a>
     </div>
-</section>
+</div>
 
-<section class="resources-section">
-    <h2 class="section-title">Как начать с OS Engine</h2>
-    <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-        <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Пошаговое руководство:</h3>
-        <ol style="color: var(--text-secondary); line-height: 1.8; padding-left: 1.5rem;">
-            <li>Выберите подходящую платформу из представленных выше проектов</li>
-            <li>Перейдите в репозиторий проекта на GitHub</li>
-            <li>Склонируйте репозиторий на свой компьютер с помощью Git</li>
-            <li>Следуйте инструкциям в README файле для установки и настройки</li>
-            <li>Изучите документацию проекта для понимания основ работы</li>
-            <li>Начните разработку своих торговых алгоритмов и стратегий</li>
-        </ol>
-        <p style="margin-top: 1.5rem; color: var(--text-secondary);">
-            OS Engine предоставляет мощные инструменты для алготрейдинга, позволяя создавать эффективные торговые роботы и автоматизировать ваши торговые стратегии.
-        </p>
-        <p style="margin-top: 1rem; color: var(--text-secondary);">
-            Для более подробной информации о процессе скачивания OSEngine и установки, посетите нашу <a href="{{ '/скачать-os-engine/' | relative_url }}" style="color: var(--primary-color);">страницу OSEngine скачать</a>.
-        </p>
-    </div>
-</section>
+<script>
+// Auto-redirect based on browser language
+(function() {
+    const savedLang = localStorage.getItem('osengine_lang');
+    if (savedLang) {
+        window.location.href = '/' + savedLang + '/';
+        return;
+    }
+
+    const browserLang = navigator.language || navigator.userLanguage;
+    const langMap = {
+        'ru': 'ru', 'zh': 'zh', 'es': 'es', 'de': 'de'
+    };
+
+    for (const [prefix, lang] of Object.entries(langMap)) {
+        if (browserLang.startsWith(prefix)) {
+            window.location.href = '/' + lang + '/';
+            return;
+        }
+    }
+
+    // Default to English
+    window.location.href = '/en/';
+})();
+</script>

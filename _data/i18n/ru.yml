@@ -1,0 +1,125 @@
+# Russian UI strings
+lang_name: "Русский"
+lang_flag: "🇷🇺"
+
+# Navigation
+nav_home: "Главная"
+nav_chat: "Чат"
+nav_blog: "Блог"
+nav_guide: "Гайд"
+nav_trading_robots: "Торговые роботы"
+nav_download: "Скачать"
+nav_language: "Язык"
+
+# Theme toggle
+theme_toggle: "Переключить тему"
+menu_label: "Меню"
+
+# Homepage
+hero_title: "Открытые платформы для алготрейдинга"
+hero_description: "Откройте для себя мир алгоритмической торговли с лучшими open source решениями. Создавайте, тестируйте и запускайте торговых роботов с помощью современных инструментов."
+section_chats: "Чаты по алготрейдингу"
+section_resources: "Полезные ресурсы по алготрейдингу"
+section_getting_started: "Как начать с OS Engine"
+getting_started_subtitle: "Пошаговое руководство:"
+getting_started_steps:
+  - "Выберите подходящую платформу из представленных выше проектов"
+  - "Перейдите в репозиторий проекта на GitHub"
+  - "Склонируйте репозиторий на свой компьютер с помощью Git"
+  - "Следуйте инструкциям в README файле для установки и настройки"
+  - "Изучите документацию проекта для понимания основ работы"
+  - "Начните разработку своих торговых алгоритмов и стратегий"
+getting_started_description: "OS Engine предоставляет мощные инструменты для алготрейдинга, позволяя создавать эффективные торговые роботы и автоматизировать ваши торговые стратегии."
+getting_started_download_text: "Для более подробной информации о процессе скачивания OSEngine и установки, посетите нашу"
+getting_started_download_link: "страницу OSEngine скачать"
+btn_website: "Сайт"
+btn_github: "GitHub"
+btn_join_chat: "Перейти в чат"
+
+# Resources
+resource_algopedia: "Алгопедия"
+resource_habr: "Хабр: Алгоритмическая торговля"
+resource_mql5: "MQL5: Сообщество трейдеров"
+resource_quik_forum: "QUIK: Форум по LUA"
+resource_tradingview: "TradingView: Торговые скрипты"
+resource_pmntrade: "PMN Trade: Роботы для QUIK"
+
+# Blog
+blog_title: "Последние новости"
+blog_description: "Следите за развитием мира алгоритмической торговли. Подпишитесь на наш"
+blog_telegram_link: "Telegram-канал"
+blog_read_more: "Читать далее"
+blog_tags: "Теги:"
+blog_previous: "Предыдущая"
+blog_next: "Следующая"
+blog_no_posts: "Пока нет записей"
+
+# Post
+reading_time_one: "мин чтения"
+reading_time_other: "мин чтения"
+post_tags: "Теги:"
+share_article: "Поделиться статьей:"
+share_telegram: "Telegram"
+share_twitter: "Twitter"
+share_facebook: "Facebook"
+share_vkontakte: "ВКонтакте"
+share_linkedin: "LinkedIn"
+share_copy_link: "Копировать ссылку"
+link_copied: "Ссылка скопирована!"
+copy_error: "Ошибка копирования"
+related_posts: "Похожие статьи"
+post_discussion: "Обсуждение"
+post_discussion_text: "Присоединяйтесь к обсуждению в нашем"
+post_discussion_link: "Telegram-чате"
+nav_previous_post: "Назад"
+nav_next_post: "Вперёд"
+
+# Tags page
+tags_title: "Теги"
+tags_description: "Список тегов и связанных с ними новостей"
+
+# Download page
+download_title: "Скачать OS Engine"
+download_description: "Как скачивать и устанавливать платформы OS Engine"
+
+# Trading robots / Bot sources
+trading_robots_title: "Бесплатные торговые роботы"
+trading_robots_description: "Каталог ресурсов с бесплатными торговыми роботами и алгоритмическими стратегиями."
+trading_robots_hero: "Где найти бесплатных торговых роботов"
+trading_robots_hero_desc: "Каталог лучших ресурсов с бесплатными торговыми роботами и алгоритмическими стратегиями. Найдите готовые решения для старта в алготрейдинге."
+trading_robots_verified: "Проверенных ресурсов"
+trading_robots_free_bots: "Бесплатных роботов"
+trading_robots_platforms: "Платформ"
+trading_robots_free_badge: "Бесплатно"
+trading_robots_visit: "Перейти на сайт"
+tips_title: "Полезные советы"
+tips:
+  - "Всегда тестируйте роботов на демо-счете перед реальной торговлей"
+  - "Изучите код робота, чтобы понимать логику его работы"
+  - "Обращайте внимание на дату последнего обновления"
+  - "Читайте отзывы и комментарии других пользователей"
+warnings_title: "Важные предупреждения"
+warnings:
+  - "Торговые роботы не гарантируют прибыль"
+  - "Прошлые результаты не гарантируют будущую доходность"
+  - "Всегда используйте управление рисками"
+  - "Регулярно мониторьте работу роботов"
+
+# Guide / FAQ
+guide_title: "Гайд по платформам OSEngine"
+guide_description: "Подробный гайд по возможностям платформ OS Engine для трейдеров и разработчиков."
+guide_hero: "Гайд по OSEngine и алготрейдингу"
+guide_hero_desc: "Исчерпывающее руководство по работе с платформами алгоритмической торговли. От основ до продвинутых техник."
+guide_questions_count: "вопросов"
+guide_in_development: "Раздел в разработке"
+guide_in_development_text: "Мы работаем над созданием подробного гайда. Скоро здесь появится много полезной информации!"
+guide_ask_question: "Задать вопрос в чате"
+faq_breadcrumb: "FAQ"
+
+# Footer
+footer_news: "Присылайте новости ваших проектов нам"
+footer_telegram: "в телеграм"
+footer_copyright: "OS Engine. Open Source алготрейдинг платформы."
+
+# Language switcher
+switch_language: "Язык"

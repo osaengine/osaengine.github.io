@@ -1,86 +1,14 @@
 ---
-layout: default
-title: Бесплатные торговые роботы
-description: "Каталог ресурсов с бесплатными торговыми роботами и алгоритмическими стратегиями."
+layout: null
 permalink: /бесплатные-торговые-роботы/
 ---
-
-<section class="hero">
-  <h2>Где найти бесплатных торговых роботов</h2>
-  <p>Каталог лучших ресурсов с бесплатными торговыми роботами и алгоритмическими стратегиями. Найдите готовые решения для старта в алготрейдинге.</p>
-</section>
-
-<div class="sources-container">
-  <div class="sources-stats">
-    <div class="stat-card">
-      <h3>{{ site.data.bot_sources | size }}</h3>
-      <p>Проверенных ресурсов</p>
-    </div>
-    <div class="stat-card">
-      <h3>1000+</h3>
-      <p>Бесплатных роботов</p>
-    </div>
-    <div class="stat-card">
-      <h3>5+</h3>
-      <p>Платформ</p>
-    </div>
-  </div>
-
-  <div class="sources-grid">
-    {% for source in site.data.bot_sources %}
-    <div class="source-card">
-      <div class="source-card-header">
-        <img src="{{ source.image | relative_url }}" alt="{{ source.name }}" class="source-image">
-        <div class="source-badge">Бесплатно</div>
-      </div>
-      <div class="source-info">
-        <h2>{{ source.name }}</h2>
-        <p class="source-description">{{ source.description }}</p>
-        <div class="source-features">
-          {% if source.name contains "StockSharp" %}
-            <span class="feature-tag">🔧 Конструктор стратегий</span>
-            <span class="feature-tag">📊 Бэктест</span>
-          {% elsif source.name contains "QuantConnect" %}
-            <span class="feature-tag">☁️ Облачная платформа</span>
-            <span class="feature-tag">🐍 Python/C#</span>
-          {% elsif source.name contains "MQL5" %}
-            <span class="feature-tag">🤖 Expert Advisors</span>
-            <span class="feature-tag">📈 Индикаторы</span>
-          {% elsif source.name contains "TradersUnion" %}
-            <span class="feature-tag">💱 Форекс роботы</span>
-            <span class="feature-tag">📋 Инструкции</span>
-          {% elsif source.name contains "PMN Trade" %}
-            <span class="feature-tag">💻 QUIK</span>
-            <span class="feature-tag">🇷🇺 Русский язык</span>
-          {% endif %}
-        </div>
-        <a href="{{ source.url }}" class="source-link" target="_blank">
-          🚀 Перейти на сайт
-        </a>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-
-  <div class="additional-info">
-    <div class="info-card">
-      <h3>💡 Полезные советы</h3>
-      <ul>
-        <li>Всегда тестируйте роботов на демо-счете перед реальной торговлей</li>
-        <li>Изучите код робота, чтобы понимать логику его работы</li>
-        <li>Обращайте внимание на дату последнего обновления</li>
-        <li>Читайте отзывы и комментарии других пользователей</li>
-      </ul>
-    </div>
-
-    <div class="info-card">
-      <h3>⚠️ Важные предупреждения</h3>
-      <ul>
-        <li>Торговые роботы не гарантируют прибыль</li>
-        <li>Прошлые результаты не гарантируют будущую доходность</li>
-        <li>Всегда используйте управление рисками</li>
-        <li>Регулярно мониторьте работу роботов</li>
-      </ul>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0;url=/ru/trading-robots/">
+<link rel="canonical" href="/ru/trading-robots/">
+</head>
+<body>
+<p>Redirecting to <a href="/ru/trading-robots/">/ru/trading-robots/</a>...</p>
+</body>
+</html>

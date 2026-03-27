@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Теги"
+description: "Список тегов и связанных с ними новостей"
+lang: "ru"
+permalink: /ru/tags/
+---
+
+{% assign lang = "ru" %}
+{% assign t = site.data.i18n[lang] %}
+{% assign lang_posts = site.posts | where: "lang", lang %}
+
+<h1>{{ t.tags_title }}</h1>
+
+{% assign all_tags = "" %}
+{% for post in lang_posts %}
+  {% for tag in post.tags %}
+    {% unless all_tags contains tag %}
+      {% if all_tags == "" %}
+        {% assign all_tags = tag %}
+      {% else %}
+        {% assign all_tags = all_tags | append: "," | append: tag %}
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign tag_words = all_tags | split: "," | sort %}
+
+<div class="tags-list">
+  {% for tag in tag_words %}
+    <a href="#{{ tag | slugify }}">{{ tag }}</a>
+  {% endfor %}
+</div>
+
+{% for tag in tag_words %}
+  <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+  <ul>
+    {% for post in lang_posts %}
+      {% if post.tags contains tag %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}

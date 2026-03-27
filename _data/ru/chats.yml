@@ -1,0 +1,29 @@
+- name: AlgoPack от МосБиржи
+  image: /assets/images/moex_algopack.png
+  description: Чат по AlgoPack от Московской Биржи
+  link: https://t.me/moex_algopack
+
+- name: OS Engine
+  image: /assets/images/logo.png
+  description: Чат по OS Engine
+  link: https://t.me/+aF2ZvtMrwFo2Nzli
+
+- name: StockSharp
+  image: /assets/images/stocksharp_chat.png
+  description: Чат по StockSharp
+  link: https://t.me/stocksharpchat
+
+- name: Backtrader
+  image: /assets/images/tinkoff_chat.png
+  description: Чат по Backtrader
+  link: https://t.me/backtrader_chat
+
+- name: Алор Брокер
+  image: /assets/images/alor_chat.png
+  description: Чат по Алор Брокер OpenAPI
+  link: https://t.me/alor_openapi_chat
+
+- name: MFD
+  image: /assets/images/algofox_chat.png
+  description: Алготрейдинг от MFD
+  link: https://mfd.ru/blogs/view/?id=50

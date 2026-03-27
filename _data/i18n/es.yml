@@ -1,0 +1,125 @@
+# Spanish UI strings
+lang_name: "Español"
+lang_flag: "🇪🇸"
+
+# Navigation
+nav_home: "Inicio"
+nav_chat: "Chat"
+nav_blog: "Blog"
+nav_guide: "Guía"
+nav_trading_robots: "Robots de Trading"
+nav_download: "Descargar"
+nav_language: "Idioma"
+
+# Theme toggle
+theme_toggle: "Cambiar tema"
+menu_label: "Menú"
+
+# Homepage
+hero_title: "Plataformas Open Source para Trading Algorítmico"
+hero_description: "Descubre el mundo del trading algorítmico con las mejores soluciones de código abierto. Crea, prueba y ejecuta robots de trading con herramientas modernas."
+section_chats: "Chats de Trading Algorítmico"
+section_resources: "Recursos Útiles de Trading Algorítmico"
+section_getting_started: "Cómo empezar con OS Engine"
+getting_started_subtitle: "Guía paso a paso:"
+getting_started_steps:
+  - "Elige una plataforma adecuada de los proyectos anteriores"
+  - "Ve al repositorio del proyecto en GitHub"
+  - "Clona el repositorio en tu ordenador usando Git"
+  - "Sigue las instrucciones del README para la instalación y configuración"
+  - "Estudia la documentación del proyecto para entender los fundamentos"
+  - "Comienza a desarrollar tus propios algoritmos y estrategias de trading"
+getting_started_description: "OS Engine proporciona herramientas poderosas para el trading algorítmico, permitiéndote crear robots de trading efectivos y automatizar tus estrategias."
+getting_started_download_text: "Para más información sobre la descarga e instalación de OSEngine, visita nuestra"
+getting_started_download_link: "página de descarga"
+btn_website: "Sitio web"
+btn_github: "GitHub"
+btn_join_chat: "Unirse al chat"
+
+# Resources
+resource_algopedia: "Algopedia"
+resource_habr: "Habr: Trading Algorítmico"
+resource_mql5: "MQL5: Comunidad de Traders"
+resource_quik_forum: "QUIK: Foro de LUA"
+resource_tradingview: "TradingView: Scripts de Trading"
+resource_pmntrade: "PMN Trade: Robots para QUIK"
+
+# Blog
+blog_title: "Últimas Noticias"
+blog_description: "Sigue el desarrollo del mundo del trading algorítmico. Suscríbete a nuestro"
+blog_telegram_link: "canal de Telegram"
+blog_read_more: "Leer más"
+blog_tags: "Etiquetas:"
+blog_previous: "Anterior"
+blog_next: "Siguiente"
+blog_no_posts: "Aún no hay publicaciones"
+
+# Post
+reading_time_one: "min de lectura"
+reading_time_other: "min de lectura"
+post_tags: "Etiquetas:"
+share_article: "Compartir artículo:"
+share_telegram: "Telegram"
+share_twitter: "Twitter"
+share_facebook: "Facebook"
+share_vkontakte: "VKontakte"
+share_linkedin: "LinkedIn"
+share_copy_link: "Copiar enlace"
+link_copied: "¡Enlace copiado!"
+copy_error: "Error al copiar"
+related_posts: "Artículos Relacionados"
+post_discussion: "Discusión"
+post_discussion_text: "Únete a la discusión en nuestro"
+post_discussion_link: "chat de Telegram"
+nav_previous_post: "Anterior"
+nav_next_post: "Siguiente"
+
+# Tags page
+tags_title: "Etiquetas"
+tags_description: "Lista de etiquetas y artículos relacionados"
+
+# Download page
+download_title: "Descargar OS Engine"
+download_description: "Cómo descargar e instalar las plataformas OS Engine"
+
+# Trading robots / Bot sources
+trading_robots_title: "Robots de Trading Gratuitos"
+trading_robots_description: "Catálogo de recursos con robots de trading gratuitos y estrategias algorítmicas."
+trading_robots_hero: "Dónde Encontrar Robots de Trading Gratuitos"
+trading_robots_hero_desc: "Catálogo de los mejores recursos con robots de trading gratuitos y estrategias algorítmicas. Encuentra soluciones listas para empezar en el trading algorítmico."
+trading_robots_verified: "Recursos verificados"
+trading_robots_free_bots: "Robots gratuitos"
+trading_robots_platforms: "Plataformas"
+trading_robots_free_badge: "Gratis"
+trading_robots_visit: "Visitar sitio web"
+tips_title: "Consejos Útiles"
+tips:
+  - "Siempre prueba los robots en una cuenta demo antes de operar en real"
+  - "Estudia el código del robot para entender su lógica"
+  - "Presta atención a la fecha de última actualización"
+  - "Lee las opiniones y comentarios de otros usuarios"
+warnings_title: "Advertencias Importantes"
+warnings:
+  - "Los robots de trading no garantizan ganancias"
+  - "Los resultados pasados no garantizan rendimientos futuros"
+  - "Siempre usa gestión de riesgos"
+  - "Monitorea regularmente el rendimiento de los robots"
+
+# Guide / FAQ
+guide_title: "Guía de OSEngine y Trading Algorítmico"
+guide_description: "Guía completa para trabajar con plataformas de trading algorítmico. Desde lo básico hasta técnicas avanzadas."
+guide_hero: "Guía de OSEngine y Trading Algorítmico"
+guide_hero_desc: "Guía completa para trabajar con plataformas de trading algorítmico. Desde lo básico hasta técnicas avanzadas."
+guide_questions_count: "preguntas"
+guide_in_development: "Sección en desarrollo"
+guide_in_development_text: "Estamos trabajando en crear una guía detallada. ¡Pronto aparecerá información útil aquí!"
+guide_ask_question: "Hacer una pregunta en el chat"
+faq_breadcrumb: "FAQ"
+
+# Footer
+footer_news: "Envía las noticias de tus proyectos"
+footer_telegram: "por Telegram"
+footer_copyright: "OS Engine. Plataformas open source de trading algorítmico."
+
+# Language switcher
+switch_language: "Idioma"

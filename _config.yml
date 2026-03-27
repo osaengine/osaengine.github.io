@@ -2,12 +2,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-paginate: 5
-paginate_path: "/blog/page:num/"
-
 title: OS Engine
-description: "Открытые платформы для алгоритмической торговли. Узнайте о лучших open source решениях для алготрейдинга."
-url: "https://osaengine.ru"
+description: "Open source platforms for algorithmic trading. Discover the best solutions for algo trading."
+url: "https://osaengine.com"
 author: OSEngine Team
 logo: /assets/images/logo.png
 social:
@@ -15,13 +12,38 @@ social:
   links:
     - https://t.me/osengine_official
     - https://github.com/osaengine
-lang: ru_RU
+
+languages: ["en", "ru", "zh", "es", "de"]
+default_lang: "en"
+
+permalink: /:categories/blog/:title/
 
 defaults:
   - scope:
       path: ""
     values:
       image: /assets/images/preview.png
+      lang: "en"
+  - scope:
+      path: "_posts/ru"
+    values:
+      lang: "ru"
+  - scope:
+      path: "_posts/en"
+    values:
+      lang: "en"
+  - scope:
+      path: "_posts/zh"
+    values:
+      lang: "zh"
+  - scope:
+      path: "_posts/es"
+    values:
+      lang: "es"
+  - scope:
+      path: "_posts/de"
+    values:
+      lang: "de"
 
 collections:
   faq:

@@ -1,0 +1,125 @@
+# English UI strings
+lang_name: "English"
+lang_flag: "🇬🇧"
+
+# Navigation
+nav_home: "Home"
+nav_chat: "Chat"
+nav_blog: "Blog"
+nav_guide: "Guide"
+nav_trading_robots: "Trading Robots"
+nav_download: "Download"
+nav_language: "Language"
+
+# Theme toggle
+theme_toggle: "Toggle theme"
+menu_label: "Menu"
+
+# Homepage
+hero_title: "Open Source Platforms for Algo Trading"
+hero_description: "Discover the world of algorithmic trading with the best open source solutions. Build, test, and run trading robots with modern tools."
+section_chats: "Algo Trading Chats"
+section_resources: "Useful Algo Trading Resources"
+section_getting_started: "Getting Started with OS Engine"
+getting_started_subtitle: "Step-by-step guide:"
+getting_started_steps:
+  - "Choose a suitable platform from the projects above"
+  - "Go to the project's GitHub repository"
+  - "Clone the repository to your computer using Git"
+  - "Follow the README instructions for installation and setup"
+  - "Study the project documentation to understand the basics"
+  - "Start developing your own trading algorithms and strategies"
+getting_started_description: "OS Engine provides powerful tools for algo trading, allowing you to create effective trading robots and automate your strategies."
+getting_started_download_text: "For more information about downloading and installing OSEngine, visit our"
+getting_started_download_link: "download page"
+btn_website: "Website"
+btn_github: "GitHub"
+btn_join_chat: "Join Chat"
+
+# Resources
+resource_algopedia: "Algopedia"
+resource_habr: "Habr: Algorithmic Trading"
+resource_mql5: "MQL5: Traders Community"
+resource_quik_forum: "QUIK: LUA Forum"
+resource_tradingview: "TradingView: Trading Scripts"
+resource_pmntrade: "PMN Trade: Robots for QUIK"
+
+# Blog
+blog_title: "Latest News"
+blog_description: "Follow the development of the algorithmic trading world. Subscribe to our"
+blog_telegram_link: "Telegram channel"
+blog_read_more: "Read more"
+blog_tags: "Tags:"
+blog_previous: "Previous"
+blog_next: "Next"
+blog_no_posts: "No posts yet"
+
+# Post
+reading_time_one: "min read"
+reading_time_other: "min read"
+post_tags: "Tags:"
+share_article: "Share this article:"
+share_telegram: "Telegram"
+share_twitter: "Twitter"
+share_facebook: "Facebook"
+share_vkontakte: "VKontakte"
+share_linkedin: "LinkedIn"
+share_copy_link: "Copy link"
+link_copied: "Link copied!"
+copy_error: "Copy error"
+related_posts: "Related Posts"
+post_discussion: "Discussion"
+post_discussion_text: "Join the discussion in our"
+post_discussion_link: "Telegram chat"
+nav_previous_post: "Previous"
+nav_next_post: "Next"
+
+# Tags page
+tags_title: "Tags"
+tags_description: "List of tags and related articles"
+
+# Download page
+download_title: "Download OS Engine"
+download_description: "How to download and install OS Engine platforms"
+
+# Trading robots / Bot sources
+trading_robots_title: "Free Trading Robots"
+trading_robots_description: "Catalog of resources with free trading robots and algorithmic strategies."
+trading_robots_hero: "Where to Find Free Trading Robots"
+trading_robots_hero_desc: "Catalog of the best resources with free trading robots and algorithmic strategies. Find ready-made solutions to start algo trading."
+trading_robots_verified: "Verified resources"
+trading_robots_free_bots: "Free robots"
+trading_robots_platforms: "Platforms"
+trading_robots_free_badge: "Free"
+trading_robots_visit: "Visit website"
+tips_title: "Useful Tips"
+tips:
+  - "Always test robots on a demo account before real trading"
+  - "Study the robot's code to understand its logic"
+  - "Pay attention to the last update date"
+  - "Read reviews and comments from other users"
+warnings_title: "Important Warnings"
+warnings:
+  - "Trading robots do not guarantee profit"
+  - "Past results do not guarantee future returns"
+  - "Always use risk management"
+  - "Regularly monitor robot performance"
+
+# Guide / FAQ
+guide_title: "OSEngine & Algo Trading Guide"
+guide_description: "Comprehensive guide to working with algorithmic trading platforms. From basics to advanced techniques."
+guide_hero: "OSEngine & Algo Trading Guide"
+guide_hero_desc: "Comprehensive guide to working with algorithmic trading platforms. From basics to advanced techniques."
+guide_questions_count: "questions"
+guide_in_development: "Section under development"
+guide_in_development_text: "We are working on creating a detailed guide. Useful information will appear here soon!"
+guide_ask_question: "Ask a question in chat"
+faq_breadcrumb: "FAQ"
+
+# Footer
+footer_news: "Send your project news to us"
+footer_telegram: "on Telegram"
+footer_copyright: "OS Engine. Open Source algo trading platforms."
+
+# Language switcher
+switch_language: "Language"

@@ -1,0 +1,125 @@
+- name: LEAN
+  image: /assets/images/lean.png
+  description: QuantConnect console client
+  advantages:
+    - High performance
+    - Active community
+  github: https://github.com/QuantConnect/Lean
+  website: https://www.quantconnect.com/lean/
+  download_url: https://github.com/QuantConnect/Lean/releases/latest
+  install_command: "git clone https://github.com/QuantConnect/Lean.git"
+  system_requirements: "Windows/Linux/macOS, .NET 6+, Python 3.8+"
+  documentation: https://www.quantconnect.com/docs/
+  telegram_chat: https://discord.gg/quantconnect
+
+- name: StockSharp
+  image: /assets/images/stocksharp.png
+  description: Algo trading platform
+  advantages:
+    - Multi-exchange support
+    - No-code strategy designer
+  github: https://github.com/StockSharp/StockSharp
+  website: https://stocksharp.com/
+  download_url: https://stocksharp.com/products/download/
+  install_command: "Download .msi installer from GitHub"
+  system_requirements: "Windows/Linux/macOS, .NET 6+"
+  documentation: https://doc.stocksharp.com/
+  telegram_chat: https://t.me/stocksharpchat
+
+- name: Backtrader
+  image: /assets/images/backtrader.png
+  description: Python backtesting framework
+  advantages:
+    - Easy to use
+    - Flexible architecture
+  github: https://github.com/mementum/backtrader
+  website: https://www.backtrader.com/
+  download_url: https://pypi.org/project/backtrader/
+  install_command: "pip install backtrader"
+  system_requirements: "Python 3.6+, cross-platform"
+  documentation: https://www.backtrader.com/docu/
+  telegram_chat: https://t.me/backtrader_chat
+
+- name: CCXT
+  image: /assets/images/ccxt.png
+  description: Crypto trading library
+  advantages:
+    - Multi-exchange support
+    - Unified API
+  github: https://github.com/ccxt/ccxt
+  website: https://ccxt.trade/
+  download_url: https://pypi.org/project/ccxt/
+  install_command: "pip install ccxt"
+  system_requirements: "Python 3.7+, Node.js 15.0+, PHP 7.0+"
+  documentation: https://docs.ccxt.com/
+  telegram_chat: https://discord.com/invite/ccxt
+
+- name: QuantLib
+  image: /assets/images/quantlib.png
+  description: Quantitative analysis library
+  advantages:
+    - Extensive toolkit
+    - Pricing models implementation
+  github: https://github.com/lballabio/QuantLib
+  website: https://www.quantlib.org/
+  download_url: https://github.com/lballabio/QuantLib/releases/latest
+  install_command: "pip install QuantLib-Python"
+  system_requirements: "C++, Python 3.6+, cross-platform"
+  documentation: https://www.quantlib.org/docs.shtml
+  telegram_chat: ""
+
+- name: Zipline
+  image: /assets/images/zipline.png
+  description: Python library
+  advantages:
+    - Easy to use
+    - Project unmaintained
+  github: https://github.com/quantopian/zipline
+  website: https://zipline.ml4trading.io/
+  download_url: https://pypi.org/project/zipline-reloaded/
+  install_command: "pip install zipline-reloaded"
+  system_requirements: "Python 3.6+, cross-platform"
+  documentation: https://zipline.ml4trading.io/
+  telegram_chat: https://discord.gg/qfCqS6Vtnj
+
+- name: Nautilus Trader
+  image: /assets/images/nautilus_trader.png
+  description: Cloud trading platform
+  advantages:
+    - Python support
+    - Cloud service
+  github: https://github.com/nautechsystems/nautilus_trader
+  website: https://nautilustrader.io/
+  download_url: https://pypi.org/project/nautilus-trader/
+  install_command: "pip install nautilus-trader"
+  system_requirements: "Python 3.10+, cross-platform"
+  documentation: https://docs.nautilustrader.io/
+  telegram_chat: https://discord.gg/NautilusTrader
+
+- name: ML for Trading
+  image: /assets/images/ml4trading.png
+  description: Machine learning book
+  advantages:
+    - Machine learning
+    - Detailed explanations
+  github: https://github.com/stefan-jansen/machine-learning-for-trading
+  website: https://ml4trading.io/
+  download_url: https://github.com/stefan-jansen/machine-learning-for-trading/archive/refs/heads/main.zip
+  install_command: "git clone the repository"
+  system_requirements: "Python 3.8+, cross-platform"
+  documentation: https://ml4trading.io/
+  telegram_chat: https://exchange.ml4trading.io
+
+- name: Backtesting.py
+  image: /assets/images/backtesting_py.png
+  description: Python backtester
+  advantages:
+    - Python support
+    - Simple API
+  github: https://github.com/kernc/backtesting.py
+  website: https://kernc.github.io/backtesting.py/
+  download_url: https://pypi.org/project/Backtesting/
+  install_command: "pip install Backtesting"
+  system_requirements: "Python 3.6+, cross-platform"
+  documentation: https://kernc.github.io/backtesting.py/doc/backtesting/
+  telegram_chat: https://github.com/kernc/backtesting.py/discussions

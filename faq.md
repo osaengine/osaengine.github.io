@@ -1,6 +1,14 @@
 ---
-layout: faq
-title: Гайд по платформам OSEngine
-description: "Подробный гайд по возможностям платформ OS Engine для трейдеров и разработчиков."
+layout: null
 permalink: /faq/
 ---
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0;url=/ru/guide/">
+<link rel="canonical" href="/ru/guide/">
+</head>
+<body>
+<p>Redirecting to <a href="/ru/guide/">/ru/guide/</a>...</p>
+</body>
+</html>
