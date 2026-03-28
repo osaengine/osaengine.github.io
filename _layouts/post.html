@@ -208,17 +208,7 @@ layout: default
     });
 
     if (activeLink) {
-      var sidebar = document.getElementById('toc-sidebar');
-      var linkTop = activeLink.offsetTop - sidebar.offsetTop;
-      var linkBottom = linkTop + activeLink.offsetHeight;
-      var scrollTop = sidebar.scrollTop;
-      var viewHeight = sidebar.clientHeight;
-
-      if (linkTop < scrollTop + 40) {
-        sidebar.scrollTo({top: linkTop - 40, behavior: 'smooth'});
-      } else if (linkBottom > scrollTop + viewHeight - 40) {
-        sidebar.scrollTo({top: linkBottom - viewHeight + 40, behavior: 'smooth'});
-      }
+      activeLink.scrollIntoView({block: 'nearest', behavior: 'smooth'});
     }
   }
 
