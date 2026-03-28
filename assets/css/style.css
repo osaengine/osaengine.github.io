@@ -2363,6 +2363,8 @@ main {
 .post-layout .post {
     flex: 1;
     min-width: 0;
+    max-width: 800px;
+    margin: 2rem 0 0;
 }
 
 /* TOC Sidebar */
@@ -2377,7 +2379,7 @@ main {
     padding: 1rem 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .toc-sidebar {
         display: block;
     }
