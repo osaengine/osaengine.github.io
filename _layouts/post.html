@@ -3,184 +3,257 @@ layout: default
 ---
 {% assign lang = page.lang | default: site.default_lang | default: "en" %}
 {% assign t = site.data.i18n[lang] %}
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 itemprop="name headline">{{ page.title }}</h1>
-    <div class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: "%d %B %Y" }}
-      </time>
-      {% if page.author %}
-        <span class="post-author">
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">{{ page.author }}</span>
+
+<!-- Reading progress bar -->
+<div class="reading-progress" id="reading-progress"></div>
+
+<div class="post-layout">
+  <!-- Table of contents sidebar (desktop only) -->
+  <aside class="toc-sidebar" id="toc-sidebar">
+    <nav class="toc" id="toc"></nav>
+  </aside>
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h1 itemprop="name headline">{{ page.title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: "%d %B %Y" }}
+        </time>
+        {% if page.author %}
+          <span class="post-author">
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">{{ page.author }}</span>
+            </span>
           </span>
+        {% endif %}
+        {% assign words = content | number_of_words %}
+        <span class="reading-time">
+          • {% if words < 360 %}1{% else %}{{ words | divided_by: 180 }}{% endif %} {{ t.reading_time_one }}
         </span>
-      {% endif %}
-      {% assign words = content | number_of_words %}
-      <span class="reading-time">
-        • {% if words < 360 %}1{% else %}{{ words | divided_by: 180 }}{% endif %} {{ t.reading_time_one }}
-      </span>
-    </div>
-  </header>
+      </div>
+    </header>
 
-  {% if page.image %}
-    <div class="post-featured-image">
-      <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image-post" itemprop="image">
-    </div>
-  {% endif %}
-
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {% if page.tags.size > 0 %}
-    <div class="post-tags">
-      <span class="tags-label">{{ t.post_tags }}</span>
-      {% for tag in page.tags %}
-        <a href="/{{ lang }}/tags#{{ tag | slugify }}" class="tag-link" rel="tag">{{ tag }}</a>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  <div class="post-sharing">
-    <h3>{{ t.share_article }}</h3>
-    <div class="sharing-buttons">
-      <a href="https://t.me/share/url?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}"
-         class="share-btn telegram" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_telegram }}">
-        <span>📱 {{ t.share_telegram }}</span>
-      </a>
-
-      <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}"
-         class="share-btn twitter" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_twitter }}">
-        <span>🐦 {{ t.share_twitter }}</span>
-      </a>
-
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | uri_escape }}"
-         class="share-btn facebook" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_facebook }}">
-        <span>📘 {{ t.share_facebook }}</span>
-      </a>
-
-      {% if lang == "ru" %}
-      <a href="https://vk.com/share.php?url={{ site.url }}{{ page.url | uri_escape }}&title={{ page.title | uri_escape }}"
-         class="share-btn vkontakte" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_vkontakte }}">
-         <span>🔵 {{ t.share_vkontakte }}</span>
-      </a>
-      {% endif %}
-
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | uri_escape }}"
-         class="share-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_linkedin }}">
-        <span>💼 {{ t.share_linkedin }}</span>
-      </a>
-
-      <button class="share-btn copy-link" onclick="copyToClipboard('{{ site.url }}{{ page.url }}')" aria-label="{{ t.share_copy_link }}">
-        <span>🔗 {{ t.share_copy_link }}</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- Related Posts (filtered by language) -->
-  {% assign lang_posts = site.posts | where: "lang", lang %}
-  {% assign related_posts = lang_posts | limit: 3 %}
-  {% if related_posts.size > 0 %}
-  <div class="related-posts">
-    <h3>{{ t.related_posts }}</h3>
-    <div class="related-posts-grid">
-      {% for post in related_posts %}
-        {% if post.url != page.url %}
-      <article class="related-post-card">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}" class="related-post-image">
-        {% else %}
-          <div class="related-post-placeholder">📰</div>
-        {% endif %}
-        <div class="related-post-content">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
-        </div>
-      </article>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
-
-  <!-- Navigation to Previous/Next Posts -->
-  <nav class="post-navigation">
-    {% if page.previous %}
-      <a href="{{ page.previous.url }}" class="nav-previous" rel="prev">
-        ← {{ page.previous.title | truncate: 30 }}
-      </a>
+    {% if page.image %}
+      <div class="post-featured-image">
+        <img src="{{ page.image }}" alt="{{ page.title }}" class="post-image-post" itemprop="image">
+      </div>
     {% endif %}
-    {% if page.next %}
-      <a href="{{ page.next.url }}" class="nav-next" rel="next">
-        {{ page.next.title | truncate: 30 }} →
-      </a>
-    {% endif %}
-  </nav>
 
-  <!-- Comments Section -->
-  <div class="post-comments">
-    <h3>{{ t.post_discussion }}</h3>
-    <p>{{ t.post_discussion_text }} <a href="https://t.me/osengine" target="_blank">{{ t.post_discussion_link }}</a>!</p>
-    <div id="comments">
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
     </div>
-  </div>
-</article>
+
+    {% if page.tags.size > 0 %}
+      <div class="post-tags">
+        <span class="tags-label">{{ t.post_tags }}</span>
+        {% for tag in page.tags %}
+          <a href="/{{ lang }}/tags#{{ tag | slugify }}" class="tag-link" rel="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="post-sharing">
+      <h3>{{ t.share_article }}</h3>
+      <div class="sharing-buttons">
+        <a href="https://t.me/share/url?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}"
+           class="share-btn telegram" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_telegram }}">
+          <span>📱 {{ t.share_telegram }}</span>
+        </a>
+
+        <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url | uri_escape }}&text={{ page.title | uri_escape }}"
+           class="share-btn twitter" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_twitter }}">
+          <span>🐦 {{ t.share_twitter }}</span>
+        </a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | uri_escape }}"
+           class="share-btn facebook" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_facebook }}">
+          <span>📘 {{ t.share_facebook }}</span>
+        </a>
+
+        {% if lang == "ru" %}
+        <a href="https://vk.com/share.php?url={{ site.url }}{{ page.url | uri_escape }}&title={{ page.title | uri_escape }}"
+           class="share-btn vkontakte" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_vkontakte }}">
+           <span>🔵 {{ t.share_vkontakte }}</span>
+        </a>
+        {% endif %}
+
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url | uri_escape }}"
+           class="share-btn linkedin" target="_blank" rel="noopener noreferrer" aria-label="{{ t.share_linkedin }}">
+          <span>💼 {{ t.share_linkedin }}</span>
+        </a>
+
+        <button class="share-btn copy-link" onclick="copyToClipboard('{{ site.url }}{{ page.url }}')" aria-label="{{ t.share_copy_link }}">
+          <span>🔗 {{ t.share_copy_link }}</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Related Posts (filtered by language) -->
+    {% assign lang_posts = site.posts | where: "lang", lang %}
+    {% assign related_posts = lang_posts | limit: 3 %}
+    {% if related_posts.size > 0 %}
+    <div class="related-posts">
+      <h3>{{ t.related_posts }}</h3>
+      <div class="related-posts-grid">
+        {% for post in related_posts %}
+          {% if post.url != page.url %}
+        <article class="related-post-card">
+          {% if post.image %}
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="related-post-image">
+          {% else %}
+            <div class="related-post-placeholder">📰</div>
+          {% endif %}
+          <div class="related-post-content">
+            <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>
+          </div>
+        </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Navigation to Previous/Next Posts -->
+    <nav class="post-navigation">
+      {% if page.previous %}
+        <a href="{{ page.previous.url }}" class="nav-previous" rel="prev">
+          ← {{ page.previous.title | truncate: 30 }}
+        </a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ page.next.url }}" class="nav-next" rel="next">
+          {{ page.next.title | truncate: 30 }} →
+        </a>
+      {% endif %}
+    </nav>
+
+    <!-- Comments Section -->
+    <div class="post-comments">
+      <h3>{{ t.post_discussion }}</h3>
+      <p>{{ t.post_discussion_text }} <a href="https://t.me/osengine" target="_blank">{{ t.post_discussion_link }}</a>!</p>
+      <div id="comments">
+      </div>
+    </div>
+  </article>
+</div>
 
 <script>
-// Copy to clipboard function
+// Reading progress bar
+(function() {
+  var progress = document.getElementById('reading-progress');
+  var article = document.querySelector('.post-content');
+  if (!progress || !article) return;
+
+  function updateProgress() {
+    var articleTop = article.offsetTop;
+    var articleHeight = article.offsetHeight;
+    var windowHeight = window.innerHeight;
+    var scrollY = window.scrollY || window.pageYOffset;
+
+    var start = articleTop;
+    var end = articleTop + articleHeight - windowHeight;
+    var pct = 0;
+
+    if (scrollY >= end) pct = 100;
+    else if (scrollY > start) pct = ((scrollY - start) / (end - start)) * 100;
+
+    progress.style.width = pct + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, {passive: true});
+  updateProgress();
+})();
+
+// Table of contents
+(function() {
+  var content = document.querySelector('.post-content');
+  var toc = document.getElementById('toc');
+  if (!content || !toc) return;
+
+  var headings = content.querySelectorAll('h2, h3');
+  if (headings.length < 2) {
+    document.getElementById('toc-sidebar').style.display = 'none';
+    return;
+  }
+
+  var html = '';
+  headings.forEach(function(h, i) {
+    if (!h.id) h.id = 'heading-' + i;
+    var cls = h.tagName === 'H3' ? ' class="toc-sub"' : '';
+    html += '<a href="#' + h.id + '"' + cls + ' data-target="' + h.id + '">' + h.textContent + '</a>';
+  });
+  toc.innerHTML = html;
+
+  // Highlight current section on scroll
+  var tocLinks = toc.querySelectorAll('a');
+
+  function updateToc() {
+    var scrollY = window.scrollY || window.pageYOffset;
+    var current = null;
+
+    headings.forEach(function(h) {
+      if (h.offsetTop - 100 <= scrollY) current = h.id;
+    });
+
+    tocLinks.forEach(function(link) {
+      if (link.getAttribute('data-target') === current) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateToc, {passive: true});
+  updateToc();
+
+  // Smooth scroll on click
+  tocLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.getElementById(this.getAttribute('data-target'));
+      if (target) {
+        window.scrollTo({top: target.offsetTop - 80, behavior: 'smooth'});
+      }
+    });
+  });
+})();
+
+// Copy to clipboard
 function copyToClipboard(text) {
   if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text).then(() => {
+    navigator.clipboard.writeText(text).then(function() {
       showCopyMessage('{{ t.link_copied }}');
     });
   } else {
-    // Fallback for older browsers
-    const textArea = document.createElement('textarea');
+    var textArea = document.createElement('textarea');
     textArea.value = text;
     textArea.style.position = 'fixed';
     textArea.style.left = '-999999px';
-    textArea.style.top = '-999999px';
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
-
     try {
       document.execCommand('copy');
       showCopyMessage('{{ t.link_copied }}');
     } catch (err) {
       showCopyMessage('{{ t.copy_error }}');
     }
-
     textArea.remove();
   }
 }
 
 function showCopyMessage(message) {
-  // Create and show a temporary message
-  const msgEl = document.createElement('div');
+  var msgEl = document.createElement('div');
   msgEl.textContent = message;
-  msgEl.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--primary-color);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    box-shadow: var(--shadow-lg);
-    z-index: 10000;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  `;
-
+  msgEl.style.cssText = 'position:fixed;top:20px;right:20px;background:var(--primary-color);color:white;padding:12px 20px;border-radius:8px;box-shadow:var(--shadow-lg);z-index:10000;font-weight:500;transition:all .3s ease';
   document.body.appendChild(msgEl);
-
-  setTimeout(() => {
+  setTimeout(function() {
     msgEl.style.opacity = '0';
     msgEl.style.transform = 'translateY(-20px)';
-    setTimeout(() => msgEl.remove(), 300);
+    setTimeout(function() { msgEl.remove(); }, 300);
   }, 2000);
 }
 </script>

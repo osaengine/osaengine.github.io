@@ -2339,6 +2339,100 @@ main {
     }
 }
 
+/* Reading Progress Bar */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    z-index: 9999;
+    transition: width 0.1s linear;
+}
+
+/* Post Layout with TOC Sidebar */
+.post-layout {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.post-layout .post {
+    flex: 1;
+    min-width: 0;
+}
+
+/* TOC Sidebar */
+.toc-sidebar {
+    display: none;
+    width: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding: 1rem 0;
+}
+
+@media (min-width: 1200px) {
+    .toc-sidebar {
+        display: block;
+    }
+}
+
+.toc {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.toc a {
+    display: block;
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-left: 2px solid var(--border-color);
+    transition: all 0.2s ease;
+    word-break: break-word;
+}
+
+.toc a:hover {
+    color: var(--primary-color);
+    border-left-color: var(--primary-color);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.toc a.active {
+    color: var(--primary-color);
+    border-left-color: var(--primary-color);
+    font-weight: 600;
+    background: rgba(99, 102, 241, 0.08);
+}
+
+.toc a.toc-sub {
+    padding-left: 24px;
+    font-size: 0.78rem;
+}
+
+/* TOC sidebar scrollbar */
+.toc-sidebar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.toc-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.toc-sidebar::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
 /* Post Header and Meta */
 .post-header {
     text-align: center;
@@ -2765,6 +2859,14 @@ main {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    .post-layout {
+        flex-direction: column;
+    }
+
+    .toc-sidebar {
+        display: none;
+    }
+
     .post-header h1 {
         font-size: 1.75rem;
     }
