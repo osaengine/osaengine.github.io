@@ -15,7 +15,7 @@ permalink: /en/blog/
 </section>
 
 <div class="blog-container">
-    {% assign posts = site.categories[lang] %}
+    {% assign posts = site.posts | where: "lang", "en" %}
     <ul class="post-list">
       {% for post in posts %}
         <li class="post-item">
