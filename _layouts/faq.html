@@ -12,12 +12,15 @@ description: "Подробный гайд по возможностям плат
 </section>
 
 <div class="faq-container">
-    {% if lang == "ru" %}
-    {% assign faq_data = site.data.ru.faq_sections %}
+    {% assign faq_data = site.data[lang].faq_sections %}
+    {% assign lang_articles = site.faq | where: "lang", lang %}
+
+    {% if faq_data and lang_articles.size > 0 %}
     {% for section in faq_data %}
         {% assign section_data = section[1] %}
-        {% assign section_questions = site.faq | where: "section", section[0] | sort: "order" %}
+        {% assign section_questions = lang_articles | where: "section", section[0] | sort: "order" %}
 
+        {% if section_questions.size > 0 %}
         <details class="faq-section">
             <summary>
                 <h2>{{ section_data.name }}</h2>
@@ -36,15 +39,14 @@ description: "Подробный гайд по возможностям плат
                 {% endfor %}
             </div>
         </details>
+        {% endif %}
     {% endfor %}
-    {% endif %}
-
-    {% if lang != "ru" or site.faq.size == 0 %}
+    {% else %}
         <div class="empty-state">
-            <h3>📚 {{ t.guide_in_development }}</h3>
+            <h3>{{ t.guide_in_development }}</h3>
             <p>{{ t.guide_in_development_text }}</p>
             <a href="https://t.me/osengine" class="btn btn-primary" target="_blank">
-                💬 {{ t.guide_ask_question }}
+                {{ t.guide_ask_question }}
             </a>
         </div>
     {% endif %}

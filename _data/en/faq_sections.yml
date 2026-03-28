@@ -1,0 +1,27 @@
+basics:
+  name: "Algotrading Basics"
+  folder: "algotrading-basics"
+
+technical:
+  name: "Technical Preparation"
+  folder: "technical-preparation"
+
+practice:
+  name: "Practice & Development"
+  folder: "practice-and-development"
+
+finance:
+  name: "Finance & Exchanges"
+  folder: "finance-and-exchanges"
+
+advanced:
+  name: "Advanced Topics"
+  folder: "advanced-topics"
+
+ai:
+  name: "Artificial Intelligence in Trading Robots"
+  folder: "ai-in-trading-robots"
+
+tools:
+  name: "Tools & Resources"
+  folder: "tools-and-resources"

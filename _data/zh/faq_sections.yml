@@ -1,0 +1,27 @@
+basics:
+  name: "算法交易基础"
+  folder: "algotrading-basics"
+
+technical:
+  name: "技术准备"
+  folder: "technical-preparation"
+
+practice:
+  name: "实践与开发"
+  folder: "practice-and-development"
+
+finance:
+  name: "金融与交易所"
+  folder: "finance-and-exchanges"
+
+advanced:
+  name: "进阶主题"
+  folder: "advanced-topics"
+
+ai:
+  name: "交易机器人中的人工智能"
+  folder: "ai-in-trading-robots"
+
+tools:
+  name: "工具与资源"
+  folder: "tools-and-resources"
