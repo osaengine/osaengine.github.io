@@ -28,22 +28,27 @@ defaults:
       path: "_posts/ru"
     values:
       lang: "ru"
+      category: "ru"
   - scope:
       path: "_posts/en"
     values:
       lang: "en"
+      category: "en"
   - scope:
       path: "_posts/zh"
     values:
       lang: "zh"
+      category: "zh"
   - scope:
       path: "_posts/es"
     values:
       lang: "es"
+      category: "es"
   - scope:
       path: "_posts/de"
     values:
       lang: "de"
+      category: "de"
 
 collections:
   faq:
