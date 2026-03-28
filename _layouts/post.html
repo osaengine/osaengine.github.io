@@ -197,13 +197,29 @@ layout: default
       if (h.offsetTop - 100 <= scrollY) current = h.id;
     });
 
+    var activeLink = null;
     tocLinks.forEach(function(link) {
       if (link.getAttribute('data-target') === current) {
         link.classList.add('active');
+        activeLink = link;
       } else {
         link.classList.remove('active');
       }
     });
+
+    if (activeLink) {
+      var sidebar = document.getElementById('toc-sidebar');
+      var linkTop = activeLink.offsetTop - sidebar.offsetTop;
+      var linkBottom = linkTop + activeLink.offsetHeight;
+      var scrollTop = sidebar.scrollTop;
+      var viewHeight = sidebar.clientHeight;
+
+      if (linkTop < scrollTop + 40) {
+        sidebar.scrollTo({top: linkTop - 40, behavior: 'smooth'});
+      } else if (linkBottom > scrollTop + viewHeight - 40) {
+        sidebar.scrollTo({top: linkBottom - viewHeight + 40, behavior: 'smooth'});
+      }
+    }
   }
 
   window.addEventListener('scroll', updateToc, {passive: true});
